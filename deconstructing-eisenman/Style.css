@@ -1,0 +1,204 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.container{
+
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%
+
+
+}
+
+
+
+
+
+.lightbox_info:target{
+    display: flex;
+}
+
+.lightbox_info{
+    
+    position: fixed;
+    width: 90vw;
+    height: 90vh;
+    top: 50%;
+    left: 50%;
+    margin-top: -45vh;
+    margin-left: -45vw;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    display:none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-header{
+    background-color: black;    
+    color: white;
+    text-align: center;
+}
+
+.modal-body{
+    color: black;
+    font-size: 15px;
+    text-align: center;
+}
+
+.modal-footer{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.modal-content{
+    position: relative;
+    margin-top: 40%;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    .info{
+        display: block;
+        position: absolute;
+        font-size: 15px;
+        right: 3%;
+        bottom: 2%;
+        color: black;
+    
+    }
+
+.desktop_lightbox_content{
+    display: none;
+}
+
+.mobile_lightbox_content{
+    overflow: visible;
+    position: relative;
+    width: 80%;
+    height: 80%;
+    font-family: sans-serif;
+}
+
+.close{
+    position: absolute;
+    top: -1.5em;
+    right: -1.5em;
+    width: 3em;
+    height: 3em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.close::after{
+    content : 'X';
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+
+
+}
+
+.title{
+    font-weight: 800;
+    font-size: 4vh;
+}
+
+.text1{
+    font-size: 2.3vh;
+}
+
+.title2{
+    margin-top: 10vh;
+    font-weight: 800;
+    font-size: 3vh;
+    
+}
+
+.text2{
+    font-size: 2.3vh;
+}
+
+}
+
+
+
+
+@media only screen and (min-width: 900px) {
+
+    .info{
+        display: block;
+        position: absolute;
+        font-size: 20px;
+        right: 3%;
+        bottom: 3%;
+        color: black;
+    
+    }
+
+    .mobile_lightbox_content{
+        display: none;
+    }
+    
+    .desktop_lightbox_content{
+        overflow: visible;
+        position: relative;
+        width: 80%;
+        height: 80%;
+        font-family: sans-serif;
+    }
+    
+    .close{
+        position: absolute;
+        top: -1.5em;
+        right: -1.5em;
+        width: 3em;
+        height: 3em;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    
+    .close::after{
+        content : 'X';
+        color: white;
+        font-size: 30px;
+        font-weight: 500;
+    
+    
+    }
+    
+    .title{
+        font-weight: 800;
+        font-size: 4vh;
+    }
+    
+    .text1{
+        font-size: 2vh;
+    }
+    
+    .title2{
+        margin-top: 25vh;
+        font-weight: 800;
+        font-size: 3vh;
+        
+    }
+    
+    .text2{
+        font-size: 2vh;
+    }
+    
+    }
