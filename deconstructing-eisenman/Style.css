@@ -1,13 +1,15 @@
-*{
-    overscroll-behavior: none;
+html, body{
+    height: 100%;
+    width: 100%;
 }
 
 body{
-    width: 100%;
-    height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow: hidden;
+    border: 0px;
+    outline: 0px;
+    -webkit-overflow-scrolling: touch;
+    overflow: scroll;
 }
 
 .container{
@@ -15,8 +17,8 @@ body{
     display: block;
     position: relative;
     width: 100%;
-    height: 100%
-
+    height: 100%;
+    overflow: hidden;
 
 }
 
