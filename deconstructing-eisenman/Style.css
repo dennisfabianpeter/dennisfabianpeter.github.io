@@ -145,7 +145,7 @@ body{
 .textsource{
     z-index: 106;
     font-size: 1.5vh;
-    margin-top: 3vh;
+    margin-top: 10vh;
 
 }
 
@@ -210,7 +210,7 @@ body{
     }
     
     .title2{
-        margin-top: 25vh;
+        margin-top: 20vh;
         font-weight: 800;
         font-size: 3vh;
         
@@ -222,7 +222,7 @@ body{
 
     .textsource{
         font-size: 2vh;
-        margin-top: 5vh;
+        margin-top: 15vh;
     
     }
     
