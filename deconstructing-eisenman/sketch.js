@@ -100,11 +100,11 @@ normalMaterial();
 
 
 if(windowWidth<900){
-    ortho(-width / (windowWidth/6.3), width /(windowWidth/6.3), height / (windowWidth/6.3), -height / (windowWidth/6.3), 0, 1000);
+    ortho(-width / (windowWidth/7), width /(windowWidth/7), height / (windowWidth/7), -height / (windowWidth/7), 0, 1000);
 }
 
 else{
-        ortho(-width / (windowWidth/11), width /(windowWidth/11), height / (windowWidth/11), -height / (windowWidth/11), 0, 1000);
+        ortho(-width / (windowWidth/13), width /(windowWidth/13), height / (windowWidth/13), -height / (windowWidth/13), 0, 1000);
   }
 
 
