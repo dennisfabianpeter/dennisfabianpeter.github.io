@@ -91,15 +91,15 @@ body{
     z-index: 101;
     overflow: visible;
     position: relative;
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     font-family: sans-serif;
 }
 
 .close{
-    z-index: 106;
+    z-index: 107;
     position: absolute;
-    top: -1.5em;
+    top: -3em;
     right: -1.5em;
     width: 3em;
     height: 3em;
@@ -121,6 +121,7 @@ body{
 
 .title{
     z-index: 103;
+    margin-top: 2vh;
     font-weight: 800;
     font-size: 3vh;
 }
@@ -141,6 +142,13 @@ body{
 .text2{
     z-index: 105;
     font-size: 1.5vh;
+}
+
+.textsource{
+    z-index: 106;
+    font-size: 1.5vh;
+    margin-top: 3vh;
+
 }
 
 }
@@ -167,8 +175,8 @@ body{
     .desktop_lightbox_content{
         overflow: visible;
         position: relative;
-        width: 80%;
-        height: 80%;
+        width: 65%;
+        height: 65%;
         font-family: sans-serif;
     }
     
@@ -212,6 +220,12 @@ body{
     
     .text2{
         font-size: 2vh;
+    }
+
+    .textsource{
+        font-size: 2vh;
+        margin-top: 5vh;
+    
     }
     
     }
