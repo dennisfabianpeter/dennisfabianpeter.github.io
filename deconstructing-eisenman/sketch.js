@@ -83,7 +83,15 @@ ortho(-width / (windowWidth/6.3), width /(windowWidth/6.3), height / (windowWidt
 
 button =createButton('Change Iteration');
 button.position(10,10);
-button.mousePressed(ChangeOrder);
+button.style('background-color', '#000');
+button.style('color', '#fff');
+button.style('border', 'solid');
+button.style('border-color', '#fff');
+button.style('border-radius', '3px');
+
+button.mouseClicked(ChangeOrder);
+button.mousePressed(ChangeButtonColor);
+button.mouseReleased(RevertButtonColor);
  
 }
 
@@ -323,5 +331,19 @@ order21=random(possibilites);
 order22=random(possibilites);
 order23=random(possibilites);
 order24=random(possibilites);
+}
 
+function ChangeButtonColor(){
+button.style('background-color', '#fff');
+button.style('color', '#000');
+button.style('border', 'solid');
+button.style('border-color', '#000');  
+}
+
+
+function RevertButtonColor(){
+button.style('background-color', '#000');
+button.style('color', '#fff');
+button.style('border', 'solid');
+button.style('border-color', '#fff');  
 }
