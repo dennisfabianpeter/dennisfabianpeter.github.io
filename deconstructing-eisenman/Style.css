@@ -30,6 +30,7 @@ body{
 
 .lightbox_info{
     
+    z-index: 100;
     position: fixed;
     width: 90vw;
     height: 90vh;
@@ -87,6 +88,7 @@ body{
 }
 
 .mobile_lightbox_content{
+    z-index: 101;
     overflow: visible;
     position: relative;
     width: 80%;
@@ -95,6 +97,7 @@ body{
 }
 
 .close{
+    z-index: 106;
     position: absolute;
     top: -1.5em;
     right: -1.5em;
@@ -117,15 +120,18 @@ body{
 }
 
 .title{
+    z-index: 103;
     font-weight: 800;
     font-size: 3vh;
 }
 
 .text1{
+    z-index: 103;
     font-size: 1.5vh;
 }
 
 .title2{
+    z-index: 104;
     margin-top: 8vh;
     font-weight: 800;
     font-size: 2vh;
@@ -133,6 +139,7 @@ body{
 }
 
 .text2{
+    z-index: 105;
     font-size: 1.5vh;
 }
 
