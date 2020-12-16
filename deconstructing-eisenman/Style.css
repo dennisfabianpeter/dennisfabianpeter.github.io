@@ -5,6 +5,8 @@
 body{
     margin: 0px;
     padding: 0px;
+    position: fixed;
+    -webkit-overflow-scrolling: touch;
     overflow: hidden;
 }
 
