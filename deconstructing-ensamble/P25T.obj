@@ -1,0 +1,22 @@
+# Alias OBJ Model File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+# File units = millimeters
+
+mtllib P25T.mtl
+
+g Mesh1 Group1 Model
+
+usemtl Translucent_Glass_Blue
+v -6312.95 3008 -17754.2
+vt -251.228 118.425
+vn 0.00311536 -4.02006e-19 -0.999995
+v 9664.92 0 -17704.2
+vt -881.689 1.1067e-18
+v -6312.95 -5.22131e-09 -17754.2
+vt -251.228 -2.05564e-10
+f 1/1/1 2/2/1 3/3/1
+
+v 9664.92 3008 -17704.2
+vt -881.689 118.425
+f 2/2/1 1/1/1 4/4/1
+
