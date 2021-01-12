@@ -83,341 +83,339 @@ function preload() {
 
 }
 
-
 function setup() {
 
-    canvas = createCanvas(windowWidth, windowHeight, WEBGL);
-    ortho(-width / (windowWidth/6.3), width /(windowWidth/6.3), height / (windowWidth/6.3), -height / (windowWidth/6.3), 0, 1000);
+canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+ortho(-width / (windowWidth/6.3), width /(windowWidth/6.3), height / (windowWidth/6.3), -height / (windowWidth/6.3), 0, 1000);
 
-    button =createButton('Change Permutation');
-    button.position(10,10);
-    button.style('background-color', '#000');
-    button.style('color', '#fff');
-    button.style('border', 'solid');
-    button.style('border-color', '#fff');
-    button.style('border-radius', '3px');
+button =createButton('Change Permutation');
+button.position(10,10);
+button.style('background-color', '#000');
+button.style('color', '#fff');
+button.style('border', 'solid');
+button.style('border-color', '#fff');
+button.style('border-radius', '3px');
 
-    button.mouseClicked(ChangeOrder);
-    button.mousePressed(ChangeButtonColor);
-    button.mouseReleased(RevertButtonColor);
-    
+button.mouseClicked(ChangeOrder);
+button.mousePressed(ChangeButtonColor);
+button.mouseReleased(RevertButtonColor);
+ 
 }
 
 
 function draw() {
 
-    background(255, 210,255);
-    rotateX(rotateVertical);
-    rotateY(rotateHorizontal);
-    noStroke();
-    glassMaterial = specularMaterial(200, 200, 200, 150);
+
+background(newRotateAmountXColor, 210,255);
+rotateX(rotateVertical);
+rotateY(rotateHorizontal);
+noStroke();
+glassMaterial = specularMaterial(200, 200, 200, 150);
 
 
 
-    if(windowWidth<900){
-        ortho(-width / (windowWidth/25000), width /(windowWidth/25000), height/ (windowWidth/25000), -height/ (windowWidth/25000), -100000, 100000);
-    }
+if(windowWidth<900){
+    ortho(-width / (windowWidth/25000), width /(windowWidth/25000), height/ (windowWidth/25000), -height/ (windowWidth/25000), -100000, 100000);
+}
 
-    else{
-            ortho(-width / (windowWidth/50000), width /(windowWidth/50000), height / (windowWidth/50000), -height / (windowWidth/50000), -100000, 100000);
-      }
+else{
+        ortho(-width / (windowWidth/50000), width /(windowWidth/50000), height / (windowWidth/50000), -height / (windowWidth/50000), -100000, 100000);
+  }
 
 
-        if(windowWidth<900){  
-    H = ((rotationY)*500);
-    V = ((rotationX)*500)-20000;}
+    if(windowWidth<900){  
+H = ((rotationY)*500);
+V = ((rotationX)*500)-20000;}
 
-    else{
-      H= rotationXforkey;
-      V= rotationYforkey;}
-      
-    permutations = [createVector(H,0,0),
-                    createVector(-H,0,0),
-                    createVector(V,0,0),
-                    createVector(-V,0,0),
-                    createVector(0,H,0),
-                    createVector(0,-H,0),
-                    createVector(0,V,0),
-                    createVector(0,-V,0),
-                    createVector(0,0,H),
-                    createVector(0,0,-H),
-                    createVector(0,0,V),
-                    createVector(0,0,-V)];
-      
-      translate(0,-5000,5000);
+else{
+  H= rotationXforkey;
+  V= rotationYforkey;}
+  
+permutations = [createVector(H,0,0),
+                createVector(-H,0,0),
+                createVector(V,0,0),
+                createVector(-V,0,0),
+                createVector(0,H,0),
+                createVector(0,-H,0),
+                createVector(0,V,0),
+                createVector(0,-V,0),
+                createVector(0,0,H),
+                createVector(0,0,-H),
+                createVector(0,0,V),
+                createVector(0,0,-V)];
+  
+  translate(0,-5000,5000);
 
-    push();   
-      normalMaterial();
-      translate(permutations[order1]);
-      model(P1);
-    pop();
+push();   
+  normalMaterial();
+  translate(permutations[order1]);
+  model(P1);
+pop();
 
+
+push();
+  normalMaterial();
+  translate(permutations[order2])
+  model(P2);
+pop();
+
+  push();
+  normalMaterial();
+  translate(9000,0,4000)
+  rotateY(H/4500)
+  translate(permutations[order4])
+  translate(-9000,0,-4000)
+  model(P4);
+pop();
+
+  push();
+  normalMaterial();
+  translate(-13500,0,-16500)
+  rotateY(-H/4500)
+  translate(permutations[order4])
+  translate(13500,0,16500)
+  model(P6);
+pop();
+
+  push();
+  normalMaterial();
+  translate(permutations[order7])
+  model(P7);
+pop();
+
+  push();
+  normalMaterial();
+  translate(permutations[order8])
+  model(P8);
+pop();
+
+  push();
+  normalMaterial();
+  translate(permutations[order9])
+  model(P9);
+pop();
+
+
+ push();
+  normalMaterial();
+  translate(permutations[order12])
+  model(P12);
+pop();
+
+  push();
+  normalMaterial();
+  translate(permutations[order13])
+  model(P13);
+pop();
+
+  push();
+  normalMaterial();
+  translate(permutations[order14])
+  model(P14);
+pop();
+
+  push();
+  normalMaterial();
+  translate(permutations[order15])
+  model(P15);
+pop();
+
+  push();
+  normalMaterial();
+  translate(10000,5000,-15000)
+  rotateX(-H/4500)
+  translate(permutations[order4])
+  translate(-10000,-5000,15000)
+  model(P17);
+pop();
+
+  push();
+  normalMaterial();
+  translate(1000,0,-3000)
+  rotateY(-H/4500)
+  //translate(permutations[order4])
+  translate(-1000,0,3000)
+  model(P18);
+pop();
+
+  push();
+  normalMaterial();
+  translate(0,8000,-16000)
+  rotateX(H/4500)
+  //translate(permutations[order4])
+  translate(0,-8000,16000)
+  model(P19);
+pop();
+
+  push();  
+  normalMaterial();
+  translate(permutations[order20])
+  model(P20);
+pop();
+
+  push();
+  normalMaterial();
+  translate(permutations[order22])
+  model(P22);
+pop();
+
+  push();
+  normalMaterial();
+  translate(1000,0,-3000)
+  rotateY(-H/4500)
+  //translate(permutations[order4])
+  translate(-1000,0,3000)
+  model(P23);
+pop();
+
+  push();
+  normalMaterial();
+  translate(permutations[order24])
+  model(P24);
+pop();
+  
+   push();
+  normalMaterial();
+  translate(permutations[order26])
+  model(P26);
+pop();
+
+  push();
+  glassMaterial;
+  translate(permutations[order3])
+  model(P3T);
+pop();  
+  
+    push();
+  glassMaterial;
+  translate(permutations[order21])
+  model(P21T);
+pop();
+    
+  push();
+  glassMaterial;
+  translate(permutations[order16])
+  model(P16T);
+pop();
+  
+    push();
+  glassMaterial;
+  translate(permutations[order11])
+  model(P11T);
+pop();
 
     push();
-      normalMaterial();
-      translate(permutations[order2])
-      model(P2);
-    pop();
+  glassMaterial;
+  translate(permutations[order10])
+  model(P10T);
+pop();
 
     push();
-      normalMaterial();
-      translate(9000,0,4000)
-      rotateY(H/4500)
-      translate(permutations[order4])
-      translate(-9000,0,-4000)
-      model(P4);
-    pop();
-
+  glassMaterial;
+  translate(permutations[order5])
+  model(P5T);
+pop();
+  
     push();
-      normalMaterial();
-      translate(-13500,0,-16500)
-      rotateY(-H/4500)
-      translate(permutations[order4])
-      translate(13500,0,16500)
-      model(P6);
-    pop();
-
-    push();
-      normalMaterial();
-      translate(permutations[order7])
-      model(P7);
-    pop();
-
-    push();
-      normalMaterial();
-      translate(permutations[order8])
-      model(P8);
-    pop();
-
-    push();
-      normalMaterial();
-      translate(permutations[order9])
-      model(P9);
-    pop();
-
-
-    push();
-      normalMaterial();
-      translate(permutations[order12])
-      model(P12);
-    pop();
-
-    push();
-      normalMaterial();
-      translate(permutations[order13])
-      model(P13);
-    pop();
-
-    push();
-      normalMaterial();
-      translate(permutations[order14])
-      model(P14);
-    pop();
-
-    push();
-      normalMaterial();
-      translate(permutations[order15])
-      model(P15);
-    pop();
-
-    push();
-      normalMaterial();
-      translate(10000,5000,-15000)
-      rotateX(-H/4500)
-      translate(permutations[order4])
-      translate(-10000,-5000,15000)
-      model(P17);
-    pop();
-
-    push();
-      normalMaterial();
-      translate(1000,0,-3000)
-      rotateY(-H/4500)
-      //translate(permutations[order4])
-      translate(-1000,0,3000)
-      model(P18);
-    pop();
-
-    push();
-      normalMaterial();
-      translate(0,8000,-16000)
-      rotateX(H/4500)
-      //translate(permutations[order4])
-      translate(0,-8000,16000)
-      model(P19);
-    pop();
-
-    push();  
-      normalMaterial();
-      translate(permutations[order20])
-      model(P20);
-    pop();
-
-    push();
-      normalMaterial();
-      translate(permutations[order22])
-      model(P22);
-    pop();
-
-    push();
-      normalMaterial();
-      translate(1000,0,-3000)
-      rotateY(-H/4500)
-      //translate(permutations[order4])
-      translate(-1000,0,3000)
-      model(P23);
-    pop();
-
-    push();
-      normalMaterial();
-      translate(permutations[order24])
-      model(P24);
-    pop();
-      
-    push();
-      normalMaterial();
-      translate(permutations[order26])
-      model(P26);
-    pop();
-
-    push();
-      glassMaterial;
-      translate(permutations[order3])
-      model(P3T);
-    pop();  
-      
-    push();
-      glassMaterial;
-      translate(permutations[order21])
-      model(P21T);
-    pop();
-        
-    push();
-      glassMaterial;
-      translate(permutations[order16])
-      model(P16T);
-    pop();
-      
-    push();
-      glassMaterial;
-      translate(permutations[order11])
-      model(P11T);
-    pop();
-
-    push();
-      glassMaterial;
-      translate(permutations[order10])
-      model(P10T);
-    pop();
-
-    push();
-      glassMaterial;
-      translate(permutations[order5])
-      model(P5T);
-    pop();
-      
-    push();
-      glassMaterial;
-      translate(permutations[order25])
-      model(P25T);
-    pop();
-      
-    }
-
+  glassMaterial;
+  translate(permutations[order25])
+  model(P25T);
+pop();
+  
+}
 
 function keyPressed() {
-    if (keyCode === LEFT_ARROW){
-    rotationXforkey=newRotationX + 785.398;
-    newRotationX = rotationXforkey;
-    }
+if (keyCode === LEFT_ARROW){
+rotationXforkey=newRotationX + 785.398;
+newRotationX = rotationXforkey;
+}
 
-    else if (keyCode === RIGHT_ARROW){
-    rotationXforkey=newRotationX - 785.398;
-    newRotationX = rotationXforkey;}
-      
-    else if (keyCode === UP_ARROW){
-    rotationYforkey=newRotationY + 785.398;
-    newRotationY = rotationYforkey;}
-      
-    else if (keyCode === DOWN_ARROW){
-    rotationYforkey=newRotationY - 785.398;
-    newRotationY = rotationYforkey;
-    }
+else if (keyCode === RIGHT_ARROW){
+rotationXforkey=newRotationX - 785.398;
+newRotationX = rotationXforkey;}
+  
+else if (keyCode === UP_ARROW){
+rotationYforkey=newRotationY + 785.398;
+newRotationY = rotationYforkey;}
+  
+else if (keyCode === DOWN_ARROW){
+rotationYforkey=newRotationY - 785.398;
+newRotationY = rotationYforkey;
+}
 
 }
 
 
 function touchMoved() {
 
-    rotateAmountX = (mouseX - pmouseX);
-    rotateAmountY = (mouseY - pmouseY);
-    
-    newRotateAmountX = lastRotateAmountX + rotateAmountX;
-    newRotateAmountY = lastRotateAmountY + rotateAmountY;
-      
+  rotateAmountX = (mouseX - pmouseX);
+  rotateAmountY = (mouseY - pmouseY);
+ 
+newRotateAmountX = lastRotateAmountX + rotateAmountX;
+newRotateAmountY = lastRotateAmountY + rotateAmountY;
+  
 
-    rotateHorizontal = -0.785 +(newRotateAmountX/100);
-    rotateVertical = 0.52+((newRotateAmountY)/200);
+rotateHorizontal = -0.785 +(newRotateAmountX/100);
+rotateVertical = 0.52+((newRotateAmountY)/200);
 
-    lastRotateAmountX = newRotateAmountX;
-    lastRotateAmountY = newRotateAmountY;
+lastRotateAmountX = newRotateAmountX;
+lastRotateAmountY = newRotateAmountY;
 
-    newRotateAmountXColor =  124 + (newRotateAmountX * 0.1);
+newRotateAmountXColor =  124 + (newRotateAmountX * 0.1);
 
-    //if(newRotateAmountX>=255){  
-    //newRotateAmountXColor = 255 - //(newRotateAmountX - 255);  
-    //}
+//if(newRotateAmountX>=255){  
+//newRotateAmountXColor = 255 - //(newRotateAmountX - 255);  
+//}
 
 
 }
 
-
 function windowResized(){
-    resizeCanvas(windowWidth, windowHeight,WEBGL);
-          ortho(-width / (windowWidth/100), width /(windowWidth/100), height / (windowWidth/100), -height / (windowWidth/100), 0, 10000);
-    }
+resizeCanvas(windowWidth, windowHeight,WEBGL);
+      ortho(-width / (windowWidth/100), width /(windowWidth/100), height / (windowWidth/100), -height / (windowWidth/100), 0, 10000);
+}
 
-    function ChangeOrder(){
-    possibilites = [0,1,2,3,4,5,6,7,8,9,10,11];
+function ChangeOrder(){
+possibilites = [0,1,2,3,4,5,6,7,8,9,10,11];
 
-    order1=random(possibilites);
-    order2=random(possibilites);
-    order3=random(possibilites);
-    order4=random(possibilites);
-    order5=random(possibilites);
-    order6=random(possibilites);
-    order7=random(possibilites);
-    order8=random(possibilites);
-    order9=random(possibilites);
-    order10=random(possibilites);
-    order11=random(possibilites);
-    order12=random(possibilites);
-    order13=random(possibilites);
-    order14=random(possibilites);
-    order15=random(possibilites);
-    order16=random(possibilites);
-    order17=random(possibilites);
-    order18=random(possibilites);
-    order19=random(possibilites);
-    order20=random(possibilites);
-    order21=random(possibilites);
-    order22=random(possibilites);
-    order23=random(possibilites);
-    order24=random(possibilites);
-    order25=random(possibilites);
+order1=random(possibilites);
+order2=random(possibilites);
+order3=random(possibilites);
+order4=random(possibilites);
+order5=random(possibilites);
+order6=random(possibilites);
+order7=random(possibilites);
+order8=random(possibilites);
+order9=random(possibilites);
+order10=random(possibilites);
+order11=random(possibilites);
+order12=random(possibilites);
+order13=random(possibilites);
+order14=random(possibilites);
+order15=random(possibilites);
+order16=random(possibilites);
+order17=random(possibilites);
+order18=random(possibilites);
+order19=random(possibilites);
+order20=random(possibilites);
+order21=random(possibilites);
+order22=random(possibilites);
+order23=random(possibilites);
+order24=random(possibilites);
+order25=random(possibilites);
 }
 
 function ChangeButtonColor(){
-    button.style('background-color', '#fff');
-    button.style('color', '#000');
-    button.style('border', 'solid');
-    button.style('border-color', '#000');  
+button.style('background-color', '#fff');
+button.style('color', '#000');
+button.style('border', 'solid');
+button.style('border-color', '#000');  
 }
 
 
 function RevertButtonColor(){
-    button.style('background-color', '#000');
-    button.style('color', '#fff');
-    button.style('border', 'solid');
-    button.style('border-color', '#fff');  
+button.style('background-color', '#000');
+button.style('color', '#fff');
+button.style('border', 'solid');
+button.style('border-color', '#fff');  
 }
