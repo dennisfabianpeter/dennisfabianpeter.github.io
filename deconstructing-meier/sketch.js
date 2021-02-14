@@ -94,7 +94,7 @@ button.mouseReleased(RevertButtonColor);
 function draw() {
 
 
-background(220,120,newRotateAmountXColor);
+background(200,250,150);
 rotateX(rotateVertical);
 rotateY(rotateHorizontal);
 noStroke();
