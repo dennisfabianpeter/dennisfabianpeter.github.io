@@ -62,10 +62,10 @@ const list = {
 let  fontHeightOffset = 5;
   
 
-// function preload() {
-//   boldFont = loadFont('../Raleway-Bold.ttf');
-//   mediumFont = loadFont('../Raleway-SemiBold.ttf');
-// }
+function preload() {
+  boldFont = loadFont('../Raleway-Bold.ttf');
+  mediumFont = loadFont('../Raleway-SemiBold.ttf');
+}
 
   
 function setup() {
@@ -75,9 +75,6 @@ function setup() {
   
   listTime = 1000,
   transitionTime = 500;
-
-  boldFont = 'Raleway';
-  mediumFont = 'Raleway';
   
   
   p5.tween.manager.addTween(list)
