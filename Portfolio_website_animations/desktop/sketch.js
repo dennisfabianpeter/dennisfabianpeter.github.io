@@ -63,8 +63,8 @@ let  fontHeightOffset = 5;
   
 
 function preload() {
-  boldFont = loadFont('../Raleway-Bold.ttf');
-  mediumFont = loadFont('../Raleway-SemiBold.ttf');
+  boldFont = loadFont('Raleway-Bold.ttf');
+  mediumFont = loadFont('Raleway-SemiBold.ttf');
 }
 
   
