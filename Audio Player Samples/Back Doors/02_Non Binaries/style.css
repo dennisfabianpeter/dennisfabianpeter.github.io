@@ -6,11 +6,18 @@ body {
 }
 
 .container {
-	margin: 75px 0px;
+	border-radius: 5px;
+	overflow: hidden;
+	z-index: 1;
+	margin: 0px 0px;
 	max-width: 325px;
 	--plyr-color-main: #f1331a;
 	--plyr-control-icon-size: 20px;
 	--plyr-audio-controls-background: #eee;
 	--plyr-audio-control-color: #333;
-	--plyr-font-size-time: medium;
+	--plyr-font-size-time: small;
+	--plyr-tooltip-background: rgba(255, 255, 255, 0.0);
+	--plyr-tooltip-color: rgba(255, 255, 255, 0.0);
+	--plyr-tooltip-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+	--plyr-line-height: 10px;
 }
