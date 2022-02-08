@@ -1,0 +1,16 @@
+/* (042920) See plyr spec & tinker w/ add'l container elements, settings 
+https://github.com/sampotts/plyr/#options */
+
+body {
+	background-color: #ffffff;
+}
+
+.container {
+	margin: 75px 0px;
+	max-width: 325px;
+	--plyr-color-main: #f1331a;
+	--plyr-control-icon-size: 20px;
+	--plyr-audio-controls-background: #eee;
+	--plyr-audio-control-color: #333;
+	--plyr-font-size-time: medium;
+}
