@@ -30,8 +30,11 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   noCursor();
   
-targetX = width/2;
-targetY = height/2;
+targetX = width/1.1;
+targetY = height/8;
+  
+cursorX = width/2;
+cursorY = height/2;
   
 x = width/2;
 y = height/2 ;
@@ -83,8 +86,8 @@ function draw() {
   v3 = createVector(-cpOffestX1, cpOffestY1);
   
   v4 = createVector(width/2, height/2);
-  v5 = createVector(mouseX -width/2 , mouseY - height/2 );
-  v6 = createVector(-(mouseX -width/2), -(mouseY - height/2));
+  v5 = createVector(cursorX -width/2 , cursorY - height/2 );
+  v6 = createVector(-(cursorX -width/2), -(cursorY - height/2));
   
     
   strokeCap(SQUARE);
