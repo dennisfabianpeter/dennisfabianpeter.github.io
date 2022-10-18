@@ -1,4 +1,8 @@
+let canvas;
 let Font;
+
+let displayCursor = true;
+let mouseDetected = false;
 
 var offset = 0;
 let sinPos;
@@ -36,6 +40,10 @@ let trans1 = 0;
 let speed2 = 0.02;
 let trans2 = 0;
 
+let mouseFill = 0;
+let mouseColor;
+let mouseRadius;
+
 let x ;
 let y ;
 let easing = 0.15;
@@ -51,26 +59,35 @@ let interA;
 let interB;
 
 let abtButton;
+let buttonOffset;
+let buttonSize;
 
 let rotAngle = 0;
 
+let abtText;
+
 function preload() {
-  Font = loadFont('Montserrat-Regular.ttf');
+  Font = loadFont('MontserratAlternates-Regular.ttf');
 
 }
 
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight);
+  canvas = createCanvas(window.innerWidth, window.innerHeight);
+  mouseColor = color(255,255,255,0);
+  
   noCursor();
   
-  abtButton = createButton('About');
-  abtButton.position(width - 60, 0);
-  abtButton.mousePressed(abtAnimation);
+  abtText = createP("Non-Linear is a creative practice by 'Dennis Fabian Peter' with a primary focus on Art, Design and Tech.");
+  abtText.style('font-family', 'Montserrat');
+  abtText.style('display', 'none');
+  abtText.style('cursor', 'none');
+
   
-  whiteC = color(255,255,255,240);
-  orangeC = color(255, 102, 41,200);
+  whiteC = color(255,255,255);
+  orangeC = color(255, 102, 41);
   blackC = color(0);
   tealC = color(24,163,140, 220);
+  clearC = color(255,255,255, 0);
   
   vertAnimPos = 0;
 
@@ -88,11 +105,53 @@ cursorY = height/2;
   
 x = width/2;
 y = height/2 ;
+  
+  abtButton = createButton('about');
+  abtButton.style('font-family', 'Montserrat Alternates');
+  abtButton.style('border', '3px solid black');  
+  abtButton.style('background-color', 'transparent'); 
+  abtButton.style('cursor', 'none');
+  
+  
     
 }
 
 function draw() {
   background(255);
+  
+  canvas.touchStarted(cursorOff);
+  
+  abtButton.position(buttonOffset, height / 50);
+  abtButton.style('font-size', buttonSize + 'px');
+  abtButton.mouseOver(abtMouseOver);
+  abtButton.mouseOut(abtMouseOut);
+  //abtButton.touchStarted(abtAnimation);
+  abtButton.mouseClicked(abtAnimation);
+  abtButton.mouseReleased(()=>abtButton.style('background-color', 'transparent'));
+  
+  
+  abtText.position(0,height/2);
+  abtText.style('font-size', width/40 + 'px');
+  abtText.style('padding-left', width/20 + 'px');
+  abtText.style('padding-right', width/20 + 'px');
+  
+
+  
+  if(mouseDetected==true && displayCursor==true){
+    targetX = mouseX;
+    targetY = mouseY; 
+    } else{
+              if(mouseIsPressed===true){
+                targetX = mouseX;
+                targetY = mouseY; 
+                fill(0); 
+              }
+              if(mouseIsPressed===false){
+                fill(255);
+                targetX = constrain(180-(-rotationY * 15),0,canvas.width);
+                targetY = constrain(((rotationX*25)-600),0,canvas.height);
+              }
+}
   
   checkRatio();
   getMousePoints();
@@ -117,17 +176,21 @@ function draw() {
   
   if(vertAnimToggle == false){
     if(trans1>0){
-       trans1 -= speed1;       
+       trans1 -= speed1;     
        }
-
+  
     }
   
   if(vertAnimToggle == true){
         if(trans1 < 1){
           trans1 += speed1;    
           }
-
+          abtText.style('display', 'inline');
     }
+  
+  if(trans1 <= 0.1){
+     abtText.style('display', 'none');
+     }
   
   vertAnimPos = easedTrans1 *(-height*1.5);
   rectFillAlpha = easedTrans1 * 100
@@ -135,6 +198,16 @@ function draw() {
   interA = lerpColor(orangeC, whiteC, easedTrans1);
   interB = lerpColor(blackC, whiteC, easedTrans1);
   interC = lerpColor(tealC, whiteC, easedTrans1);
+  interD = lerpColor(clearC, whiteC, easedTrans1);
+  
+  
+  let abtFontColor = interB;
+  let abtTextColor = interD;
+  
+  abtButton.style('color', str(interB));
+  abtButton.style('border-color', str(interB));
+  abtText.style('color', str(interD));
+
   
   translate(0,vertAnimPos);
   
@@ -185,7 +258,7 @@ function draw() {
   fill(255,190);
   circle(x3, y3, dotThic * (abs(vertPull/1) + 1.5));
   circle(width-x3, height-y3, dotThic * (abs(vertPull/1) + 1.5));
-  fill(255, 102, 41,200); 
+  fill(255, 102, 41,250); 
   circle(x3, y3, dotThic * (abs(vertPull/1) + 1));
   circle(width-x3, height-y3, dotThic * (abs(vertPull/1) + 1));
   pop();
@@ -198,21 +271,26 @@ function draw() {
     sine();
   pop();
   
+if(displayCursor == true ){
+  if(mouseDetected == true){mouseColor = interA;}
+  
   push();
-  strokeWeight(3);
-  stroke(interA);
-  noFill()
-  circle(mouseX, mouseY, 20);
+  strokeWeight(4);  
+  stroke(mouseColor);
+  mouseColor.setAlpha(mouseFill)
+  fill(mouseColor)
+  circle(mouseX, mouseY, mouseRadius);
   pop();
+}
   
   noStroke();
   textFont(Font);
   fill(interB);
   textSize(tSize);
   textAlign(LEFT, CENTER);
-  text("non", tSize/0.9 + (horzPull*(tSize/3.4)), tSize/1.5 );
+  text("non", tSize/1 + (horzPull*(tSize/5)), tSize/1.5 );
   textSize(tSize);
-  text("Linear", tSize/1.9 - (horzPull*(tSize/3.4)), (tSize/1.5)*(2.3));
+  text("linear", tSize/1.9 - (horzPull*(tSize/3.4)), (tSize/1.5)*(2.3));
   
 }
 
@@ -223,15 +301,25 @@ function draw() {
 
 
 function mouseMoved(){
-  targetX = mouseX;
-  targetY = mouseY; 
+
+      mouseDetected = true;
+  
+      targetX = mouseX;
+      targetY = mouseY;
+
 }
 
 function touchMoved() {
-  targetX = mouseX;
-  targetY = mouseY; 
+
 }
 
+
+function deviceMoved() {
+  easing = 0.1;
+  
+  }
+
+  
 function checkRatio() {
   
   if(width/height >1){  
@@ -263,6 +351,12 @@ function checkRatio() {
     sinPos = width/30;
     
     gridSpacing = mostDim/100;
+    mouseRadius = width/30;
+    
+    buttonSize = width/50;
+    buttonOffset = width -  width/11;
+    
+    
   }
     
   
@@ -295,6 +389,10 @@ function checkRatio() {
     sinPos = width/20;
     
     gridSpacing = mostDim/50
+    mouseRadius = width/20;
+    
+    buttonSize = width/30;
+    buttonOffset = width -width/6.3;
   }
   
     if(width/height >1.8){ 
@@ -311,11 +409,15 @@ function checkRatio() {
     x3=x1 + cpOffestX2;
     y3=y1 - cpOffestY2;
     x4=width/2;
-    y4=height/2
+    y4=height/2;
       
-    tSize = width/20;
+    tSize = width/28;
     
     gridSpacing = mostDim/120;
+    mouseRadius = width/50;
+      
+    buttonSize = width/70;
+    buttonOffset = width -  width/15;
 
     }
 
@@ -392,19 +494,36 @@ function sine(){
 function abtAnimation(){
   
   vertAnimToggle = !vertAnimToggle;
+  abtButton.style('background-color', 'rgb(255, 102, 41,0.3)' );
   
 }
 
 
+function abtMouseOver(){
+  mouseFill = 255;
+  abtButton.style('background-color', 'rgb(220,220,220,0.7)' );
+  
+}
+
+
+function abtMouseOut(){
+  mouseFill = 0;
+  abtButton.style('background-color', 'transparent' );
+  
+}
+
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  canvas = resizeCanvas(windowWidth, windowHeight);
 
 }
 
+function cursorOff() {
+  displayCursor = false;
+
+}
 
 
 function setLineDash(list) {
   drawingContext.setLineDash(list);
 }
-
 
