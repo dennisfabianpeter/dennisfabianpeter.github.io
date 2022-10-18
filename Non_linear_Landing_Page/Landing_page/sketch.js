@@ -38,7 +38,7 @@ let trans2 = 0;
 
 let x ;
 let y ;
-let easing = 0.05;
+let easing = 0.15;
 
 let x1,y1,x2,y2,x3,y3,x4,y4;
 
@@ -60,7 +60,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(window.innerWidth, window.innerHeight);
   noCursor();
   
   abtButton = createButton('About');
