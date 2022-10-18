@@ -112,14 +112,15 @@ y = height/2 ;
   abtButton.style('background-color', 'transparent'); 
   abtButton.style('cursor', 'none');
   
-  
-    
+  canvas.touchStarted(cursorOff);
+      
 }
+
 
 function draw() {
   background(255);
   
-  canvas.touchStarted(cursorOff);
+  
   
   abtButton.position(buttonOffset, height / 50);
   abtButton.style('font-size', buttonSize + 'px');
@@ -421,7 +422,6 @@ function checkRatio() {
 
     }
 
-
 }
 
 
@@ -513,7 +513,7 @@ function abtMouseOut(){
 }
 
 function windowResized() {
-  canvas = resizeCanvas(windowWidth, windowHeight);
+  canvas = resizeCanvas(window.innerWidth, window.innerHeight);
 
 }
 
