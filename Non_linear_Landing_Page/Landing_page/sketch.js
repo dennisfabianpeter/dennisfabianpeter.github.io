@@ -72,6 +72,7 @@ let workButtonHeight;
 let spotButton;
 let spotButtonOffset;
 let spotButtonSize;
+let titleTextFill;
 
 let rotAngle = 0;
 
@@ -79,6 +80,8 @@ let sineStroke;
 let mouseOverSpot = false;
 
 let abtText;
+let aboutTextSize;
+let abtTextHeight;
 
 function preload() {
   Font = loadFont('MontserratAlternates-Regular.ttf');
@@ -91,7 +94,7 @@ function setup() {
   
   noCursor();
   
-  abtText = createP("Non-Linear is a creative practice by Dennis Peter with a primary focus on Art, Design and Tech.");
+  abtText = createP("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
   abtText.style('font-family', 'Montserrat');
   abtText.style('display', 'none');
   abtText.style('cursor', 'none');
@@ -171,9 +174,9 @@ function draw() {
   spotButton.mouseClicked(spotClicked);
   //spotButton.mouseReleased(()=>workButton.style('background-color', 'transparent'));
   
-  
-  abtText.position(0,height/2);
-  abtText.style('font-size', width/40 + 'px');
+
+  abtText.position(0,abtTextHeight);
+  abtText.style('font-size', aboutTextSize + 'px');
   abtText.style('padding-left', width/20 + 'px');
   abtText.style('padding-right', width/20 + 'px');
   
@@ -333,9 +336,13 @@ if(displayCursor == true ){
     sine();
   pop();
   
+  if(mouseOverSpot===true){
+  titleTextFill = 0;}
+  else{titleTextFill = interB;}
+  
   noStroke();
   textFont(Font);
-  fill(interB);
+  fill(titleTextFill);
   textSize(tSize);
   textAlign(LEFT, CENTER);
   text("non", tSize/1 + (horzPull*(tSize/5)), tSize/1.5 );
@@ -398,20 +405,21 @@ function checkRatio() {
     x4=width/2;
     y4=height/2
     
-    tSize = width/23;
+    tSize = width/16;
     sinPos = width/30;
     
     gridSpacing = mostDim/100;
     mouseRadius = width/30;
     
-    buttonSize = width/50;
-    buttonOffset = width -  width/10;
+    buttonSize = 30;
+    buttonOffset = width -  130;
     
     workButtonSize = 30;
     workButtonOffset = width/2 - 50;
     workButtonHeight = height - (workButtonSize * 2.2);
     
-    
+    aboutTextSize = 25;
+    abtTextHeight = height/2 - (aboutTextSize*4)
   }
     
   
@@ -440,18 +448,21 @@ function checkRatio() {
     x4=width/2;
     y4=height/2
     
-    tSize = width/13;
+    tSize = width/11;
     sinPos = width/20;
     
     gridSpacing = mostDim/50
     mouseRadius = width/20;
     
-    buttonSize = width/30;
-    buttonOffset = width -width/5.5;
+    buttonSize = 20;
+    buttonOffset = width - 100;
     
-    workButtonSize = 23;
+    workButtonSize = 20;
     workButtonOffset = width/2 - 40;
     workButtonHeight = height - (workButtonSize * 2.7);
+    
+    aboutTextSize = 18;
+    abtTextHeight = height/2 - (aboutTextSize*6) ;
   }
   
     if(width/height >1.8){ 
@@ -475,12 +486,14 @@ function checkRatio() {
     gridSpacing = mostDim/120;
     mouseRadius = width/50;
       
-    buttonSize = width/70;
-    buttonOffset = width -  width/15;
+    buttonSize = 32;
+    buttonOffset = width -  145;
       
-    workButtonSize = 40;
+    workButtonSize = 32;
     workButtonOffset = width/2 - 50;
     workButtonHeight = height - (workButtonSize * 2);
+      
+    abtTextHeight = height/2 - (aboutTextSize*2)
 
     }
 
@@ -563,6 +576,8 @@ function spotClicked(){
   mouseFill = 0;
   workButton.style('background-color', 'transparent' );
   window.open('https://open.spotify.com/artist/7CHhl346f9bEyeI0NX4OH7'); //,"_self")
+  
+  
   
 }
 
