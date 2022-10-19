@@ -3,6 +3,7 @@ let Font;
 
 let displayCursor = true;
 let mouseDetected = false;
+let moveDetected =0;
 
 var offset = 0;
 let sinPos;
@@ -62,7 +63,20 @@ let abtButton;
 let buttonOffset;
 let buttonSize;
 
+let workButton;
+let workButtonOffset;
+let workButtonSize;
+let workButtonHeight;
+
+
+let spotButton;
+let spotButtonOffset;
+let spotButtonSize;
+
 let rotAngle = 0;
+
+let sineStroke;
+let mouseOverSpot = false;
 
 let abtText;
 
@@ -77,7 +91,7 @@ function setup() {
   
   noCursor();
   
-  abtText = createP("Non-Linear is a creative practice by 'Dennis Fabian Peter' with a primary focus on Art, Design and Tech.");
+  abtText = createP("Non-Linear is a creative practice by Dennis Peter with a primary focus on Art, Design and Tech.");
   abtText.style('font-family', 'Montserrat');
   abtText.style('display', 'none');
   abtText.style('cursor', 'none');
@@ -112,6 +126,18 @@ y = height/2 ;
   abtButton.style('background-color', 'transparent'); 
   abtButton.style('cursor', 'none');
   
+  workButton = createButton('work');
+  workButton.style('font-family', 'Montserrat Alternates');
+  workButton.style('border', '3px solid black');  
+  workButton.style('background-color', 'transparent'); 
+  workButton.style('cursor', 'none');
+  
+  spotButton = createButton('    ');
+  spotButton.style('font-family', 'Montserrat Alternates');
+  spotButton.style('border', 'none');  
+  spotButton.style('background-color', 'transparent'); 
+  spotButton.style('cursor', 'none');
+  
   canvas.touchStarted(cursorOff);
       
 }
@@ -126,9 +152,24 @@ function draw() {
   abtButton.style('font-size', buttonSize + 'px');
   abtButton.mouseOver(abtMouseOver);
   abtButton.mouseOut(abtMouseOut);
-  //abtButton.touchStarted(abtAnimation);
   abtButton.mouseClicked(abtAnimation);
   abtButton.mouseReleased(()=>abtButton.style('background-color', 'transparent'));
+  
+  workButton.position(workButtonOffset , workButtonHeight);
+  workButton.style('font-size', workButtonSize + 'px');
+  workButton.mouseOver(workMouseOver);
+  workButton.mouseOut(workMouseOut);
+  workButton.mouseClicked(workClicked);
+  //workButton.mouseReleased(()=>workButton.style('background-color', 'transparent'));
+  
+  spotButton.position(width/35, (height - height/20) - height/40 );
+  spotButton.style('width' , constrain(width/8,0,130) + 20 + 'px');
+  spotButton.style('height' , height/20 + 'px');
+  spotButton.style('font-size', workButtonSize + 'px');
+  spotButton.mouseOver(spotMouseOver);
+  spotButton.mouseOut(spotMouseOut);
+  spotButton.mouseClicked(spotClicked);
+  //spotButton.mouseReleased(()=>workButton.style('background-color', 'transparent'));
   
   
   abtText.position(0,height/2);
@@ -147,12 +188,13 @@ function draw() {
                 targetY = mouseY; 
                 fill(0); 
               }
-              if(mouseIsPressed===false){
+              if(mouseIsPressed===false && moveDetected==1){
                 fill(255);
                 targetX = constrain(180-(-rotationY * 15),0,canvas.width);
                 targetY = constrain(((rotationX*25)-600),0,canvas.height);
-              }
-}
+              } 
+  }
+  
   
   checkRatio();
   getMousePoints();
@@ -208,6 +250,9 @@ function draw() {
   abtButton.style('color', str(interB));
   abtButton.style('border-color', str(interB));
   abtText.style('color', str(interD));
+  
+  workButton.style('color', str(interB));
+  workButton.style('border-color', str(interB));
 
   
   translate(0,vertAnimPos);
@@ -266,12 +311,6 @@ function draw() {
   pop();
   
   
-  push();//SINE****************
-    stroke(interC);
-    translate(sinPos,height - height / 20);
-    sine();
-  pop();
-  
 if(displayCursor == true ){
   if(mouseDetected == true){mouseColor = interA;}
   
@@ -283,6 +322,16 @@ if(displayCursor == true ){
   circle(mouseX, mouseY, mouseRadius);
   pop();
 }
+  
+  if(mouseOverSpot ===true){
+    sineStroke = 0;
+  }else{sineStroke = interC;}
+  
+    push();//SINE****************
+    stroke(sineStroke);
+    translate(sinPos,height - height / 20);
+    sine();
+  pop();
   
   noStroke();
   textFont(Font);
@@ -317,6 +366,7 @@ function touchMoved() {
 
 function deviceMoved() {
   easing = 0.1;
+  moveDetected = 1;
   
   }
 
@@ -355,7 +405,11 @@ function checkRatio() {
     mouseRadius = width/30;
     
     buttonSize = width/50;
-    buttonOffset = width -  width/11;
+    buttonOffset = width -  width/10;
+    
+    workButtonSize = 30;
+    workButtonOffset = width/2 - 50;
+    workButtonHeight = height - (workButtonSize * 2.2);
     
     
   }
@@ -393,7 +447,11 @@ function checkRatio() {
     mouseRadius = width/20;
     
     buttonSize = width/30;
-    buttonOffset = width -width/6.3;
+    buttonOffset = width -width/5.5;
+    
+    workButtonSize = 23;
+    workButtonOffset = width/2 - 40;
+    workButtonHeight = height - (workButtonSize * 2.7);
   }
   
     if(width/height >1.8){ 
@@ -419,6 +477,10 @@ function checkRatio() {
       
     buttonSize = width/70;
     buttonOffset = width -  width/15;
+      
+    workButtonSize = 40;
+    workButtonOffset = width/2 - 50;
+    workButtonHeight = height - (workButtonSize * 2);
 
     }
 
@@ -490,6 +552,20 @@ function sine(){
 }
 
 
+function workClicked(){
+  
+  workButton.style('background-color', 'rgb(255, 102, 41,0.3)' ); 
+  window.open('https://www.youtube.com/'); //,"_self")
+  
+}
+
+function spotClicked(){
+  mouseFill = 0;
+  workButton.style('background-color', 'transparent' );
+  window.open('https://open.spotify.com/artist/7CHhl346f9bEyeI0NX4OH7'); //,"_self")
+  
+}
+
 
 function abtAnimation(){
   
@@ -509,6 +585,31 @@ function abtMouseOver(){
 function abtMouseOut(){
   mouseFill = 0;
   abtButton.style('background-color', 'transparent' );
+  
+}
+
+function workMouseOver(){
+  mouseFill = 255;
+  workButton.style('background-color', 'rgb(220,220,220,0.7)' );
+  
+}
+
+function workMouseOut(){
+  mouseFill = 0;
+  workButton.style('background-color', 'transparent' );
+  
+}
+
+
+function spotMouseOver(){
+  mouseFill = 255;
+  mouseOverSpot = true;
+  
+}
+
+function spotMouseOut(){
+  mouseFill = 0;
+  mouseOverSpot = false;
   
 }
 
