@@ -568,14 +568,14 @@ function sine(){
 function workClicked(){
   
   workButton.style('background-color', 'rgb(255, 102, 41,0.3)' ); 
-  window.open('https://www.non-linear.in/Work'); //,"_self")
+  window.open('https://www.non-linear.in/Work',"_self"); 
   
 }
 
 function spotClicked(){
   mouseFill = 0;
   workButton.style('background-color', 'transparent' );
-  window.open('https://open.spotify.com/artist/7CHhl346f9bEyeI0NX4OH7'); //,"_self")
+  window.open('https://open.spotify.com/artist/7CHhl346f9bEyeI0NX4OH7',"_self");
   
   
   
