@@ -568,7 +568,7 @@ function sine(){
 function workClicked(){
   
   workButton.style('background-color', 'rgb(255, 102, 41,0.3)' ); 
-  window.open('https://www.youtube.com/'); //,"_self")
+  window.open('https://www.non-linear.in/Work'); //,"_self")
   
 }
 
