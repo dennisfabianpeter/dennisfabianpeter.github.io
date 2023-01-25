@@ -438,6 +438,7 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
         padding-right: 10px;
         padding-bottom: 10px;
         padding-top: 10px;
+        font-size: 15px;
     }
 
     .spacer{
@@ -465,6 +466,7 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
         padding-right: 10px;
         padding-bottom: 8px;
         padding-top: 8px;
+        font-size: 15px;
     }
 
     .spacer{
@@ -486,6 +488,7 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
         padding-right: 10px;
         padding-bottom: 8px;
         padding-top: 8px;
+        font-size: 14px;
     }
 
     .spacer{
