@@ -35,6 +35,11 @@ a {
     padding-bottom: 4px;
 }
 
+.end_spacer{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
 .header2{
     font-family: 'Montserrat';
     font-size: 30px;
