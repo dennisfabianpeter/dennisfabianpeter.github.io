@@ -30,6 +30,13 @@ a {
     cursor: pointer;
 }
 
+.header2{
+    font-size: 30px;
+    color: #FF6629;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
 
 .hover_box .d-flex{
     padding-top: 1px;
