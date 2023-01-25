@@ -30,11 +30,27 @@ a {
     cursor: pointer;
 }
 
+.spacer{
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
 .header2{
+    font-family: 'Montserrat';
     font-size: 30px;
-    color: #FF6629;
-    margin-bottom: 10px;
-    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #666;
+}
+
+.caption{
+    font-family: 'Montserrat';
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    color: #009999;
 }
 
 
@@ -120,13 +136,11 @@ a {
     height: 100%;
 }
 
-
-
 .desc-text{
     padding-top: 30px;
+    padding-bottom: 30px;
     padding-left: 40px;
     padding-right: 40px;
-
 }
 
 a:hover { color:#FF6629; }
@@ -394,6 +408,11 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
         height: 475px;
      }
 
+     .desc-text{
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -403,6 +422,12 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
     .video-container {
         height: 375px;
      }
+
+     .desc-text{
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+
 }
 
 @media (max-width: 575px) {
@@ -411,6 +436,19 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
     .desc-text{
         padding-left: 10px;
         padding-right: 10px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .spacer{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .caption{
+        padding-top: 1px;
+        padding-bottom: 1px;
+        font-size: 13px;
     }
 
     .video-container {
@@ -423,8 +461,21 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
     .tm-btn-big { padding: 12px 50px 14px; }
 
     .desc-text{
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 8px;
+        padding-top: 8px;
+    }
+
+    .spacer{
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    .caption{
+        padding-top: 1px;
+        padding-bottom: 1px;
+        font-size: 13px;
     }
 }
 
@@ -433,6 +484,19 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
     .desc-text{
         padding-left: 10px;
         padding-right: 10px;
+        padding-bottom: 8px;
+        padding-top: 8px;
+    }
+
+    .spacer{
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+
+    .caption{
+        padding-top: 2px;
+        padding-bottom: 2px;
+        font-size: 12px;
     }
 
 }
