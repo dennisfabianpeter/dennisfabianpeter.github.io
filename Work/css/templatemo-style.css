@@ -434,8 +434,8 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
     .tm-container-content { max-width: 420px; }
     .tm-container-content2 { max-width: 420px; }
     .desc-text{
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 14px;
+        padding-right: 14px;
         padding-bottom: 10px;
         padding-top: 10px;
         font-size: 15px;
@@ -462,11 +462,11 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
     .tm-btn-big { padding: 12px 50px 14px; }
 
     .desc-text{
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 12px;
+        padding-right: 12px;
         padding-bottom: 8px;
         padding-top: 8px;
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .spacer{
@@ -488,7 +488,7 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
         padding-right: 10px;
         padding-bottom: 8px;
         padding-top: 8px;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .spacer{
