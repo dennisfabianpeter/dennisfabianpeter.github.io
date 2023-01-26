@@ -6,6 +6,18 @@ https://templatemo.com/tm-556-catalog-z
 
 */
 
+body::-webkit-scrollbar{
+    background: #ffffff00;
+    width: 12px;
+  }
+
+body::-webkit-scrollbar-thumb{
+    background: #FF6629;
+  }
+body::-webkit-scrollbar-track {
+    background: #03a5a5a8;
+  }
+
 * { 
     font-family: 'Montserrat';
     }
@@ -30,14 +42,20 @@ a {
     cursor: pointer;
 }
 
+hr.dotted {
+    opacity: 30%;
+    border-top: 4px solid #8b8b8b;
+    background-color: #ffffff00;
+  }
+
 .spacer{
     padding-top: 4px;
     padding-bottom: 4px;
 }
 
 .end_spacer{
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .header2{
@@ -50,12 +68,16 @@ a {
 }
 
 .caption{
+    width: 100%;
+    background-color: #222;
     font-family: 'Montserrat';
     font-size: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
     text-align: center;
-    color: #009999;
+    color: #b6b6b6;
 }
 
 
@@ -390,10 +412,21 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
 
 
 
+@media (max-width: 1199px) {
 
+    .tm-container-content { max-width: 90vw; }
+    .tm-container-content2 { max-width: 90vw; }
+
+    .end_spacer{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+}
 
 
 @media (max-width: 991px) {
+
     .navbar-collapse {
         position: fixed;
         top: 82px;
@@ -404,8 +437,8 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
         text-align: right;
     }
 
-    .tm-container-content { max-width: 870px; }
-    .tm-container-content2 { max-width: 870px; }
+    .tm-container-content { max-width: 90vw; }
+    .tm-container-content2 { max-width: 90vw; }
     
     .nav-item { width: 100%; }
 
@@ -418,9 +451,15 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
         padding-top: 20px;
     }
 
+    .end_spacer{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
 }
 
 @media (max-width: 767px) {
+
     .tm-paging-col { flex-direction: column; }
     .tm-paging { flex-wrap: wrap; }
 
@@ -433,9 +472,15 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
         padding-top: 15px;
     }
 
+    .end_spacer{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
 }
 
 @media (max-width: 575px) {
+
     .tm-container-content { max-width: 420px; }
     .tm-container-content2 { max-width: 420px; }
     .desc-text{
@@ -461,6 +506,11 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
         height: 275px;
      }
 
+     .end_spacer{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
 }
 
 @media (max-width: 400px) {
@@ -484,6 +534,12 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
         padding-bottom: 1px;
         font-size: 13px;
     }
+
+    .end_spacer{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
 }
 
 @media (max-width: 334px) {
@@ -507,4 +563,122 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
         font-size: 12px;
     }
 
+    .end_spacer{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
 }
+
+
+
+  /* Slider Gallery CSS */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev{
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 12px;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  #caption {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px 2px 16px;
+    color: rgb(197, 197, 197);
+  }
+  
+  .gallery_row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+
+  .gallery_column {
+    float: left;
+    width: 16.66%;
+  }
+
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }

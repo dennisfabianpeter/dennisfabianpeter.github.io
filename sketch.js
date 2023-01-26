@@ -94,7 +94,7 @@ function setup() {
   
   noCursor();
   
-  abtText = createP("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+  abtText = createP("Non-Linear is a process-driven design practice led by Dennis Fabain Peter. The practice operates within the overlapping fields of art, design, sound and technology. Trained as an architect, and along with his keen intersts in computational design and generative art, Peters work often focusses on creating immersive and interactive spatial experiences that aim to stimulate the viewer. ");
   abtText.style('font-family', 'Montserrat');
   abtText.style('display', 'none');
   abtText.style('cursor', 'none');
