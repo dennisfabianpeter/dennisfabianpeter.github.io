@@ -94,7 +94,7 @@ function setup() {
   
   noCursor();
   
-  abtText = createP("Non-Linear is a process-driven design practice led by Dennis Fabain Peter. The practice operates within the overlapping fields of art, design, sound and technology. Trained as an architect, and along with his keen intersts in computational design and generative art, Peters work often focusses on creating immersive and interactive spatial experiences that aim to stimulate the viewer. ");
+  abtText = createP("Non-Linear is a process-driven design practice led by Dennis Fabain Peter. The practice operates within the overlapping fields of art, design, sound and technology. Trained as an architect, and along with his keen intersts in computational design and generative art, Peter's work often focusses on creating immersive and interactive spatial experiences that aim to stimulate the viewer. ");
   abtText.style('font-family', 'Montserrat');
   abtText.style('display', 'none');
   abtText.style('cursor', 'none');
@@ -418,7 +418,7 @@ function checkRatio() {
     workButtonOffset = width/2 - 50;
     workButtonHeight = height - (workButtonSize * 2.2);
     
-    aboutTextSize = 25;
+    aboutTextSize = 24;
     abtTextHeight = height/2 - (aboutTextSize*4)
   }
     
@@ -461,7 +461,7 @@ function checkRatio() {
     workButtonOffset = width/2 - 40;
     workButtonHeight = height - (workButtonSize * 2.7);
     
-    aboutTextSize = 18;
+    aboutTextSize = 16;
     abtTextHeight = height/2 - (aboutTextSize*6) ;
   }
   

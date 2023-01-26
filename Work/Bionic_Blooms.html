@@ -202,7 +202,7 @@
 
                     <div class="desc-text">
                         <span class="tm-text-gray-dark">
-                            The framework for the mechanics were optimised to be 3D printed in parts. The initial prototype for the mechanism consits of 11 individual printed parts which were hand assembled with fasteners. The design for this mechanism is still under development - primarily to
+                            The framework for the mechanics were optimised to be 3D printed in parts. The initial prototype for the mechanism consits of 11 individual printed parts which were hand assembled with fasteners. The design of this mechanism is constantly under development - primarily to
                             reduce hand assembly times, but also to increase the longetivity of the parts after observing possible points of failure from wear and tear. The ultimate goal would be to develop injection moulded parts which can considerably help reduce the production time (but at the expense of much higher initial development costs).
                             We also made use of a CO2 laser cutter to cut the MDF panels (which served as a base to mount the mechanisms in groups of 4) as well as to cut the pieces of carboard which served as the petals of the bloom. The whole installation sits on a plywood base which is mounted on a steel framework.
                         </span>
@@ -284,9 +284,11 @@
 
                     <div class="desc-text">
                         <span class="tm-text-gray-dark">
-                            We used a Kinect one camera for the handtracking of the user. The camera has some great open source libraries that make it easy to implement and to receive user skeleton data from a depth image. There were some user-interface problems that we had to solve while implementing the hand tracking though. For example - What happens when multiple people are in the frame and trying to wave both their hands together, or what happens when when a user is just standing in frame and moves their hand without the intention of controlling the blooms.
-                            This is how the issues were solved from a UI level - Firstly, There is a spot marked on the floor, only if a user stands on this particular spot will they be able to control the blooms (this elimanates data from multiple people trying to control them at the same time). Secondly, a user is only able to control the blooms if their right palm is fully open and facing the camera (This eliminates accidental hand tracking data).
-                            The 'x' and 'y' co-ordinates of the users hand is taken to control a circle which is mapped onto the animation clip. Apart from the 'x' & 'y' position of the hand, the depth of the users hand from the camera is also taken to control the scale of the circle (thus by pushing their hand towards the direction of the camera, they can control the size of the circle on the animation).
+                            While this particular build was designed as a prototype, we are constantly trying to improve the design of the mechanics and the electronic components. We plan on making a production ready model of the installation soon. Additionally we are also trying to make the whole system modular, where more modules can be added in the future to expand the size of the artwork. 
+                            Currently the installation runs off a laptop/mini PC, we are trying to port the code to have it running on a raspberry-pi, this way, it would be easier to package the whole installation. 
+                            <br>
+                            <br>
+                            We envision a lot of possibilities with this installation. If you would like to partner/collaborate/have suggestions to make Bionic Blooms ready for production, please write to us.
                         </span>
                     </div>
 
