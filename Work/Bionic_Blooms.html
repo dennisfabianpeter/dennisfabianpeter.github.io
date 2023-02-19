@@ -78,7 +78,7 @@
                             <span class="tm-text-gray">Crescent School of Architecture</span>
                         </div>
                         <span class="tm-text-gray-dark ">
-                            Bionic Blooms is an interactive installation which was developed as part of an academic excercise along with the students of Crescent School of Architecture. 
+                            Bionic Blooms is an interactive installation which was developed as part of an academic exercise along with the students of Crescent School of Architecture. 
                             The installation consists of 90 mechanical modules / blooms which can be individually controlled to create mesmerizing patterns.
                         </span>
                     </div>
@@ -96,10 +96,8 @@
             </div>
                     <div class="desc-text">
                         <span class="tm-text-gray-dark">
-                            Bionic Blooms is an interactive art installation that mimics floral blooms. It was designed in collaboration with "Digital Intuition" as part of an academic excercise at the Crescent School of Architecture. 
-                            The brief was to design an interactive installation that would involve the students of the university and expose the students to technologies and fabrication processes outside the immediate realm of architecture (yet closely linked to design and architecture). 
-                            Developing the mechanism of the bloom was an iterative process where we explored the best possible dynamics we could achieve while keeping in mind the limitations of the motors that were commonly available in the market.
-                            During the four-weeks of development, we engaged in a variety of design and fabrication technologies along with the students including 3D printing, computer vision, computational design and programming & interfacing with microcontrollers.
+                            Bionic Blooms is an interactive art installation that imitates the shape and movement of floral blooms. It is the result of a collaborative effort with "Digital Intuition" as part of an academic exercise at the Crescent School of Architecture. The project brief was to create an interactive installation that would involve and engage the students of the university, and introduce them to advanced technologies and fabrication processes that are outside the traditional domain of architecture, yet closely linked to design and architecture.
+                            The development of the mechanism for the blooms involved an iterative process that aimed to achieve optimal dynamics while considering the constraints of the available motors in the market. Over the course of four weeks, we explored a range of design and fabrication technologies, along with the students, including 3D printing, computer vision, computational design, and programming and interfacing with microcontrollers.
                         </span>
                     </div>
 
@@ -129,11 +127,10 @@
                     
                     <div class="desc-text">
                         <span class="tm-text-gray-dark mb-4">
-                            The design process of the mechanism was an iterative process where we tried various different mechanisms, materials, motors and sizes. It was clear from the beginning that we would use servo motors for the mechanism - primarily since it was musch easier to implement from an electrical point of view, but also becuase of its cost and ability to self correct. While stepper motors would have been ideal for long term use,
-                            it's lack of self correction (without a rotary encoder), higher initial costs and complex wiring/power systems would prove to be too complicated to implement within the allocated time that we had to set up the installation. We ended up choosing the MG996 servo motor with approximately 9.4kg/cm of torque, and the mechanism was based upon the specifications of this particular motor. 
-                            <br>  
-                            <br>  
-                            For the control electronics, we used the Arduino MEGA. With upto 15 PWM pins, each MEGA could control upto 15 servo motors, and hence we had 6 MEGA's controlling 90 motors. The arduinos are all connected to a single PC and receives control data via USB serial. While ethernet cables would be the preffered way to handle data output from the computer - for upto 6 slave devices, and for the lengths of cable involved in this particular install, USB cables proved to be sufficient and easier to implement.
+                            The design process for the mechanism involved a series of iterations, in which we experimented with different mechanisms, materials, motors, and sizes. We determined early on that servo motors were the best choice for the mechanism, primarily because they are simpler to implement from an electrical standpoint, and they are cost-effective, with the added benefit of self-correction. While stepper motors would have been the ideal choice for long-term use, their lack of self-correction (without a rotary encoder), high initial costs, and complex wiring/power systems made them too complicated to implement within the project's allotted time. We selected the MG996 servo motor with approximately 9.4kg/cm of torque, and the mechanism was based on the specifications of this particular motor.
+                            <br>
+                            <br>
+                            For control electronics, we employed the Arduino MEGA. With up to 15 PWM pins, each MEGA could control up to 15 servo motors, allowing us to use 6 MEGA's to control 90 motors. All the Arduinos are connected to a single PC, which sends control data via USB serial. While ethernet cables are preferred for data output from the computer, USB cables were sufficient for this installation, given the length of the cable runs and the maximum number of slave devices used.
                         </span>
                     </div>
 
@@ -153,11 +150,10 @@
 
                     <div class="desc-text">
                         <span class="tm-text-gray-dark">
-                            The development of the mechanics itself was all based on the type of motor that we decided on. Once we had decided to use servo motors, we were limited to around 180 degrees of rotational motion. With some nifty experiments with varying gear mechanisms, we had arrived at the current design. It uses a combination of radial and linear gear systems to simultaneously rotate 4 prongs. 
-                            <br>  
-                            <br> 
-                            For the design of the petals, we explored various flexible materials and even explored the possibility of using compliant mechanisms to design a visually rigid yet foldable structure. We looked at everything from origami folds to designing our own micro-hinged mechanisms for the folds. But ultimately we arrived at using cardboard paper along with vinyl stickers on either side to give it the flexibility and the long term durability. We were extremely happy with how it performed and even more so, how it looked.
-                            The colour scheme that we used for the petals was computationally generated and the fabrication for the same was also optimised using computational algorithms in Grasshopper. To reduce material wastage and time during laser cutting, we employed packing algorithms for maximum efficiency.
+                            The mechanics were developed based on the chosen motor, servo motors, which allow for about 180 degrees of rotational motion. Through experimentation with various gear mechanisms, the current design was created using a combination of radial and linear gear systems to rotate four prongs simultaneously.
+                            <br>
+                            <br>
+                            For the petals, a range of flexible materials were considered, including compliant mechanisms, origami folds, and micro-hinged mechanisms, but ultimately, cardboard paper with vinyl stickers was selected for its flexibility and long-term durability. We were very delighted with the performance and appearance of this material. The petal colour scheme was generated computationally, and fabrication was optimized using computational algorithms in Grasshopper. To minimize material waste and time during laser cutting, packing algorithms were employed for maximum efficiency. 
                         </span>
                     </div>
 
@@ -202,9 +198,7 @@
 
                     <div class="desc-text">
                         <span class="tm-text-gray-dark">
-                            The framework for the mechanics were optimised to be 3D printed in parts. The initial prototype for the mechanism consits of 11 individual printed parts which were hand assembled with fasteners. The design of this mechanism is constantly under development - primarily to
-                            reduce hand assembly times, but also to increase the longetivity of the parts after observing possible points of failure from wear and tear. The ultimate goal would be to develop injection moulded parts which can considerably help reduce the production time (but at the expense of much higher initial development costs).
-                            We also made use of a CO2 laser cutter to cut the MDF panels (which served as a base to mount the mechanisms in groups of 4) as well as to cut the pieces of carboard which served as the petals of the bloom. The whole installation sits on a plywood base which is mounted on a steel framework.
+                            The mechanical framework was designed to be optimized for 3D printing in parts. The initial prototype of the mechanism consisted of 11 individual printed parts that were manually assembled with fasteners. The design of this mechanism is continuously being developed to reduce assembly times and increase the durability of the parts by identifying potential points of wear and tear. The ultimate goal is to produce injection-moulded parts that can significantly reduce production time, although this would require higher initial development costs. The MDF panels used as a base for grouping the mechanisms in sets of 4 were cut using a CO2 laser cutter, as were the pieces of cardboard used for the bloom's petals. The entire installation rests on a plywood base mounted on a steel framework.
                         </span>
                     </div>
 
@@ -233,8 +227,7 @@
 
                     <div class="desc-text">
                         <span class="tm-text-gray-dark">
-                            The control data for the motors are generated by converting greyscale pixel values into degrees of rotation. The animation consists of a 15px * 6px video file (giving a total of 90 pixels - one pixel for each motor). The vaule of each pixel in the animation is sampled at each instant and is remapped to control 90 degrees of motion for the servo motors.
-                            Various animations can be generated and easily converted into rotational data for the motors in realtime. The animations can either be procedurally generated or can be pre-rendered. This rotational data is then sent to the 6 Arduino MEGA's via USB serial communication. 
+                            The control data for the motors are generated by converting the greyscale pixel values in a 15px X 6px video file into rotational motion for the 90 servo motors. Each pixel represents one motor, and its sampled value determines the degree of rotation for the motor. The result is a captivating display of synchronized motion that can be generated from any animation, whether it's created in real time or pre-rendered. To control the motors, we use 6 Arduino MEGA boards that receive the rotational data via USB serial communication.
                         </span>
                     </div>
 
@@ -251,9 +244,7 @@
 
                     <div class="desc-text">
                         <span class="tm-text-gray-dark">
-                            We used a Kinect one camera for the handtracking of the user. The camera has some great open source libraries that make it easy to implement and to receive user skeleton data from a depth image. There were some user-interface problems that we had to solve while implementing the hand tracking though. For example - What happens when multiple people are in the frame and trying to wave both their hands together, or what happens when when a user is just standing in frame and moves their hand without the intention of controlling the blooms.
-                            This is how the issues were solved from a UI level - Firstly, There is a spot marked on the floor, only if a user stands on this particular spot will they be able to control the blooms (this elimanates data from multiple people trying to control them at the same time). Secondly, a user is only able to control the blooms if their right palm is fully open and facing the camera (This eliminates accidental hand tracking data).
-                            The 'x' and 'y' co-ordinates of the users hand is taken to control a circle which is mapped onto the animation clip. Apart from the 'x' & 'y' position of the hand, the depth of the users hand from the camera is also taken to control the scale of the circle (thus by pushing their hand towards the direction of the camera, they can control the size of the circle on the animation).
+                            On our installation, the user controls the blooms through hand tracking with a 'Kinect One' camera. With its excellent open-source libraries, the camera easily generates user skeleton data from a depth image. However, there were some challenges we faced in implementing the hand tracking. We had to figure out what to do when multiple people were in the frame or when a user accidentally moved their hand. To solve these issues from a UI standpoint, we marked a spot on the floor where users must stand to control the blooms, and only their right hand's fully open palm facing the camera can control the blooms. We use the hand's 'x' and 'y' coordinates to control a circle that's mapped onto the animation clip. Additionally, the depth of the hand from the camera controls the circle's size, allowing users to control the circle's size by pushing their hand towards the camera.
                         </span>
                     </div>
 
@@ -284,11 +275,10 @@
 
                     <div class="desc-text">
                         <span class="tm-text-gray-dark">
-                            While this particular build was designed as a prototype, we are constantly trying to improve the design of the mechanics and the electronic components. We plan on making a production ready model of the installation soon. Additionally we are also trying to make the whole system modular, where more modules can be added in the future to expand the size of the artwork. 
-                            Currently the installation runs off a laptop/mini PC, we are trying to port the code to have it running on a raspberry-pi, this way, it would be easier to package the whole installation. 
+                            We're always looking for ways to improve our prototype build, both in terms of mechanics and electronics. In fact, we plan on creating a production-ready version of the installation in the near future. We're also working on making the system modular, so that more modules can be added to expand the artwork. Currently, the installation is powered by a laptop or mini PC, but we're exploring the possibility of running it on a Raspberry Pi to make it more portable.
                             <br>
                             <br>
-                            We envision a lot of possibilities with this installation. If you would like to partner/collaborate/have suggestions to make Bionic Blooms ready for production, please write to us.
+                            We see a lot of potential in Bionic Blooms, and we're open to collaboration and partnerships to bring it to production. If you have any ideas or suggestions, we'd love to hear from you.
                         </span>
                     </div>
 

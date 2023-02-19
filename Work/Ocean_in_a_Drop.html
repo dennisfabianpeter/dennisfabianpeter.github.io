@@ -95,10 +95,14 @@
             </div>
                     <div class="desc-text">
                         <span class="tm-text-gray-dark">
-                            Bionic Blooms is an interactive art installation that mimics floral blooms. It was designed in collaboration with "Digital Intuition" as part of an academic excercise at the Crescent School of Architecture. 
-                            The brief was to design an interactive installation that would involve the students of the university and expose the students to technologies and fabrication processes outside the immediate realm of architecture (yet closely linked to design and architecture). 
-                            Developing the mechanism of the bloom was an iterative process where we explored the best possible dynamics we could achieve while keeping in mind the limitations of the motors that were commonly available in the market.
-                            During the four-weeks of development, we engaged in a variety of design and fabrication technologies along with the students including 3D printing, computer vision, computational design and programming & interfacing with microcontrollers.
+                            This dynamic installation made its debut at the "Delhi Contemporary Art Week 2023" in collaboration with Aditi Anuj, who is an origami artist based in Jaipur. Aditi's exhibition centered around the theme of water, where she envisioned a creation that would capture the essence of the ocean's fluctuating motions. 27 individual modules made of pleated origami folds take on the metaphor for a drop of water. These drops combine to form an oceanic landscape that sways in harmony with the motion of waves. 
+                            <br>  
+                            <br> 
+                            Adorned with beautiful watercolour details painted by Sapna Khatri, the installation's bi-chromatic blue hues complement the interplay of the dark and light shades found within the ocean. 
+                            Quoting Aditi - "The fleeting nature of the wave represents the unfolding of life and everything else it brings along."
+
+
+                        
                         </span>
                     </div>
 
@@ -128,11 +132,10 @@
                     
                     <div class="desc-text">
                         <span class="tm-text-gray-dark mb-4">
-                            The design process of the mechanism was an iterative process where we tried various different mechanisms, materials, motors and sizes. It was clear from the beginning that we would use servo motors for the mechanism - primarily since it was musch easier to implement from an electrical point of view, but also becuase of its cost and ability to self correct. While stepper motors would have been ideal for long term use,
-                            it's lack of self correction (without a rotary encoder), higher initial costs and complex wiring/power systems would prove to be too complicated to implement within the allocated time that we had to set up the installation. We ended up choosing the MG996 servo motor with approximately 9.4kg/cm of torque, and the mechanism was based upon the specifications of this particular motor. 
-                            <br>  
-                            <br>  
-                            For the control electronics, we used the Arduino MEGA. With upto 15 PWM pins, each MEGA could control upto 15 servo motors, and hence we had 6 MEGA's controlling 90 motors. The arduinos are all connected to a single PC and receives control data via USB serial. While ethernet cables would be the preffered way to handle data output from the computer - for upto 6 slave devices, and for the lengths of cable involved in this particular install, USB cables proved to be sufficient and easier to implement.
+                            Aditi's work is a testament to her skillful manipulation of form and geometry. Her artistic vision manifests in the form of intricate designs, which she brings to life through her exploration of pleated folds and the use of modular elements. The design process began with an extensive examination of her previous works, as we sought ways to add fluidity and motion to her pieces. Ultimately, we landed on the V-pleated fold, which proved to be mechanically compliant and aesthetically pleasing. With its myriad facets and varying angles, this fold structure bears a striking resemblance to the folds of an accordion.
+                          <br>  
+                          <br> 
+                          The V-pleated fold's unique contours offer ample surface area for intricate painting work, and its ability to virtually disappear when completely collapsed imbues the piece with great dynamics(both in terms of movement as well as its visual presentation). By combining precise geometric forms with kinetic elements, we wanted to create a piece that is at once mesmerizing, intriguing, and endlessly fascinating for the viewer.
                         </span>
                     </div>
 
@@ -152,11 +155,11 @@
 
                     <div class="desc-text">
                         <span class="tm-text-gray-dark">
-                            The development of the mechanics itself was all based on the type of motor that we decided on. Once we had decided to use servo motors, we were limited to around 180 degrees of rotational motion. With some nifty experiments with varying gear mechanisms, we had arrived at the current design. It uses a combination of radial and linear gear systems to simultaneously rotate 4 prongs. 
+                            From the outset, it was evident that multiple motors would be necessary to control similar modules made up of Aditi's intricate pleated folds. Thus, the mechanical design process began from scratch, aiming to animate these pleats in the most straightforward manner. Initially, we explored linear actuator mechanisms to animate the pleats linearly. However, we eventually decided to fold the pleats around a semi-circular path, which was not only simpler to implement mechanically but also visually more captivating. 
+                            The resulting curved profile imbued the installation with greater depth, while the movement conveyed a heightened sense of dynamism. 
                             <br>  
                             <br> 
-                            For the design of the petals, we explored various flexible materials and even explored the possibility of using compliant mechanisms to design a visually rigid yet foldable structure. We looked at everything from origami folds to designing our own micro-hinged mechanisms for the folds. But ultimately we arrived at using cardboard paper along with vinyl stickers on either side to give it the flexibility and the long term durability. We were extremely happy with how it performed and even more so, how it looked.
-                            The colour scheme that we used for the petals was computationally generated and the fabrication for the same was also optimised using computational algorithms in Grasshopper. To reduce material wastage and time during laser cutting, we employed packing algorithms for maximum efficiency.
+                            The mesmerizing movement of the installation is made possible by a unique mechanism that utilizes a  servo motor with an arm that sweeps 180 degrees. One end of the pleated fold is attached to this moving arm, while the other end is simply fixed along a curved rail. The beauty of this design is in its simplicity - the arm's smooth motion along the semi-circular path is all that's needed to set the entire installation in motion. The intricate pleats and folds themselves, and not the mechanics, are the true stars of the show.
                         </span>
                     </div>
 
@@ -194,16 +197,14 @@
 
                         <div class="caption">
                              <span>
-                                The shade of blue varies when viewing from either end of the installation
+                                The shade of blue varies when viewed from either end of the installation
                             </span>
                         </div>
                     </div>
 
                     <div class="desc-text">
                         <span class="tm-text-gray-dark">
-                            The framework for the mechanics were optimised to be 3D printed in parts. The initial prototype for the mechanism consits of 11 individual printed parts which were hand assembled with fasteners. The design of this mechanism is constantly under development - primarily to
-                            reduce hand assembly times, but also to increase the longetivity of the parts after observing possible points of failure from wear and tear. The ultimate goal would be to develop injection moulded parts which can considerably help reduce the production time (but at the expense of much higher initial development costs).
-                            We also made use of a CO2 laser cutter to cut the MDF panels (which served as a base to mount the mechanisms in groups of 4) as well as to cut the pieces of carboard which served as the petals of the bloom. The whole installation sits on a plywood base which is mounted on a steel framework.
+                            Aditi collaborated with Sapna Khatri, a watercolour artist, to create the intricate patterns on the origami. With the V-shaped pleats offering various facets and interesting opportunities, Aditi aimed to capture the complex textures of the ocean, from its turbulent white foam to its calm yet deep blue depths. Sapna's work resulted in a mesmerizing, detailed pattern that features two distinct shades of blue, with the left and right facets painted in light and dark blues respectively. The visual effect of the installation is further enhanced when the pleats are set in motion. When the two opposing facets of the pleats are compressed and come together, they form an ever-changing gradient of blues that is truly captivating to watch.
                         </span>
                     </div>
 
@@ -232,8 +233,7 @@
 
                     <div class="desc-text">
                         <span class="tm-text-gray-dark">
-                            The control data for the motors are generated by converting greyscale pixel values into degrees of rotation. The animation consists of a 15px * 6px video file (giving a total of 90 pixels - one pixel for each motor). The vaule of each pixel in the animation is sampled at each instant and is remapped to control 90 degrees of motion for the servo motors.
-                            Various animations can be generated and easily converted into rotational data for the motors in realtime. The animations can either be procedurally generated or can be pre-rendered. This rotational data is then sent to the 6 Arduino MEGA's via USB serial communication. 
+                            The origami folds are fully supported and secured by the mechanical framework. The mechanics consist mainly of plastic parts that have been produced through 3D printing and laser-cutting. Positioned at the center of the rotational plane is the servo motor. The motors are accommodated in a 3D-printed bracket that is fixed to a wooden framework. All wiring and electronics are hidden behind this framework. The entire installation consists of 3 such wooden frameworks for easier transportation and installation. Each framework consists of a staggered grid of 3x3 modules. The mechanical parts were all white color to merge into the background, which helps to emphasize the blue of the origami as much as possible.
                         </span>
                     </div>
 
@@ -243,16 +243,14 @@
                         </video>  
                         <div class="caption">
                             <span>
-                                3D model showing the mechanical framework
+                                3D model showing the mechanical and structural framework
                             </span>
                         </div>
                     </div>
 
                     <div class="desc-text">
                         <span class="tm-text-gray-dark">
-                            We used a Kinect one camera for the handtracking of the user. The camera has some great open source libraries that make it easy to implement and to receive user skeleton data from a depth image. There were some user-interface problems that we had to solve while implementing the hand tracking though. For example - What happens when multiple people are in the frame and trying to wave both their hands together, or what happens when when a user is just standing in frame and moves their hand without the intention of controlling the blooms.
-                            This is how the issues were solved from a UI level - Firstly, There is a spot marked on the floor, only if a user stands on this particular spot will they be able to control the blooms (this elimanates data from multiple people trying to control them at the same time). Secondly, a user is only able to control the blooms if their right palm is fully open and facing the camera (This eliminates accidental hand tracking data).
-                            The 'x' and 'y' co-ordinates of the users hand is taken to control a circle which is mapped onto the animation clip. Apart from the 'x' & 'y' position of the hand, the depth of the users hand from the camera is also taken to control the scale of the circle (thus by pushing their hand towards the direction of the camera, they can control the size of the circle on the animation).
+                            The electronic system comprises an ESP-32 microcontroller that serves as an intermediary for managing the servo motors. This controller is linked to a controlling PC via USB serial, where the animation is played. The animation technique utilized in this system is similar to that of 'Bionic Blooms'. Essentially, it transforms greyscale values of pixels into rotational degrees, which regulate the angle of the servo motors. It is also feasible to utilize a Kinect or another similar depth-sensing camera to enable motion tracking and control of the individual motors.                           
                         </span>
                     </div>
 
@@ -265,6 +263,18 @@
                                 Greyscale pixel values are converted into data for the animation
                             </span>
                         </div>
+                    </div>
+
+                    <div class="spacer">
+                    </div>
+                    
+                    <div class="spacer">
+                    </div>
+                    
+                    <div class="spacer">
+                    </div>
+                    
+                    <div class="spacer">
                     </div>
 
                     <div class="spacer">

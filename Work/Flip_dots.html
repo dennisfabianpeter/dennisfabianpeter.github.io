@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Dots</title>
+    <script src="p5.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <script src="sketch.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+    </style>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@500&display=swap');
+    </style>
+
+
+</head>
+<body>
+    <!-- Page Loader -->
+
+    <div id="sketch-holder"></div>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://non-linear.in">
+                <img src="img/NL_Logo.png"  height="55" alt="Logo">
+                non linear
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">work</a>
+                    </li>
+                </ul>
+                </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid tm-container-content tm-mt-30" style="margin-bottom: 60px;">     
+        <div class="row tm-mb-60 " >            
+            <div class="col-xl-7 col-lg-6 col-md-6 col-sm-12">
+                <img src="img/FD_SQ_LARGE.jpg" alt="Image" class="img-fluid">
+            </div>
+
+            
+            <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12">
+                <div class="tm-bg-gray tm-video-details" style="background-color: #cfcfcf8f ;">    
+                    <div class="mb-0">
+                        <h1 class="tm-text-gray-dark mb-0" style="color: #FF6629;">Flip Dots (WIP)</h1>
+                        <div class="d-flex flex-wrap">
+                            <div class="mr-4 mb-3">
+                                <span class="tm-text-primary">Kinetic</span>
+                                <span class="tm-text-primary">/</span>
+                                <span class="tm-text-primary">Interactive</span>
+                            </div>
+                        </div>
+
+                        <div class="mr-4 mb-0">
+                            <span class="tm-text-gray-dark-collab">Collaborators</span>
+                        </div>
+                        <div class="mr-4 mb-4">
+                            <span class="tm-text-gray">Uttam Solanki</span>
+                        </div>
+       
+
+                        <span class="tm-text-gray-dark ">
+                            The Flip-Dot Matrix is an electro-mechanical board that was commonly used for large-scale signages at airports and sports arenas before LED screens became popular. We were fortunate to get our hands on one of these, and ever since, we've been working to interface with them by sending our own data and animations to the board. Although it's still a work in progress, our ultimate goal is to use this technology to convert it into a kinetic, wall-mounted piece that can be easily installed in any location.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid tm-container-content2"> 
+
+        <div class="row tm-mb-60" >   
+            <div class="video-container">
+                <iframe class="youtubeVideo" src="https://www.youtube.com/embed/lUfY19UxjnE" allowfullscreen>
+                </iframe>
+            </div>
+                    <div class="desc-text">
+                        <span class="tm-text-gray-dark">
+                            We had been truly mesmerised by the functioning of the flip-dots ever since we saw it implemented as an art installation by "Breakfast Studio" - which popularized the usage of this technology in the art scene. We found out that it was manufactured by a company based out of Poland and we decided to get our hands on some of them to see how best we could implement something fun using them. The boards are modular and come in varying sizes - we picked up 3 boards with 14x28 dots each, giving us a total of 1,176 dots to work with.
+                            <br>
+                            <br>
+                            The flip dots are essentially electromagnets that can switch on and off at an incredibly fast rate. The magnetic field created by them flips a magnetic disk that is fixed along a pivot (this can be seen in the video below). Since the dots are controlled by electromagnets that dont have any moving parts in them, they are much more durable than a lot of mechanical systems(that require motors/gears/moving parts).
+                        
+                        </span>
+                    </div>
+
+                    <div class="spacer">
+                    </div>
+
+                    <div class="spacer">
+                    </div>
+
+                    <div>
+                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                            <source src="video/FD_V-02.mp4" type="video/mp4">
+                        </video>  
+                        <div class="caption">
+                            <span>
+                                A close up of the flipping mechanism
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="desc-text">
+                        <span class="tm-text-gray-dark mb-4">
+                            
+                            While the manufacturer of the boards does provide a software to control the boards, while testing we figured out that the possibilities we could execute with this software were pretty limited. So, we began developing our own code for the hardware within the "processing" environment. 
+                            <br>
+                            <br>
+                            Within processing, we were able to convert any pre-rendered/real-time animation into a bit-array and have the data transmitted to the boards via the TCP protocol. Additionally, the processing development environment also allowed us to integrate a kinect camera into the system and thus have the ability to cleanly track the silhouette of a person. The frame rates that we were able to achieve through this method were also much higher since the software that shipped with the boards could only be run on a raspberry pi. We are constantly tweaking the code and playing with other fun and interactive ideas that can be integrated into the system.  
+                        </span>
+                    </div>
+
+                    <div class="spacer">
+                    </div>
+
+
+                    <div>
+                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                            <source src="video/FD_V-03.mp4" type="video/mp4">
+                        </video>  
+                        <div class="caption">
+                            <span>
+                                Converting video files into data for controlling the boards
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="spacer">
+                    </div>
+                    <div class="spacer">
+                    </div>
+                    <div class="spacer">
+                    </div>
+
+
+                    <div>
+                        <div>
+                            <img src="img/FD_02.jpg" alt="Image" class="img-fluid">
+                        </div>
+                        <div class="caption">
+                            <span>
+                                The rear of the moudular boards
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="desc-text">
+                        <span class="tm-text-gray-dark">
+                            Since the boards utilize ethernet cables to transmit data, we were really able to use any computer that came with a standard ethernet port for data processing. We started off with trying to run it on a raspberry pi - since its compact form factor was appealing, but we eventually hit a roadblock in terms of its processing capabilities. So, we eventually proceeded to run the animations through a mini-PC. However, we do believe that with properly optimized code, we may still eventually be able to run the entire system out of just a raspberry pi. 
+                            <br>
+                            <br>
+                            If you're a developer who has experience coding for the raspberry pi, and if you'd like to work with us to develop/tweak the code for this project, please write to us.
+                        </span>
+                    </div>
+
+                    <div class="spacer">
+                    </div>
+                    
+
+                    <div>
+                        <div>
+                            <img src="img/FD_01.jpg" alt="Image" class="img-fluid">
+                        </div>
+                        <div class="caption">
+                            <span>
+                                Various controllers were tested with to provide data to the boards
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="spacer">
+                    </div>
+                    <div class="spacer">
+                    </div>
+                    <div class="spacer">
+                    </div>
+
+                    <div>
+                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                            <source src="video/FD_V-01.mp4" type="video/mp4">
+                        </video>  
+                        <div class="caption">
+                            <span>
+                                A close up of the flip dots
+                            </span>
+                        </div>
+                    </div>
+            
+
+                    <div class="end_spacer">
+                    </div>
+                    
+        </div>
+    </div>
+        
+
+</div>
+    
+    <script src="js/plugins.js"></script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Sanctum</title>
+    <script src="p5.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <script src="sketch.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+    </style>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@500&display=swap');
+    </style>
+
+
+</head>
+<body>
+    <!-- Page Loader -->
+
+    <div id="sketch-holder"></div>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://non-linear.in">
+                <img src="img/NL_Logo.png"  height="55" alt="Logo">
+                non linear
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">work</a>
+                    </li>
+                </ul>
+                </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid tm-container-content tm-mt-30" style="margin-bottom: 60px;">     
+        <div class="row tm-mb-60 " >            
+            <div class="col-xl-7 col-lg-6 col-md-6 col-sm-12">
+                <img src="img/NS_SQ_LARGE.jpg" alt="Image" class="img-fluid">
+            </div>
+
+            
+            <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12">
+                <div class="tm-bg-gray tm-video-details" style="background-color: #cfcfcf8f ;">    
+                    <div class="mb-0">
+                        <h1 class="tm-text-gray-dark mb-0" style="color: #FF6629;">Neural Sanctum</h1>
+                        <div class="d-flex flex-wrap">
+                            <div class="mr-4 mb-3">
+                                <span class="tm-text-primary">Visual</span>
+                                <span class="tm-text-primary">/</span>
+                                <span class="tm-text-primary">Interactive</span>
+                            </div>
+                        </div>
+                        <div class="mr-4 mb-0">
+                            <span class="tm-text-gray-dark-collab">Collaborators</span>
+                        </div>
+                        <div class="mr-4 mb-0">
+                            <span class="tm-text-gray">Ocupus Studio,</span>
+                        </div>
+                        <div class="mr-4 mb-4">
+                            <span class="tm-text-gray">Social Hour Arts</span>
+                        </div>
+                        <span class="tm-text-gray-dark ">
+                            Bionic Blooms is an interactive installation which was developed as part of an academic exercise along with the students of Crescent School of Architecture. 
+                            The installation consists of 90 mechanical modules / blooms which can be individually controlled to create mesmerizing patterns.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid tm-container-content2"> 
+
+        <div class="row tm-mb-60" >   
+            <div class="video-container">
+                <iframe class="youtubeVideo" src="https://www.youtube.com/embed/F1oFBk9cAx4" allowfullscreen>
+                </iframe>
+            </div>
+                    <div class="desc-text">
+                        <span class="tm-text-gray-dark">
+                            Bionic Blooms is an interactive art installation that imitates the shape and movement of floral blooms. It is the result of a collaborative effort with "Digital Intuition" as part of an academic exercise at the Crescent School of Architecture. The project brief was to create an interactive installation that would involve and engage the students of the university, and introduce them to advanced technologies and fabrication processes that are outside the traditional domain of architecture, yet closely linked to design and architecture.
+                            The development of the mechanism for the blooms involved an iterative process that aimed to achieve optimal dynamics while considering the constraints of the available motors in the market. Over the course of four weeks, we explored a range of design and fabrication technologies, along with the students, including 3D printing, computer vision, computational design, and programming and interfacing with microcontrollers.
+                        </span>
+                    </div>
+
+                    <div class="spacer">
+                    </div>
+
+                    <hr class="dotted">
+
+
+                    <div class="header2">
+                        <span>The Tunnel</span>
+                    </div>
+
+                    
+                    <div class="spacer">
+                    </div>
+
+
+                    <div>
+                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                            <source src="video/NS_V-02.mp4" type="video/mp4">
+                        </video>  
+                        <div class="caption">
+                            <span>
+                                Piezo sensors on the floor detect the footsteps of a user and triggers the visuals around that region 
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="desc-text">
+                        <span class="tm-text-gray-dark mb-4">
+                            The design process for the mechanism involved a series of iterations, in which we experimented with different mechanisms, materials, motors, and sizes. We determined early on that servo motors were the best choice for the mechanism, primarily because they are simpler to implement from an electrical standpoint, and they are cost-effective, with the added benefit of self-correction. While stepper motors would have been the ideal choice for long-term use, their lack of self-correction (without a rotary encoder), high initial costs, and complex wiring/power systems made them too complicated to implement within the project's allotted time. We selected the MG996 servo motor with approximately 9.4kg/cm of torque, and the mechanism was based on the specifications of this particular motor.
+                            <br>
+                            <br>
+                            For control electronics, we employed the Arduino MEGA. With up to 15 PWM pins, each MEGA could control up to 15 servo motors, allowing us to use 6 MEGA's to control 90 motors. All the Arduinos are connected to a single PC, which sends control data via USB serial. While ethernet cables are preferred for data output from the computer, USB cables were sufficient for this installation, given the length of the cable runs and the maximum number of slave devices used.
+                        </span>
+                    </div>
+
+                    <div class="spacer">
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="img/NS_02.jpg" alt="Image" class="img-fluid">
+                        </div>
+
+                        <div class="caption">
+                             <span>
+                                The tunnel during a particularly active state
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="desc-text">
+                        <span class="tm-text-gray-dark">
+                            The mechanics were developed based on the chosen motor, servo motors, which allow for about 180 degrees of rotational motion. Through experimentation with various gear mechanisms, the current design was created using a combination of radial and linear gear systems to rotate four prongs simultaneously.
+                            <br>
+                            <br>
+                            For the petals, a range of flexible materials were considered, including compliant mechanisms, origami folds, and micro-hinged mechanisms, but ultimately, cardboard paper with vinyl stickers was selected for its flexibility and long-term durability. We were very delighted with the performance and appearance of this material. The petal colour scheme was generated computationally, and fabrication was optimized using computational algorithms in Grasshopper. To minimize material waste and time during laser cutting, packing algorithms were employed for maximum efficiency. 
+                        </span>
+                    </div>
+
+                    <div class="spacer">
+                    </div>
+
+                    <hr class="dotted">
+
+
+                    <div class="header2">
+                        <span>The Sanctum</span>
+                    </div>
+
+                    <div class="spacer">
+                    </div>
+
+
+                    <div>
+                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                            <source src="video/NS_V-03.mp4" type="video/mp4">
+                        </video>  
+                        <div class="caption">
+                            <span>
+                                A user controlling the visuals in the sanctum 
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div class="desc-text">
+                        <span class="tm-text-gray-dark">
+                            The mechanical framework was designed to be optimized for 3D printing in parts. The initial prototype of the mechanism consisted of 11 individual printed parts that were manually assembled with fasteners. The design of this mechanism is continuously being developed to reduce assembly times and increase the durability of the parts by identifying potential points of wear and tear. The ultimate goal is to produce injection-moulded parts that can significantly reduce production time, although this would require higher initial development costs. The MDF panels used as a base for grouping the mechanisms in sets of 4 were cut using a CO2 laser cutter, as were the pieces of cardboard used for the bloom's petals. The entire installation rests on a plywood base mounted on a steel framework.
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <div>
+                            <img src="img/NS_01.jpg" alt="Image" class="img-fluid">
+                        </div>
+
+                        <div class="caption">
+                             <span>
+                                A leapmotion sensor is used to track the users hand movement and gestures
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="desc-text">
+                        <span class="tm-text-gray-dark">
+                            The mechanical framework was designed to be optimized for 3D printing in parts. The initial prototype of the mechanism consisted of 11 individual printed parts that were manually assembled with fasteners. The design of this mechanism is continuously being developed to reduce assembly times and increase the durability of the parts by identifying potential points of wear and tear. The ultimate goal is to produce injection-moulded parts that can significantly reduce production time, although this would require higher initial development costs. The MDF panels used as a base for grouping the mechanisms in sets of 4 were cut using a CO2 laser cutter, as were the pieces of cardboard used for the bloom's petals. The entire installation rests on a plywood base mounted on a steel framework.
+                        </span>
+                    </div>
+
+
+
+                    <div class="spacer">
+                    </div>
+
+                    <hr class="dotted">
+
+                    <div class="spacer">
+                    </div>
+                    
+                    <div class="header2">
+                        <span>More Images</span>
+                    </div>
+
+
+
+<!-- Container for the image gallery -->
+
+<div class="container">
+
+    <!-- Full-width images with number text -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+        <img src="img/NS_04.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+          <img src="img/NS_03.jpg" style="width:100%">
+      </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+        <source src="video/NS_V-04.mp4" style="width:100%">
+        </video>
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+        <img src="img/NS_05.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+        <img src="img/NS_06.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+        <source src="video/NS_V-01.mp4" style="width:100%">
+        </video>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+    <!-- Image text -->
+    <div class="caption-container">
+      <p class="caption" id="caption"></p>
+    </div>
+  
+    <!-- Thumbnail images -->
+    <div class="gallery_row">
+      <div class="gallery_column">
+        <img class="demo cursor" src="img/NS_04-THUMB.jpg" style="width:100%; padding: 0px;" onclick="currentSlide(1)" alt="A wide angle shot of the sanctum">
+      </div>
+      <div class="gallery_column">
+        <img class="demo cursor" src="img/NS_03-THUMB.jpg" style="width:100%" onclick="currentSlide(2)" alt="The tunnel during an active state">
+      </div>
+      <div class="gallery_column">
+        <img class="demo cursor" src="img/NS_V-04-THUMB.jpg" style="width:100%" onclick="currentSlide(3)" alt="Hand tracking and gesture detection is captured by the leapmotion">
+      </div>
+      <div class="gallery_column">
+        <img class="demo cursor" src="img/NS_05-THUMB.jpg" style="width:100%" onclick="currentSlide(4)" alt="An interior shot of the sanctum">
+      </div>
+      <div class="gallery_column">
+        <img class="demo cursor" src="img/NS_06-THUMB.jpg" style="width:100%" onclick="currentSlide(5)" alt="Having a conversation inside the tunnel">
+      </div>
+      <div class="gallery_column">
+        <img class="demo cursor" src="img/NS_V-01-THUMB.jpg" style="width:100%" onclick="currentSlide(6)" alt="A quick walkthrough of the entire installation">
+      </div>
+    </div>
+  </div>
+
+  <!-- Container for the image gallery -->
+
+
+                    <div class="end_spacer">
+                    </div>
+                    
+        </div>
+    </div>
+        
+
+</div>
+
+        
+ <!-- container-fluid, tm-container-content -->
+
+    
+    <script src="js/plugins.js"></script>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
+
+
+<script>
+
+</script>
+
+</body>
+</html>
+
