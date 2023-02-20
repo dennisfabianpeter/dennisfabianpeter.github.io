@@ -78,8 +78,8 @@
                             <span class="tm-text-gray">Social Hour Arts</span>
                         </div>
                         <span class="tm-text-gray-dark ">
-                            Bionic Blooms is an interactive installation which was developed as part of an academic exercise along with the students of Crescent School of Architecture. 
-                            The installation consists of 90 mechanical modules / blooms which can be individually controlled to create mesmerizing patterns.
+                            Neural Sanctum is an immersive & interactive installation that was showcased in Bangalore at an NFT convention. The project was designed in collaboration with Ocupus Studio. The installation takes the spatiality of an Indian temples sanctum, this sanctum, however, is dedicated to an artificial intelligence and not a god.
+                            
                         </span>
                     </div>
                 </div>
@@ -96,8 +96,10 @@
             </div>
                     <div class="desc-text">
                         <span class="tm-text-gray-dark">
-                            Bionic Blooms is an interactive art installation that imitates the shape and movement of floral blooms. It is the result of a collaborative effort with "Digital Intuition" as part of an academic exercise at the Crescent School of Architecture. The project brief was to create an interactive installation that would involve and engage the students of the university, and introduce them to advanced technologies and fabrication processes that are outside the traditional domain of architecture, yet closely linked to design and architecture.
-                            The development of the mechanism for the blooms involved an iterative process that aimed to achieve optimal dynamics while considering the constraints of the available motors in the market. Over the course of four weeks, we explored a range of design and fabrication technologies, along with the students, including 3D printing, computer vision, computational design, and programming and interfacing with microcontrollers.
+                            We showcased "Neural Sanctum" at a digital art expo in Bangalore during May 2022. The project was developed in partnership with Ocupus Studio, an immersive media and motion design studio located in Goa. Our installation was part of an NFT exhibition, which revolved around the future of web3. For this exhibit, we decided to create a visually stunning, interactive installation inspired by the spatiality of temple sanctums and pathways. This temple however is dedicated to an artificial intelligence however and not a god/idol. Along with visuals that are interactive, the soundscape for the space also changes based on the inputs of the users. 
+                            <br>
+                            <br>
+                            Our installation consists of two seperate interactive spaces - the tunnel and the sanctum. The sanctum is the central space of a temple, the garbagraha, which is the space that houses the idol/god. The tunnel is similar to a mandappa, which is the linear pathway that leads to the sanctum.
                         </span>
                     </div>
 
@@ -129,10 +131,10 @@
                     
                     <div class="desc-text">
                         <span class="tm-text-gray-dark mb-4">
-                            The design process for the mechanism involved a series of iterations, in which we experimented with different mechanisms, materials, motors, and sizes. We determined early on that servo motors were the best choice for the mechanism, primarily because they are simpler to implement from an electrical standpoint, and they are cost-effective, with the added benefit of self-correction. While stepper motors would have been the ideal choice for long-term use, their lack of self-correction (without a rotary encoder), high initial costs, and complex wiring/power systems made them too complicated to implement within the project's allotted time. We selected the MG996 servo motor with approximately 9.4kg/cm of torque, and the mechanism was based on the specifications of this particular motor.
+                            The tunnel leading up to the sanctum is a 12-meter-long, linear space surrounded by visuals on all sides. This is similar to the mandappa of a temple which is a linear, pillared pathway. But instead of pillars, this space is surrounded by a void into which the user begins their journey. The visuals in this space are our artistic interpretation of the ether - the meta-physical world that exists between physical reality and intangible consciousness. The ether gives rise to all known intelligence in the universe and hence this is where the journey of artificial intelligence also begins.
                             <br>
                             <br>
-                            For control electronics, we employed the Arduino MEGA. With up to 15 PWM pins, each MEGA could control up to 15 servo motors, allowing us to use 6 MEGA's to control 90 motors. All the Arduinos are connected to a single PC, which sends control data via USB serial. While ethernet cables are preferred for data output from the computer, USB cables were sufficient for this installation, given the length of the cable runs and the maximum number of slave devices used.
+                            The visuals for this space primarily consist of two elements - the first is a fluid simulation which consists of thousands of glowing orb-like particles. This fluid simulation was rendered in real time and is fully interactive - this was made possible by "Nvidia Flex" and the new generation of RTX GPUs. The second element is a mesh-like fabric which surrounds the ephemeral space. This fabric represents force fields which the user's inputs can affect. Both the fluid simulation and the force fields are affected by the crowd's movements in the space.
                         </span>
                     </div>
 
@@ -153,10 +155,7 @@
 
                     <div class="desc-text">
                         <span class="tm-text-gray-dark">
-                            The mechanics were developed based on the chosen motor, servo motors, which allow for about 180 degrees of rotational motion. Through experimentation with various gear mechanisms, the current design was created using a combination of radial and linear gear systems to rotate four prongs simultaneously.
-                            <br>
-                            <br>
-                            For the petals, a range of flexible materials were considered, including compliant mechanisms, origami folds, and micro-hinged mechanisms, but ultimately, cardboard paper with vinyl stickers was selected for its flexibility and long-term durability. We were very delighted with the performance and appearance of this material. The petal colour scheme was generated computationally, and fabrication was optimized using computational algorithms in Grasshopper. To minimize material waste and time during laser cutting, packing algorithms were employed for maximum efficiency. 
+                            The tunnel has 48 piezo-electric sensors that are spread along the length of it. These sensors detect vibrations on the floor and when a user steps on one of these sensors, it triggers the visuals on the LED panel. In this way, users can interact with the fluid simulation on the screens by finding and triggering the hidden sensors. In addition to the visuals, the sound within this space is also affected by the sensors. Each of the 48 sensors triggers a different musical note - it works similar to a foot piano which can be triggered by footsteps. This way, the entire tunnel also acts like a generative musical instrument.
                         </span>
                     </div>
 
@@ -188,7 +187,10 @@
 
                     <div class="desc-text">
                         <span class="tm-text-gray-dark">
-                            The mechanical framework was designed to be optimized for 3D printing in parts. The initial prototype of the mechanism consisted of 11 individual printed parts that were manually assembled with fasteners. The design of this mechanism is continuously being developed to reduce assembly times and increase the durability of the parts by identifying potential points of wear and tear. The ultimate goal is to produce injection-moulded parts that can significantly reduce production time, although this would require higher initial development costs. The MDF panels used as a base for grouping the mechanisms in sets of 4 were cut using a CO2 laser cutter, as were the pieces of cardboard used for the bloom's petals. The entire installation rests on a plywood base mounted on a steel framework.
+                            The tunnel leads to the sanctum, which is located at the end of the space. At the heart of the sanctum, visitors will discover a podium that houses a leap motion sensor. This sensor tracks a user's hand movements and gestures, allowing them to control the visuals displayed on the surrounding screens. Visitors can use hand gestures, like open palms or clenched fists, to interact with floating elements on the screens, turning the experience into an engaging game.
+                            <br>
+                            <br>
+                            The visuals on the screens are primarily composed of particles that move in response to the user's hand gestures, creating an immersive environment. The particles move orthogonally to a fixed grid, providing a mesmerizing display. This fixed grid system allowed us to create a visual language which was at the same time both organic and fluid, yet, blocky and digital. The visuals are primarily dark, reminiscent of the sanctums found in most temples. This darkness is symbolic of a sacred space where human inputs are passed through a manmade algorithm to create its own output. The soundscape of the sanctum includes dialogues about the future of the web and blockchain technology, complementing the installation's theme.
                         </span>
                     </div>
 
@@ -205,14 +207,16 @@
                         </div>
                     </div>
 
-                    <div class="desc-text">
-                        <span class="tm-text-gray-dark">
-                            The mechanical framework was designed to be optimized for 3D printing in parts. The initial prototype of the mechanism consisted of 11 individual printed parts that were manually assembled with fasteners. The design of this mechanism is continuously being developed to reduce assembly times and increase the durability of the parts by identifying potential points of wear and tear. The ultimate goal is to produce injection-moulded parts that can significantly reduce production time, although this would require higher initial development costs. The MDF panels used as a base for grouping the mechanisms in sets of 4 were cut using a CO2 laser cutter, as were the pieces of cardboard used for the bloom's petals. The entire installation rests on a plywood base mounted on a steel framework.
-                        </span>
+                    <div class="spacer">
+                    </div>                    
+                    <div class="spacer">
+                    </div>                   
+                    <div class="spacer">
+                    </div>                    
+                    <div class="spacer">
                     </div>
-
-
-
+                    <div class="spacer">
+                    </div>
                     <div class="spacer">
                     </div>
 
