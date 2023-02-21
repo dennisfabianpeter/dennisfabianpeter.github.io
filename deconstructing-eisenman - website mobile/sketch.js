@@ -13,8 +13,11 @@ newRotateAmountY = 0;
 newRotationX = 0;
 newRotationY = 0;
 
-rotationXforkey = 0;
-rotationYforkey = 0;
+rotationXforMouse = 0;
+rotationYforMouse = 0;
+
+gyroX = 0;
+gyroY=0;
 
 permutations=[];  
 
@@ -92,6 +95,8 @@ button.style('border-radius', '3px');
 button.mouseClicked(ChangeOrder);
 button.mousePressed(ChangeButtonColor);
 button.mouseReleased(RevertButtonColor);
+
+setMoveThreshold(0.1);
  
 }
 
@@ -116,13 +121,8 @@ else{
   }
 
 
-    if(windowWidth<900){  
-H = ((rotationY)/10);
-V = ((rotationX)/10) - 3;}
-
-else{
-  H= rotationXforkey;
-  V= rotationYforkey;}
+  H = ((gyroX) + rotationXforMouse );
+  V = ((gyroY) + rotationYforMouse);
   
 permutations = [createVector(H,0,0),
                 createVector(-H,0,0),
@@ -260,26 +260,6 @@ pop();
 
 }
 
-function keyPressed() {
-if (keyCode === LEFT_ARROW){
-rotationXforkey=newRotationX + 0.4;
-newRotationX = rotationXforkey;
-}
-
-else if (keyCode === RIGHT_ARROW){
-rotationXforkey=newRotationX - 0.4;
-newRotationX = rotationXforkey;}
-  
-else if (keyCode === UP_ARROW){
-rotationYforkey=newRotationY + 0.4;
-newRotationY = rotationYforkey;}
-  
-else if (keyCode === DOWN_ARROW){
-rotationYforkey=newRotationY - 0.4;
-newRotationY = rotationYforkey;
-}
-
-}
 
 
 function touchMoved() {
@@ -298,6 +278,20 @@ lastRotateAmountX = newRotateAmountX;
 lastRotateAmountY = newRotateAmountY;
 
 }
+
+
+function mouseMoved() {
+  if (mouseIsPressed === false){
+    rotationXforMouse = (mouseX - (windowWidth/2))/5;
+    rotationYforMouse = (mouseY - (windowHeight/2))/5;  
+    }
+  }
+  
+  function deviceMoved() {
+    gyroX = rotationX;
+    gyroY = rotationY-50;
+  }
+
 
 function windowResized(){
 resizeCanvas(windowWidth, windowHeight,WEBGL);

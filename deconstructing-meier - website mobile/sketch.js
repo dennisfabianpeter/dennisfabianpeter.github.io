@@ -13,8 +13,11 @@ newRotateAmountY = 0;
 newRotationX = 0;
 newRotationY = 0;
 
-rotationXforkey = 0;
-rotationYforkey = 0;
+rotationXforMouse = 0;
+rotationYforMouse = 0;
+
+gyroX = 0;
+gyroY=0;
 
 newRotateAmountXColor = 80;
 
@@ -87,6 +90,8 @@ button.style('border-radius', '3px');
 button.mouseClicked(ChangeOrder);
 button.mousePressed(ChangeButtonColor);
 button.mouseReleased(RevertButtonColor);
+  
+setMoveThreshold(0.1);
  
 }
 
@@ -94,7 +99,7 @@ button.mouseReleased(RevertButtonColor);
 function draw() {
 
 
-background(200,250,150);
+background(200,newRotateAmountXColor,150);
 rotateX(rotateVertical);
 rotateY(rotateHorizontal);
 noStroke();
@@ -106,16 +111,10 @@ if(windowWidth<900){
 else{
         ortho(-width / (windowWidth/300), width /(windowWidth/300), height / (windowWidth/300), -height / (windowWidth/300), -100000, 100000);
   }
-
-
-    if(windowWidth<900){  
-H = ((rotationY));
-V = ((rotationX)-50);}
-
-else{
-  H= rotationXforkey;
-  V= rotationYforkey;}
   
+H = ((gyroX) + rotationXforMouse );
+V = ((gyroY) + rotationYforMouse);
+
 permutations = [createVector(H,0,0),
                 createVector(-H,0,0),
                 createVector(V,0,0),
@@ -271,26 +270,6 @@ pop();
   
 }
 
-function keyPressed() {
-if (keyCode === LEFT_ARROW){
-rotationXforkey=newRotationX + 15;
-newRotationX = rotationXforkey;
-}
-
-else if (keyCode === RIGHT_ARROW){
-rotationXforkey=newRotationX - 15;
-newRotationX = rotationXforkey;}
-  
-else if (keyCode === UP_ARROW){
-rotationYforkey=newRotationY + 15;
-newRotationY = rotationYforkey;}
-  
-else if (keyCode === DOWN_ARROW){
-rotationYforkey=newRotationY - 15;
-newRotationY = rotationYforkey;
-}
-
-}
 
 
 function touchMoved() {
@@ -314,7 +293,18 @@ newRotateAmountXColor =  80 + (newRotateAmountX * 0.1);
 //newRotateAmountXColor = 255 - //(newRotateAmountX - 255);  
 //}
 
+}
 
+function mouseMoved() {
+if (mouseIsPressed === false){
+  rotationXforMouse = (mouseX - (windowWidth/2))/5;
+  rotationYforMouse = (mouseY - (windowHeight/2))/5;  
+  }
+}
+
+function deviceMoved() {
+  gyroX = rotationX;
+  gyroY = rotationY-50;
 }
 
 function windowResized(){
