@@ -1,7 +1,7 @@
 var H =0;
 var V =0;
 
-rotateHorizontal = 0.785;
+rotateHorizontal = 0;
 rotateVertical = 0.52;
  
 lastRotateAmountX = 0 ;
@@ -15,6 +15,8 @@ newRotationY = 0;
 
 rotationXforkey = 0;
 rotationYforkey = 0;
+
+newRotateAmountXColor = 80;
 
 permutations=[];  
 
@@ -42,14 +44,14 @@ order20=3;
 order21=2;
 order22=1;
 order23=0;
-order24=1;
-
+order24=3;
+order25=9;
 
 
 function preload() {
-  P1 = loadModel('P1.obj');
-  P2 = loadModel('P2.obj');
-  P3 = loadModel('P3.obj');
+  P1C = loadModel('P1C.obj');
+  P2C = loadModel('P2C.obj');
+  P3C = loadModel('P3C.obj');
   P4 = loadModel('P4.obj');
   P5 = loadModel('P5.obj');
   P6 = loadModel('P6.obj');
@@ -67,21 +69,14 @@ function preload() {
   P18 = loadModel('P18.obj');
   P19 = loadModel('P19.obj');
   P20 = loadModel('P20.obj');
-  P21 = loadModel('P21.obj');
-  P22 = loadModel('P22.obj');
-  P23 = loadModel('P23.obj');
-  P24 = loadModel('P24.obj');
-
-
-
 }
 
 function setup() {
 
 canvas = createCanvas(windowWidth, windowHeight, WEBGL);
-ortho(-width / (windowWidth/6.3), width /(windowWidth/6.3), height / (windowWidth/6.3), -height / (windowWidth/6.3), 0, 1000);
+ortho(-width / (windowWidth/600), width /(windowWidth/600), height / (windowWidth/600), -height / (windowWidth/600), 0, 1000);
 
-button =createButton('Change Iteration');
+button =createButton('Change Permutation');
 button.position(10,10);
 button.style('background-color', '#000');
 button.style('color', '#fff');
@@ -99,26 +94,23 @@ button.mouseReleased(RevertButtonColor);
 function draw() {
 
 
-background('#fcb900');
+background(200,250,150);
 rotateX(rotateVertical);
 rotateY(rotateHorizontal);
 noStroke();
-normalMaterial();
-
-
 
 if(windowWidth<900){
-    ortho(-width / (windowWidth/9), width /(windowWidth/9), height / (windowWidth/9), -height / (windowWidth/9), 0, 1000);
+    ortho(-width / (windowWidth/180), width /(windowWidth/180), height/ (windowWidth/180), -height/ (windowWidth/180), -100000, 100000);
 }
 
 else{
-        ortho(-width / (windowWidth/10), width /(windowWidth/10), height / (windowWidth/10), -height / (windowWidth/10), 0, 1000);
+        ortho(-width / (windowWidth/300), width /(windowWidth/300), height / (windowWidth/300), -height / (windowWidth/300), -100000, 100000);
   }
 
 
     if(windowWidth<900){  
-H = ((rotationY)/10);
-V = ((rotationX)/10) - 3;}
+H = ((rotationY));
+V = ((rotationX)-50);}
 
 else{
   H= rotationXforkey;
@@ -135,147 +127,166 @@ permutations = [createVector(H,0,0),
                 createVector(0,0,H),
                 createVector(0,0,-H),
                 createVector(0,0,V),
-                createVector(0,0,-V)];   
+                createVector(0,0,-V)];
+  
+translate(0,-50,0);
 
-push();      
-  translate(permutations[order1]);
-  model(P1);
+push();   
+  normalMaterial();
+  translate(50,0,0)
+  rotateZ(-H/60)
+  rotateY(-V/60)
+  translate(permutations[order10])
+  translate(-50,0,0)
+  model(P1C);
 pop();
-
 
 push();
-  translate(permutations[order2])
-  model(P2);
-pop();
-
-  push();
+  normalMaterial();
+  translate(50,0,0)
+  rotateZ(H/60)
+  rotateY(V/60)
   translate(permutations[order3])
-  model(P3);
+  translate(-50,0,0)
+  model(P2C);
 pop();
 
-  push();
-  translate(permutations[order4])
+  
+push();
+  normalMaterial();
+  translate(50,0,0)
+  rotateZ(-H/60)
+  rotateY(V/60)
+  translate(permutations[order5])
+  translate(-50,0,0)
+  model(P3C);
+pop();  
+  
+  
+push();
+  normalMaterial();
+  rotateX(-H/60)
+  rotateZ(-V/60)
+  translate(permutations[order4]);
   model(P4);
 pop();
-
-  push();
-  translate(permutations[order5])
+  
+push();
+  normalMaterial();
+  translate(permutations[order8])
   model(P5);
 pop();
 
-  push();
-  translate(permutations[order6])
+push();
+  normalMaterial();
+  translate(permutations[order3])
   model(P6);
 pop();
 
-  push();
-  translate(permutations[order7])
+push();
+  normalMaterial();
+  translate(permutations[order1])
   model(P7);
 pop();
 
-  push();
+push();
+  normalMaterial();
   translate(permutations[order8])
   model(P8);
 pop();
 
-  push();
-  translate(permutations[order9])
+push();
+  normalMaterial();
+  translate(permutations[order11])
   model(P9);
 pop();
 
-  push();
-  translate(permutations[order10])
+push();
+  normalMaterial();
+  translate(permutations[order1])
   model(P10);
-pop();
-
-  push();
-  translate(permutations[order11])
+pop(); 
+  
+  
+push(); 
+  normalMaterial();
+  translate(permutations[order5])
   model(P11);
 pop();
 
- push();
-  translate(permutations[order12])
+
+push();
+  normalMaterial();
+  translate(permutations[order3])
   model(P12);
 pop();
 
-  push();
-  translate(permutations[order13])
+push();
+  normalMaterial();
+  translate(permutations[order7])
   model(P13);
 pop();
 
-  push();
-  translate(permutations[order14])
+push();
+  normalMaterial();
+  translate(permutations[order6])
   model(P14);
 pop();
 
-  push();
-  translate(permutations[order15])
+push();
+  normalMaterial();
+  translate(permutations[order2])
   model(P15);
 pop();
-
-  push();
-  translate(permutations[order16])
+  
+push();
+  normalMaterial();
+  translate(permutations[order1])
   model(P16);
 pop();
 
-  push();
-  translate(permutations[order17])
+push();
+  normalMaterial();
+  translate(permutations[order10])
   model(P17);
 pop();
 
-  push();
-  translate(permutations[order18])
+push();
+  normalMaterial();
+  translate(permutations[order7])
   model(P18);
 pop();
 
-  push();
-  translate(permutations[order19])
+push();
+  normalMaterial();
+  translate(permutations[order8])
   model(P19);
 pop();
 
-  push();
-  translate(permutations[order20])
+push();  
+  normalMaterial();
+  translate(permutations[order9])
   model(P20);
 pop();
-
-  push();
-  translate(permutations[order21])
-  model(P21);
-pop();
-
-  push();
-  translate(permutations[order22])
-  model(P22);
-pop();
-
-  push();
-  translate(permutations[order23])
-  model(P23);
-pop();
-
-  push();
-  translate(permutations[order24])
-  model(P24);
-pop();
-
+  
 }
 
 function keyPressed() {
 if (keyCode === LEFT_ARROW){
-rotationXforkey=newRotationX + 0.4;
+rotationXforkey=newRotationX + 15;
 newRotationX = rotationXforkey;
 }
 
 else if (keyCode === RIGHT_ARROW){
-rotationXforkey=newRotationX - 0.4;
+rotationXforkey=newRotationX - 15;
 newRotationX = rotationXforkey;}
   
 else if (keyCode === UP_ARROW){
-rotationYforkey=newRotationY + 0.4;
+rotationYforkey=newRotationY + 15;
 newRotationY = rotationYforkey;}
   
 else if (keyCode === DOWN_ARROW){
-rotationYforkey=newRotationY - 0.4;
+rotationYforkey=newRotationY - 15;
 newRotationY = rotationYforkey;
 }
 
@@ -291,17 +302,24 @@ newRotateAmountX = lastRotateAmountX + rotateAmountX;
 newRotateAmountY = lastRotateAmountY + rotateAmountY;
   
 
-rotateHorizontal = 0.785 +(newRotateAmountX/100);
+rotateHorizontal = 0 +(newRotateAmountX/100);
 rotateVertical = 0.52+((newRotateAmountY)/200);
 
 lastRotateAmountX = newRotateAmountX;
 lastRotateAmountY = newRotateAmountY;
 
+newRotateAmountXColor =  80 + (newRotateAmountX * 0.1);
+
+//if(newRotateAmountX>=255){  
+//newRotateAmountXColor = 255 - //(newRotateAmountX - 255);  
+//}
+
+
 }
 
 function windowResized(){
 resizeCanvas(windowWidth, windowHeight,WEBGL);
-      ortho(-width / (windowWidth/6.3), width /(windowWidth/6.3), height / (windowWidth/6.3), -height / (windowWidth/6.3), 0, 1000);
+      ortho(-width / (windowWidth/100), width /(windowWidth/100), height / (windowWidth/100), -height / (windowWidth/100), 0, 10000);
 }
 
 function ChangeOrder(){
@@ -331,6 +349,7 @@ order21=random(possibilites);
 order22=random(possibilites);
 order23=random(possibilites);
 order24=random(possibilites);
+order25=random(possibilites);
 }
 
 function ChangeButtonColor(){

@@ -1,7 +1,7 @@
 var H =0;
 var V =0;
 
-rotateHorizontal = 0.785;
+rotateHorizontal = -0.785;
 rotateVertical = 0.52;
  
 lastRotateAmountX = 0 ;
@@ -15,6 +15,8 @@ newRotationY = 0;
 
 rotationXforkey = 0;
 rotationYforkey = 0;
+
+newRotateAmountXColor = 124;
 
 permutations=[];  
 
@@ -42,35 +44,40 @@ order20=3;
 order21=2;
 order22=1;
 order23=0;
-order24=1;
+order24=3;
+order25=9;
+order26=6;
 
 
 
 function preload() {
   P1 = loadModel('P1.obj');
   P2 = loadModel('P2.obj');
-  P3 = loadModel('P3.obj');
+  P3T = loadModel('P3T.obj');
   P4 = loadModel('P4.obj');
-  P5 = loadModel('P5.obj');
+  P5T = loadModel('P5T.obj');
   P6 = loadModel('P6.obj');
   P7 = loadModel('P7.obj');
   P8 = loadModel('P8.obj');
   P9 = loadModel('P9.obj');
-  P10 = loadModel('P10.obj');
-  P11 = loadModel('P11.obj');
+  P10T = loadModel('P10T.obj');
+  P11T = loadModel('P11T.obj');
   P12 = loadModel('P12.obj');
   P13 = loadModel('P13.obj');
   P14 = loadModel('P14.obj');
   P15 = loadModel('P15.obj');
-  P16 = loadModel('P16.obj');
+  P16T = loadModel('P16T.obj');
   P17 = loadModel('P17.obj');
   P18 = loadModel('P18.obj');
   P19 = loadModel('P19.obj');
   P20 = loadModel('P20.obj');
-  P21 = loadModel('P21.obj');
+  P21T = loadModel('P21T.obj');
   P22 = loadModel('P22.obj');
   P23 = loadModel('P23.obj');
   P24 = loadModel('P24.obj');
+  P25T = loadModel('P25T.obj');
+  P26 = loadModel('P26.obj');
+
 
 
 
@@ -81,7 +88,7 @@ function setup() {
 canvas = createCanvas(windowWidth, windowHeight, WEBGL);
 ortho(-width / (windowWidth/6.3), width /(windowWidth/6.3), height / (windowWidth/6.3), -height / (windowWidth/6.3), 0, 1000);
 
-button =createButton('Change Iteration');
+button =createButton('Change Permutation');
 button.position(10,10);
 button.style('background-color', '#000');
 button.style('color', '#fff');
@@ -99,26 +106,26 @@ button.mouseReleased(RevertButtonColor);
 function draw() {
 
 
-background('#fcb900');
+background(newRotateAmountXColor, 210,255);
 rotateX(rotateVertical);
 rotateY(rotateHorizontal);
 noStroke();
-normalMaterial();
+glassMaterial = specularMaterial(200, 200, 200, 150);
 
 
 
 if(windowWidth<900){
-    ortho(-width / (windowWidth/9), width /(windowWidth/9), height / (windowWidth/9), -height / (windowWidth/9), 0, 1000);
+    ortho(-width / (windowWidth/32000), width /(windowWidth/32000), height/ (windowWidth/32000), -height/ (windowWidth/32000), -100000, 100000);
 }
 
 else{
-        ortho(-width / (windowWidth/10), width /(windowWidth/10), height / (windowWidth/10), -height / (windowWidth/10), 0, 1000);
+        ortho(-width / (windowWidth/35000), width /(windowWidth/35000), height / (windowWidth/35000), -height / (windowWidth/35000), -100000, 100000);
   }
 
 
     if(windowWidth<900){  
-H = ((rotationY)/10);
-V = ((rotationX)/10) - 3;}
+H = ((rotationY)*500);
+V = ((rotationX)*500)-20000;}
 
 else{
   H= rotationXforkey;
@@ -135,147 +142,204 @@ permutations = [createVector(H,0,0),
                 createVector(0,0,H),
                 createVector(0,0,-H),
                 createVector(0,0,V),
-                createVector(0,0,-V)];   
+                createVector(0,0,-V)];
+  
+  translate(0,-5000,5000);
 
-push();      
+push();   
+  normalMaterial();
   translate(permutations[order1]);
   model(P1);
 pop();
 
 
 push();
+  normalMaterial();
   translate(permutations[order2])
   model(P2);
 pop();
 
   push();
-  translate(permutations[order3])
-  model(P3);
-pop();
-
-  push();
+  normalMaterial();
+  translate(9000,0,4000)
+  rotateY(H/4500)
   translate(permutations[order4])
+  translate(-9000,0,-4000)
   model(P4);
 pop();
 
   push();
-  translate(permutations[order5])
-  model(P5);
-pop();
-
-  push();
-  translate(permutations[order6])
+  normalMaterial();
+  translate(-13500,0,-16500)
+  rotateY(-H/4500)
+  translate(permutations[order4])
+  translate(13500,0,16500)
   model(P6);
 pop();
 
   push();
+  normalMaterial();
   translate(permutations[order7])
   model(P7);
 pop();
 
   push();
+  normalMaterial();
   translate(permutations[order8])
   model(P8);
 pop();
 
   push();
+  normalMaterial();
   translate(permutations[order9])
   model(P9);
 pop();
 
-  push();
-  translate(permutations[order10])
-  model(P10);
-pop();
-
-  push();
-  translate(permutations[order11])
-  model(P11);
-pop();
 
  push();
+  normalMaterial();
   translate(permutations[order12])
   model(P12);
 pop();
 
   push();
+  normalMaterial();
   translate(permutations[order13])
   model(P13);
 pop();
 
   push();
+  normalMaterial();
   translate(permutations[order14])
   model(P14);
 pop();
 
   push();
+  normalMaterial();
   translate(permutations[order15])
   model(P15);
 pop();
 
   push();
-  translate(permutations[order16])
-  model(P16);
-pop();
-
-  push();
-  translate(permutations[order17])
+  normalMaterial();
+  translate(10000,5000,-15000)
+  rotateX(-H/4500)
+  translate(permutations[order4])
+  translate(-10000,-5000,15000)
   model(P17);
 pop();
 
   push();
-  translate(permutations[order18])
+  normalMaterial();
+  translate(1000,0,-3000)
+  rotateY(-H/4500)
+  //translate(permutations[order4])
+  translate(-1000,0,3000)
   model(P18);
 pop();
 
   push();
-  translate(permutations[order19])
+  normalMaterial();
+  translate(0,8000,-16000)
+  rotateX(H/4500)
+  //translate(permutations[order4])
+  translate(0,-8000,16000)
   model(P19);
 pop();
 
-  push();
+  push();  
+  normalMaterial();
   translate(permutations[order20])
   model(P20);
 pop();
 
   push();
-  translate(permutations[order21])
-  model(P21);
-pop();
-
-  push();
+  normalMaterial();
   translate(permutations[order22])
   model(P22);
 pop();
 
   push();
-  translate(permutations[order23])
+  normalMaterial();
+  translate(1000,0,-3000)
+  rotateY(-H/4500)
+  //translate(permutations[order4])
+  translate(-1000,0,3000)
   model(P23);
 pop();
 
   push();
+  normalMaterial();
   translate(permutations[order24])
   model(P24);
 pop();
+  
+   push();
+  normalMaterial();
+  translate(permutations[order26])
+  model(P26);
+pop();
 
+  push();
+  glassMaterial;
+  translate(permutations[order3])
+  model(P3T);
+pop();  
+  
+    push();
+  glassMaterial;
+  translate(permutations[order21])
+  model(P21T);
+pop();
+    
+  push();
+  glassMaterial;
+  translate(permutations[order16])
+  model(P16T);
+pop();
+  
+    push();
+  glassMaterial;
+  translate(permutations[order11])
+  model(P11T);
+pop();
+
+    push();
+  glassMaterial;
+  translate(permutations[order10])
+  model(P10T);
+pop();
+
+    push();
+  glassMaterial;
+  translate(permutations[order5])
+  model(P5T);
+pop();
+  
+    push();
+  glassMaterial;
+  translate(permutations[order25])
+  model(P25T);
+pop();
+  
 }
 
 function keyPressed() {
 if (keyCode === LEFT_ARROW){
-rotationXforkey=newRotationX + 0.4;
+rotationXforkey=newRotationX + 785.398;
 newRotationX = rotationXforkey;
 }
 
 else if (keyCode === RIGHT_ARROW){
-rotationXforkey=newRotationX - 0.4;
+rotationXforkey=newRotationX - 785.398;
 newRotationX = rotationXforkey;}
   
 else if (keyCode === UP_ARROW){
-rotationYforkey=newRotationY + 0.4;
+rotationYforkey=newRotationY + 785.398;
 newRotationY = rotationYforkey;}
   
 else if (keyCode === DOWN_ARROW){
-rotationYforkey=newRotationY - 0.4;
+rotationYforkey=newRotationY - 785.398;
 newRotationY = rotationYforkey;
 }
 
@@ -291,17 +355,24 @@ newRotateAmountX = lastRotateAmountX + rotateAmountX;
 newRotateAmountY = lastRotateAmountY + rotateAmountY;
   
 
-rotateHorizontal = 0.785 +(newRotateAmountX/100);
+rotateHorizontal = -0.785 +(newRotateAmountX/100);
 rotateVertical = 0.52+((newRotateAmountY)/200);
 
 lastRotateAmountX = newRotateAmountX;
 lastRotateAmountY = newRotateAmountY;
 
+newRotateAmountXColor =  124 + (newRotateAmountX * 0.1);
+
+//if(newRotateAmountX>=255){  
+//newRotateAmountXColor = 255 - //(newRotateAmountX - 255);  
+//}
+
+
 }
 
 function windowResized(){
 resizeCanvas(windowWidth, windowHeight,WEBGL);
-      ortho(-width / (windowWidth/6.3), width /(windowWidth/6.3), height / (windowWidth/6.3), -height / (windowWidth/6.3), 0, 1000);
+      ortho(-width / (windowWidth/100), width /(windowWidth/100), height / (windowWidth/100), -height / (windowWidth/100), 0, 10000);
 }
 
 function ChangeOrder(){
@@ -331,6 +402,7 @@ order21=random(possibilites);
 order22=random(possibilites);
 order23=random(possibilites);
 order24=random(possibilites);
+order25=random(possibilites);
 }
 
 function ChangeButtonColor(){
