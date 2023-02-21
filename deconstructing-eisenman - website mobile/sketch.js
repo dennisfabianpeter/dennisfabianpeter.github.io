@@ -282,8 +282,8 @@ lastRotateAmountY = newRotateAmountY;
 
 function mouseMoved() {
   if (mouseIsPressed === false){
-    rotationXforMouse = (mouseX - (windowWidth/2))/5;
-    rotationYforMouse = (mouseY - (windowHeight/2))/5;  
+    rotationXforMouse = (mouseX - (windowWidth/2))/80;
+    rotationYforMouse = (mouseY - (windowHeight/2))/80;  
     }
   }
   

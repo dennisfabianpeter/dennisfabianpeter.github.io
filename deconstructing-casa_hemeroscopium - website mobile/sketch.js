@@ -349,8 +349,8 @@ newRotateAmountXColor =  124 + (newRotateAmountX * 0.1);
 
 function mouseMoved() {
   if (mouseIsPressed === false){
-    rotationXforMouse = (mouseX - (windowWidth/2))/5;
-    rotationYforMouse = (mouseY - (windowHeight/2))/5;  
+    rotationXforMouse = (mouseX - (windowWidth/2))*25;
+    rotationYforMouse = (mouseY - (windowHeight/2))*25;  
     }
   }
   
