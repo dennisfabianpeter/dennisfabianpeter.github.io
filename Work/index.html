@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Non-linear: Work</title>
+    <title>Interactive Gallery Test</title>
     <script src="p5.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
@@ -17,19 +17,20 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@500&display=swap');
     </style>
+
 <!--
     
-TemplateMo 556 Catalog-Z
+TemplateMo 555 Upright
 
-https://templatemo.com/tm-556-catalog-z
+https://templatemo.com/tm-555-upright
 
 -->
 </head>
-<body>
-    
-    <div id="sketch-holder"></div>
+<body>    
 
-    <nav class="navbar navbar-expand-lg  mb-4">
+<div id="sketch-holder"></div>
+    <div class="navbarContainer">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="https://non-linear.in">
                 <img src="img/NL_Logo.png"  height="55" alt="Logo">
@@ -53,252 +54,328 @@ https://templatemo.com/tm-556-catalog-z
                 </div>
         </div>
     </nav>
+    </div>
+
+                <!-- Gallery section -->               
+
+                        
+
+                <div class="container-fluid tm-container-content tm-mt-60">
+                    <section id="gallery" class="tm-section">
+
+                        <ul class="row tm-gallery-links">
+                            <div class="linkContainer">
+                            <div class="filterList">
+                                <button href="javascript:void(0);" class="active tm-gallery-link" data-filter="*">
+                                    All
+                                </button>
+                            </div>
+
+                            <div class="filterList">
+                                <button href="javascript:void(0);" class="tm-gallery-link" data-filter="Kinetic">
+                                    Kinetic
+                                </button>
+                            </div>
+
+                            <div class="filterList">
+                                <button href="javascript:void(0);" class="tm-gallery-link" data-filter="Interactive">
+                                    Interactive
+                                </button>
+                            </div>
+
+                            <div class="filterList">
+                                <button href="javascript:void(0);" class="tm-gallery-link" data-filter="Sound">
+                                    Sound
+                                </button>
+                            </div>
+
+                            <div class="filterList">
+                                <button href="javascript:void(0);" class="tm-gallery-link" data-filter="Visual">
+                                    Visual
+                                </button>
+                            </div>
+
+                            <div class="filterList">
+                                <button href="javascript:void(0);" class="tm-gallery-link col-xl-2" data-filter="Experiments">
+                                    Experiments
+                                </button>
+                            </div>
+                            </div>
+                        </ul>
+
+                        <div class="row tm-mb-90 tm-gallery">
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1 tm-gallery-item Kinetic Interactive General">
+                                    <a href="Bionic_bloom.html">
+                                    <div class="hover_box">
+                                        <div class="icon_image">
+                                            <img src="img/BB_ICON-01.png" alt="Image" class="img-fluid">
+                                        </div>
+                                        <div class="hover_image">
+                                            <img src="img/BB_ICON-02.png" alt="Image" class="img-fluid">
+                                        </div>   
+                                        
+                                    
+                                    <div class="d-flex justify-content-between tm-text-gray">
+                                        <span>Bionic bloom</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between tm-text-gray mb-3">
+                                        <span class="tm-text-gray-light">Kinetic / Interactive</span>
+                                    </div>
+                                    </div>
+                                    </a>    
+                            </div>
 
 
-    <div class="container-fluid tm-container-content tm-mt-60">
-        <div class="row tm-mb-90 tm-gallery">
 
-        	<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1">
-                <a href="Bionic_bloom.html">
-                <div class="hover_box">
-                    <div class="icon_image">
-                        <img src="img/BB_ICON-01.png" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="hover_image">
-                        <img src="img/BB_ICON-02.png" alt="Image" class="img-fluid">
-                    </div>   
-                     
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1 tm-gallery-item Sound General">
+                                    <a href="Organic_rhythm_sequencer.html">
+                                    <div class="hover_box">
+                                        <div class="icon_image">
+                                            <img src="img/OS_ICON-01.png" alt="Image" class="img-fluid">
+                                        </div>
+                                        <div class="hover_image">
+                                            <img src="img/OS_ICON-02.png" alt="Image" class="img-fluid">
+                                        </div>            
+                    
+                                    <div class="d-flex justify-content-between tm-text-gray">
+                                        <span>Organic rhythm sequencer</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between tm-text-gray mb-3">
+                                        <span class="tm-text-gray-light">Sound</span>
+                                    </div>
+                                    </div>
+                                    </a>
+                            </div>
+
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1 tm-gallery-item Kinetic Interactive General">
+                                    <a href="Flip_dots.html">
+                                    <div class="hover_box">
+                                        <div class="icon_image">
+                                            <img src="img/FD_ICON-01.png" alt="Image" class="img-fluid">
+                                        </div>
+                                        <div class="hover_image">
+                                            <img src="img/FD_ICON-02.png" alt="Image" class="img-fluid">
+                                        </div>            
+                    
+                                    <div class="d-flex justify-content-between tm-text-gray">
+                                        <span>Flip dots</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between tm-text-gray mb-3">
+                                        <span class="tm-text-gray-light">Kinetic / Interactive</span>
+                                    </div>
+                                    </div>
+                                    </a>
+                            </div>
+
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1 tm-gallery-item Visual Interactive General">
+                                <a href="Neural_sanctum.html">
+                                <div class="hover_box">
+                                    <div class="icon_image">
+                                        <img src="img/NS_ICON-01.png" alt="Image" class="img-fluid">
+                                    </div>
+                                    <div class="hover_image">
+                                        <img src="img/NS_ICON-02.png" alt="Image" class="img-fluid">
+                                    </div>            
                 
-                <div class="d-flex justify-content-between tm-text-gray">
-                    <span>Bionic bloom</span>
-                </div>
-                <div class="d-flex justify-content-between tm-text-gray mb-3">
-                    <span class="tm-text-gray-light">Kinetic / Interactive</span>
-                </div>
-                </div>
-                </a>    
-            </div>
-
-            
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1">
-                <a href="Organic_rhythm_sequencer.html">
-                <div class="hover_box">
-                    <div class="icon_image">
-                        <img src="img/OS_ICON-01.png" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="hover_image">
-                        <img src="img/OS_ICON-02.png" alt="Image" class="img-fluid">
-                    </div>            
-
-                <div class="d-flex justify-content-between tm-text-gray">
-                    <span>Organic rhythm sequencer</span>
-                </div>
-                <div class="d-flex justify-content-between tm-text-gray mb-3">
-                    <span class="tm-text-gray-light">Sound</span>
-                </div>
-            </div>
-            </a>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1">
-                <a href="Flip_dots.html">
-                <div class="hover_box">
-                    <div class="icon_image">
-                        <img src="img/FD_ICON-01.png" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="hover_image">
-                        <img src="img/FD_ICON-02.png" alt="Image" class="img-fluid">
-                    </div>            
-
-                <div class="d-flex justify-content-between tm-text-gray">
-                    <span>Flip dots</span>
-                </div>
-                <div class="d-flex justify-content-between tm-text-gray mb-3">
-                    <span class="tm-text-gray-light">Kinetic / Interactive</span>
-                </div>
-            </div>
-            </a>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1">
-                <a href="Neural_sanctum.html">
-                <div class="hover_box">
-                    <div class="icon_image">
-                        <img src="img/NS_ICON-01.png" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="hover_image">
-                        <img src="img/NS_ICON-02.png" alt="Image" class="img-fluid">
-                    </div>            
-
-                <div class="d-flex justify-content-between tm-text-gray">
-                    <span>Neural sanctum</span>
-                </div>
-                <div class="d-flex justify-content-between tm-text-gray mb-3">
-                    <span class="tm-text-gray-light">Visual / Interactive</span>
-                </div>
-            </div>
-            </a>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1">
-                <div class="hover_box">
-                    <div class="icon_image">
-                        <img src="img/DS_ICON-01.png" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="hover_image">
-                        <img src="img/DS_ICON-02.png" alt="Image" class="img-fluid">
-                    </div>            
-
-                <div class="d-flex justify-content-between tm-text-gray">
-                    <span>Deconstruction series</span>
-                </div>
-                <div class="d-flex justify-content-between tm-text-gray mb-3">
-                    <span class="tm-text-gray-light">Visual / Interactive</span>
-                </div>
-            </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1">
-                <a href="Ocean_in_a_Drop.html">
-                <div class="hover_box">
-                    <div class="icon_image">
-                        <img src="img/OD_ICON-1.png" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="hover_image">
-                        <img src="img/OD_ICON-2.png" alt="Image" class="img-fluid">
-                    </div>          
-
-                    <div class="d-flex justify-content-between tm-text-gray">
-                        <span>An ocean in a drop </span>
-                    </div>
-                    <div class="d-flex justify-content-between tm-text-gray mb-3">
-                        <span class="tm-text-gray-light">Kinetic / Interactive</span>
-                    </div>
-                </div>
-                </a>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1">
-                <a href="This_city_swells.html">
-                <div class="hover_box">
-                    <div class="icon_image">
-                        <img src="img/TCS_ICON-01.png" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="hover_image">
-                        <img src="img/TCS_ICON-02.png" alt="Image" class="img-fluid">
-                    </div>            
-
-                <div class="d-flex justify-content-between tm-text-gray">
-                    <span>This city swells</span>
-                </div>
-                <div class="d-flex justify-content-between tm-text-gray mb-3">
-                    <span class="tm-text-gray-light">Sound / Visual</span>
-                </div>
-            </div>
-             </a>
-            </div>
-            
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1">
-                <div class="hover_box">
-                    <div class="icon_image">
-                        <img src="img/LT_ICON-01.png" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="hover_image">
-                        <img src="img/LT_ICON-02.png" alt="Image" class="img-fluid">
-                    </div>            
-
-                <div class="d-flex justify-content-between tm-text-gray">
-                    <span>MIDI reactive lasers</span>
-                </div>
-                <div class="d-flex justify-content-between tm-text-gray mb-3">
-                    <span class="tm-text-gray-light">Visual / Sound</span>
-                </div>
-            </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1">
-                <div class="hover_box">
-                    <div class="icon_image">
-                        <img src="img/CP_ICON-01.png" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="hover_image">
-                        <img src="img/CP_ICON-02.png" alt="Image" class="img-fluid">
-                    </div>            
-
-                <div class="d-flex justify-content-between tm-text-gray">
-                    <span>Church projection mapping</span>
-                </div>
-                <div class="d-flex justify-content-between tm-text-gray mb-3">
-                    <span class="tm-text-gray-light">Visual</span>
-                </div>
-            </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1">
-                <div class="hover_box">
-                    <div class="icon_image">
-                        <img src="img/WC_ICON-01.png" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="hover_image">
-                        <img src="img/WC_ICON-02.png" alt="Image" class="img-fluid">
-                    </div>            
-
-                <div class="d-flex justify-content-between tm-text-gray">
-                    <span>Windchime sequencer</span>
-                </div>
-                <div class="d-flex justify-content-between tm-text-gray mb-3">
-                    <span class="tm-text-gray-light">Sound / Interactive</span>
-                </div>
-            </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1">
-                <div class="hover_box">
-                    <div class="icon_image">
-                        <img src="img/ML_ICON-01.png" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="hover_image">
-                        <img src="img/ML_ICON-02.png" alt="Image" class="img-fluid">
-                    </div>            
-
-                <div class="d-flex justify-content-between tm-text-gray">
-                    <span>MLF Proposal</span>
-                </div>
-                <div class="d-flex justify-content-between tm-text-gray mb-3">
-                    <span class="tm-text-gray-light">Visual / Sound / Interactive</span>
-                </div>
-            </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1">
-                <div class="hover_box">
-                    <div class="icon_image">
-                        <img src="img/MO_ICON-01.png" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="hover_image">
-                        <img src="img/MO_ICON-02.png" alt="Image" class="img-fluid">
-                    </div>            
-
-                <div class="d-flex justify-content-between tm-text-gray">
-                    <span>Moire Installation</span>
-                </div>
-                <div class="d-flex justify-content-between tm-text-gray mb-3">
-                    <span class="tm-text-gray-light">Visual / Interactive</span>
-                </div>
-            </div>
-            </div>
+                                <div class="d-flex justify-content-between tm-text-gray">
+                                    <span>Neural sanctum</span>
+                                </div>
+                                <div class="d-flex justify-content-between tm-text-gray mb-3">
+                                    <span class="tm-text-gray-light">Visual / Interactive</span>
+                                </div>
+                                </div>
+                                </a>
+                            </div>
 
 
-        </div> <!-- row -->
-    </div> <!-- container-fluid, tm-container-content -->
-    
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1 tm-gallery-item Visual Interactive General">
+                                <a href="Deconstruction_series.html">
+                                <div class="hover_box">
+                                    <div class="icon_image">
+                                        <img src="img/DS_ICON-01.png" alt="Image" class="img-fluid">
+                                    </div>
+                                    <div class="hover_image">
+                                        <img src="img/DS_ICON-02.png" alt="Image" class="img-fluid">
+                                    </div>            
+                
+                                <div class="d-flex justify-content-between tm-text-gray">
+                                    <span>Deconstruction series</span>
+                                </div>
+                                <div class="d-flex justify-content-between tm-text-gray mb-3">
+                                    <span class="tm-text-gray-light">Visual / Interactive</span>
+                                </div>
+                                </div>
+                                </a>
+                            </div>
 
-    
-    <script src="js/plugins.js"></script>
-    <script>
-        $(window).on("load", function() {
-            $('body').addClass('loaded');
-        });
-    </script>
+
+                            
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1 tm-gallery-item Kinetic Interactive General">
+                                <a href="Ocean_in_a_Drop.html">
+                                <div class="hover_box">
+                                    <div class="icon_image">
+                                        <img src="img/OD_ICON-1.png" alt="Image" class="img-fluid">
+                                    </div>
+                                    <div class="hover_image">
+                                        <img src="img/OD_ICON-2.png" alt="Image" class="img-fluid">
+                                    </div>          
+
+                                    <div class="d-flex justify-content-between tm-text-gray">
+                                        <span>An ocean in a drop </span>
+                                    </div>
+                                    <div class="d-flex justify-content-between tm-text-gray mb-3">
+                                        <span class="tm-text-gray-light">Kinetic / Interactive</span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1 tm-gallery-item Sound Visual General">
+                                <a href="This_city_swells.html">
+                                <div class="hover_box">
+                                    <div class="icon_image">
+                                        <img src="img/TCS_ICON-01.png" alt="Image" class="img-fluid">
+                                    </div>
+                                    <div class="hover_image">
+                                        <img src="img/TCS_ICON-02.png" alt="Image" class="img-fluid">
+                                    </div>            
+                
+                                <div class="d-flex justify-content-between tm-text-gray">
+                                    <span>This city swells</span>
+                                </div>
+                                <div class="d-flex justify-content-between tm-text-gray mb-3">
+                                    <span class="tm-text-gray-light">Sound / Visual</span>
+                                </div>
+                                </div>
+                                 </a>
+                            </div>
+
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1 tm-gallery-item Visual Sound General">
+                                <div class="hover_box">
+                                    <div class="icon_image">
+                                        <img src="img/LT_ICON-01.png" alt="Image" class="img-fluid">
+                                    </div>
+                                    <div class="hover_image">
+                                        <img src="img/LT_ICON-02.png" alt="Image" class="img-fluid">
+                                    </div>            
+                
+                                <div class="d-flex justify-content-between tm-text-gray">
+                                    <span>MIDI reactive lasers</span>
+                                </div>
+                                <div class="d-flex justify-content-between tm-text-gray mb-3">
+                                    <span class="tm-text-gray-light">Visual / Sound</span>
+                                </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1 tm-gallery-item Visual General">
+                                <div class="hover_box">
+                                    <div class="icon_image">
+                                        <img src="img/CP_ICON-01.png" alt="Image" class="img-fluid">
+                                    </div>
+                                    <div class="hover_image">
+                                        <img src="img/CP_ICON-02.png" alt="Image" class="img-fluid">
+                                    </div>            
+                
+                                <div class="d-flex justify-content-between tm-text-gray">
+                                    <span>Church projection mapping</span>
+                                </div>
+                                <div class="d-flex justify-content-between tm-text-gray mb-3">
+                                    <span class="tm-text-gray-light">Visual</span>
+                                </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1 tm-gallery-item Sound Interactive General">
+                                <a href="Windchime_sequencer.html">
+                                <div class="hover_box">
+                                    <div class="icon_image">
+                                        <img src="img/WC_ICON-01.png" alt="Image" class="img-fluid">
+                                    </div>
+                                    <div class="hover_image">
+                                        <img src="img/WC_ICON-02.png" alt="Image" class="img-fluid">
+                                    </div>            
+                
+                                <div class="d-flex justify-content-between tm-text-gray">
+                                    <span>Windchime sequencer</span>
+                                </div>
+                                <div class="d-flex justify-content-between tm-text-gray mb-3">
+                                    <span class="tm-text-gray-light">Sound / Interactive</span>
+                                </div>
+                                </div>
+                                </a>
+                            </div>
+
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1 tm-gallery-item Visual Sound Interactive General">
+                                <div class="hover_box">
+                                    <div class="icon_image">
+                                        <img src="img/ML_ICON-01.png" alt="Image" class="img-fluid">
+                                    </div>
+                                    <div class="hover_image">
+                                        <img src="img/ML_ICON-02.png" alt="Image" class="img-fluid">
+                                    </div>            
+                
+                                <div class="d-flex justify-content-between tm-text-gray">
+                                    <span>MLF Proposal</span>
+                                </div>
+                                <div class="d-flex justify-content-between tm-text-gray mb-3">
+                                    <span class="tm-text-gray-light">Visual / Sound / Interactive</span>
+                                </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-1 tm-gallery-item Visual Interactive General">
+                                <div class="hover_box">
+                                    <div class="icon_image">
+                                        <img src="img/MO_ICON-01.png" alt="Image" class="img-fluid">
+                                    </div>
+                                    <div class="hover_image">
+                                        <img src="img/MO_ICON-02.png" alt="Image" class="img-fluid">
+                                    </div>            
+                
+                                <div class="d-flex justify-content-between tm-text-gray">
+                                    <span>Moire Installation</span>
+                                </div>
+                                <div class="d-flex justify-content-between tm-text-gray mb-3">
+                                    <span class="tm-text-gray-light">Visual / Interactive</span>
+                                </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </section>
+                </div>
+
+
+                    
+                <!-- Gallery section -->
+
+                
+                <script src="js/plugins.js"></script>
+                <script>
+                    $(window).on("load", function() {
+                        $('body').addClass('loaded');
+                    });
+                </script>            
+
+    <script src="js/jquery-3.4.1.min.js"></script>          <!-- https://jquery.com/ -->
+    <script src="js/jquery.singlePageNav.min.js"></script>  <!-- https://github.com/ChrisWojcik/single-page-nav -->
+    <script src="js/parallax/parallax.min.js"></script>     <!-- https://pixelcog.github.io/parallax.js/ -->
+    <script src="js/imagesloaded.pkgd.min.js"></script>     <!-- https://imagesloaded.desandro.com/ -->
+    <script src="js/isotope.pkgd.min.js"></script>          <!-- https://isotope.metafizzy.co/ -->
+    <script src="js/jquery.magnific-popup.min.js"></script> <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
+    <script src="slick/slick.min.js"></script>              <!-- https://kenwheeler.github.io/slick/ -->
+    <script src="js/templatemo-script.js"></script>
 </body>
-</html>
+</html> 
