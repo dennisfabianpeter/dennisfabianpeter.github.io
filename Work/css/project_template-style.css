@@ -78,8 +78,8 @@ h1{
     margin-bottom: 25px;
     align-items: center;
     background-color: #000000;
-    border-top: #FF6629 solid 4px;
-    border-bottom: #FF6629 solid 4px;
+    border-top: #000000 solid 4px;
+    border-bottom: #000000 solid 4px;
 }
 
 .desktop-hero-container{
@@ -93,7 +93,7 @@ h1{
 .title{
     font-size: 30px;
     color:#000000;
-    border-left: #FF6629 solid 16px;
+    border-left: #000000 solid 16px;
     padding-bottom: 4px;
     padding-top: 0px;
     padding-left: 7px;
@@ -967,6 +967,7 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
     .info-button{
         display: block;
         position: absolute;
+        
         font-size: 25px;
         right: 0px;
         top: 0px;
@@ -1219,7 +1220,7 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
         position: sticky;
         top: 100px;
         margin-right: 10px;
-        height: 80vh;
+        height: 60vh;
         padding-left: 15px;
         padding-right: 0px;
         padding-top: 0px;
@@ -1232,7 +1233,7 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
     }
 
     .title{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .caption, .caption2{
@@ -1245,7 +1246,24 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
         height: 275px;
      }
 
-     .end_spacer{
+    .secondary-main-heading{
+        color: #fff; text-align: left; padding-right: 120px; font-size: 22px;}
+    .secondary-tag-text{color: #919191; text-align: left; font-size: 13px;}
+
+    .info-button{
+        font-size: 23px;
+    }
+
+    #mobile-secondary-text{
+        font-size: 14px;
+ 
+    }
+
+    #primText{
+        font-size: 13px;
+    }
+
+    .end_spacer{
         padding-top: 10px;
         padding-bottom: 10px;
     }
@@ -1271,6 +1289,27 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
         padding-top: 1px;
         padding-bottom: 1px;
         font-size: 13px;
+    }
+
+    .secondary-main-heading{
+        color: #fff; text-align: left; padding-right: 120px; font-size: 20px;}
+    .secondary-tag-text{color: #919191; text-align: left; font-size: 12px;}
+
+    .info-button{
+        font-size: 22px;
+    }
+
+    .title{
+        font-size: 16px;
+    }
+
+    #mobile-secondary-text{
+        font-size: 13px;
+ 
+    }
+
+    #primText{
+        font-size: 12px;
     }
 
     .end_spacer{
