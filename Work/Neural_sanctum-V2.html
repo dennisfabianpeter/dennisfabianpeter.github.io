@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Sanctum</title>
+    <script src="p5.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/project_template-style.css">
+    <!-- <script src="sketch_project.js"></script> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+    </style>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@500&display=swap');
+    </style>
+
+
+</head>
+<body>
+    <div id="sketch-holder"></div>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://non-linear.in">
+                <img src="img/NL_Logo.png"  height="55" alt="Logo">
+                non linear
+            </a>
+            <button class="navbar-toggler" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">work</a>
+                    </li>
+                </ul>
+                </div>
+        </div>
+    </nav>
+
+    <div id="navToggle" class="fullscreenToggle" style="left: 100vw;">
+        <div class="toggle-list-container">
+            <li class="nav-item-toggler">
+                <a class="nav-link" href="index.html" style="padding-left: 5px;">home</a>
+            </li>
+            <li class="nav-item-toggler">
+                <a class="nav-link" href="index.html" style="padding-left: 5px;">contact</a>
+            </li>
+            <li class="nav-item-toggler">
+                <a class="nav-link active" aria-current="page" href="index.html" style="padding-left: 5px;">work</a>
+            </li>
+        </div>
+    </div>
+
+
+
+
+<div class="center">
+    <div class="container">
+        <div class="left">
+            <div class="gallery">
+                <div class="desktop-hero-container">
+                    <img src="img/NS_HERO.jpg" alt="Image" class="photograph">
+                </div>
+                
+                <div id="mySidenav" class="sidenav">
+
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                    <div class="splash">
+                        <h1 class="main-heading" style="color: #FF6629; text-align: left; margin-right: 60px;">Neural Sanctum</h1>
+                        <div class="mb-3">
+                            <span class="tag-text">Visual / Interactive</span>
+                        </div>
+            
+                        <div class="mr-4 mb-0">
+                            <span class="tm-text-gray-dark-collab">Collaborators</span>
+                        </div>
+                        <div class="mr-4 mb-0">
+                            <a class="hyperlink-green" href="https://ocupus.in/" target=”_blank”>Studio Ocupus</a>
+                        </div>
+                        <div class="mr-4 mb-0">
+                            <a class="hyperlink-green" href="https://www.instagram.com/social_hour_arts/" target=”_blank”>Social Hour Arts</a>
+                        </div>
+                        <div class="mr-4 mb-0">
+                            <a class="hyperlink-green" href="https://www.vinaykhare.in/" target=”_blank”>Vinay Khare</a>
+                        </div>
+            
+                        <div class="mr-4 mb-0 mt-3">
+                            <span class="tm-text-gray-dark-collab">Photographs / Video</span>
+                        </div>
+                        <div class="mr-4 mb-0">
+                            <span class="tm-text-gray" target=”_blank”>Ameen Abdullah</span>
+                        </div>
+            
+                        <div class="text-container">
+                        <span class="secondary-text">
+                            Neural Sanctum is an immersive & interactive installation that was showcased in Bangalore at an NFT convention. The project was designed in collaboration with Ocupus Studio. The installation takes the spatiality of an Indian temples sanctum, this sanctum, however, is dedicated to an artificial intelligence and not a god. Our installation consists of two seperate interactive spaces - the tunnel and the sanctum. The sanctum is the central space of a temple, the garbagraha, which is the space that houses the idol/god. The tunnel is similar to a mandappa, which is the linear pathway that leads to the sanctum.
+                            <br>
+                        </span>
+                            
+                        <span class="secondary-text">    
+                            <br>
+                            The tunnel leading up to the sanctum is a 12-meter-long, linear space surrounded by visuals on all sides. This is similar to the mandappa of a temple which is a linear, pillared pathway. But instead of pillars, this space is surrounded by a void into which the user begins their journey. The visuals in this space are our artistic interpretation of the ether - the meta-physical world that exists between physical reality and intangible consciousness. The ether gives rise to all known intelligence in the universe and hence this is where the journey of artificial intelligence also begins.
+                            The visuals for this space primarily consist of two elements - the first is a fluid simulation which consists of thousands of glowing orb-like particles. This fluid simulation was rendered in real time and is fully interactive. The second element is a mesh-like fabric which surrounds the ephemeral space. This fabric represents force fields which the user's inputs can affect. Both the fluid simulation and the force fields are affected by the crowd's movements in the space. 
+                            The tunnel has 48 piezo-electric sensors that are spread along the length of it. These sensors detect vibrations on the floor and when a user steps on one of these sensors, it triggers the visuals on the LED panel. In this way, users can interact with the fluid simulation on the screens by finding and triggering the hidden sensors. In addition to the visuals, the sound within this space is also affected by the sensors. Each of the 48 sensors triggers a different musical note - it works similar to a foot piano which can be triggered by footsteps. This way, the entire tunnel also acts like a generative musical instrument.
+                            <br>
+                            <br>
+                            The tunnel leads to the sanctum, which is located at the end of the space. At the heart of the sanctum, visitors will discover a podium that houses a leap motion sensor. This sensor tracks a user's hand movements and gestures, allowing them to control the visuals displayed on the surrounding screens. Visitors can use hand gestures, like open palms or clenched fists, to interact with floating elements on the screens, turning the experience into an engaging game.
+                            The visuals on the screens are primarily composed of particles that move in response to the user's hand gestures, creating an immersive environment. The particles move orthogonally to a fixed grid, providing a mesmerizing display. This fixed grid system allowed us to create a visual language which was at the same time both organic and fluid, yet, blocky and digital. The visuals are primarily dark, reminiscent of the sanctums found in most temples. This darkness is symbolic of a sacred space where human inputs are passed through a manmade algorithm to create its own output. The soundscape of the sanctum includes dialogues about the future of the web and blockchain technology, complementing the installation's theme.
+                            <br>
+                            <br>
+                        </span>
+                        <div class="credit-text">
+                        <span class="tm-text-gray credit-text">
+                            Additional Credits:
+                        </span>
+                        <br>
+                        <span class="tm-text-gray credit-text" style="font-style: italic;">
+                            Illangovan (Production), Aswathy 
+                        </span>
+                        </div>
+            
+                    </div>
+                </div>
+                    
+                </div>
+
+
+
+                <div class="fixed-mobile-container">
+                    <div class="mobile-only-hero">
+                        <div class="mobile-hero-container" style="border:none; margin-bottom: 0px;">
+                            <img src="img/NS_HERO.jpg" alt="Image" class="photograph">
+                        </div>
+                        <div class="gradient-container"></div>
+                    </div>
+                </div>
+
+                <div class="heading-container">
+                    <div class="info-button">
+                        <button class="tm-gallery-link" onclick="openNav()">&#10094; info</button>
+                    </div>
+                    <h1 class="secondary-main-heading" >Neural Sanctum</h1>
+                    <div>
+                        <span class="secondary-tag-text">Visual / Interactive</span>
+                    </div>
+                    <div class="gradient-container-bottom"></div>
+                </div>
+
+                <div class="mobile-only-text">
+                    <span class="main-text">
+                        Neural Sanctum is an immersive & interactive installation that was showcased in Bangalore at an NFT convention. The project was designed in collaboration with Ocupus Studio. The installation takes the spatiality of an Indian temples sanctum, this sanctum, however, is dedicated to an artificial intelligence and not a god. Our installation consists of two seperate interactive spaces - the tunnel and the sanctum. The sanctum is the central space of a temple, the garbagraha, which is the space that houses the idol/god. The tunnel is similar to a mandappa, which is the linear pathway that leads to the sanctum.
+                        <br>
+                    </span>
+                </div>
+
+                <span class="title">Video</span>
+                <div class="content-container">
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/803031295?h=d0bb1b1ea8&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Neural Sanctum"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+
+                <div class="video-container" style="display: none;">
+                    <iframe class="youtubeVideo" width="560" height="315" src="https://www.youtube-nocookie.com/embed/F1oFBk9cAx4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>                        
+                    </iframe>
+                </div>
+                
+                <span class="title">Gallery</span>
+
+                <div class="content-container">
+
+                        <div class="mySlides">
+                          <div class="numbertext">1 / 7</div>
+                            <img src="img/NS_02.jpg" style="width:100%">
+                        </div>
+                      
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 7</div>
+                            <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                                <source src="video/NS_V-01.mp4" style="width:100%">
+                                </video>
+                          </div>
+                    
+                        <div class="mySlides">
+                          <div class="numbertext">3 / 7</div>
+                          <img src="img/NS_06.jpg" style="width:100%">
+                            </video>
+                        </div>
+                      
+                        <div class="mySlides">
+                          <div class="numbertext">4 / 7</div>
+                            <img src="img/NS_03.jpg" style="width:100%">
+                        </div>
+                      
+                        <div class="mySlides">
+                          <div class="numbertext">5 / 7</div>
+                            <img src="img/NS_04.jpg" style="width:100%">
+                        </div>
+                      
+                        <div class="mySlides">
+                          <div class="numbertext">6 / 7</div>
+                          <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                            <source src="video/NS_V-03.mp4" style="width:100%">
+                            </video>
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">7 / 7</div>
+                              <img src="img/NS_05.jpg" style="width:100%">
+                        </div>
+                      
+                    
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                      
+                    
+                        <div class="caption-container">
+                          <p class="caption" id="caption"></p> 
+                        </div>
+                    
+                        <div class="gallery_row" style="display: none;">
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="The tunnel during an active state">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="Walkthrough of the entire installation">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="The tunnel during a relatively calmer state">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="The tunnel during an active state">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="A wide angle shot of the sanctum">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="Visuals inside the sanctum">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="Interior shot of the sanctum">
+                          </div>
+                        </div>
+                </div>
+
+                <span class="title">Working</span>
+
+                <div class="content-container">
+                  
+                    <div class="mySlides2">
+                        <div class="numbertext2">1 / 3</div>
+                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                            <source src="video/NS_V-02.mp4" style="width:100%">
+                            </video>
+                      </div>
+                
+                    <div class="mySlides2">
+                      <div class="numbertext2">2 / 3</div>
+                      <img src="img/NS_01.jpg" style="width:100%">
+                        </video>
+                    </div>
+                  
+                    <div class="mySlides2">
+                        <div class="numbertext2">3 / 3</div>
+                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                            <source src="video/NS_V-04.mp4" style="width:100%">
+                            </video>
+                      </div>
+                  
+                
+                    <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+                    <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+                  
+                
+                    <div class="caption-container2">
+                      <p class="caption2" id="caption2"></p>
+                    </div>
+                
+                    <div class="gallery_row2" style="display: none;">
+                      <div class="gallery_column2">
+                        <img class="demo2 cursor2" alt="Sensors detect the footsteps of the users">
+                      </div>
+                      <div class="gallery_column2">
+                        <img class="demo2 cursor2" alt="Leapmotion sensor tracks the users hand">
+                      </div>
+                      <div class="gallery_column2">
+                        <img class="demo2 cursor2" alt="Hand gestures are also used to interact with the visuals">
+                      </div>
+                    </div>
+            </div>
+
+            <div class="end_spacer"></div>
+
+
+            </div>         
+        </div>
+
+        
+        <div class="right">
+            <h1 class="main-heading" style="color: #FF6629; text-align: left;">Neural Sanctum</h1>
+            <div class="mb-3">
+                <span class="tag-text">Visual / Interactive</span>
+            </div>
+
+            <div class="mr-4 mb-0">
+                <span class="tm-text-gray-dark-collab">Collaborators</span>
+            </div>
+            <div class="mr-4 mb-0">
+                <a class="hyperlink-green" href="https://ocupus.in/" target=”_blank”>Studio Ocupus</a>
+            </div>
+            <div class="mr-4 mb-0">
+                <a class="hyperlink-green" href="https://www.instagram.com/social_hour_arts/" target=”_blank”>Social Hour Arts</a>
+            </div>
+            <div class="mr-4 mb-0">
+                <a class="hyperlink-green" href="https://www.vinaykhare.in/" target=”_blank”>Vinay Khare</a>
+            </div>
+
+            <div class="mr-4 mb-0 mt-3">
+                <span class="tm-text-gray-dark-collab">Photographs / Video</span>
+            </div>
+            <div class="mr-4 mb-0">
+                <span class="tm-text-gray" target=”_blank”>Ameen Abdullah</span>
+            </div>
+
+            <div class="text-container">
+            <span class="main-text">
+                Neural Sanctum is an immersive & interactive installation that was showcased in Bangalore at an NFT convention. The project was designed in collaboration with Ocupus Studio. The installation takes the spatiality of an Indian temples sanctum, this sanctum, however, is dedicated to an artificial intelligence and not a god. Our installation consists of two seperate interactive spaces - the tunnel and the sanctum. The sanctum is the central space of a temple, the garbagraha, which is the space that houses the idol/god. The tunnel is similar to a mandappa, which is the linear pathway that leads to the sanctum.
+                <br>
+            </span>
+                
+            <span class="secondary-text">    
+                <br>
+                The tunnel leading up to the sanctum is a 12-meter-long, linear space surrounded by visuals on all sides. This is similar to the mandappa of a temple which is a linear, pillared pathway. But instead of pillars, this space is surrounded by a void into which the user begins their journey. The visuals in this space are our artistic interpretation of the ether - the meta-physical world that exists between physical reality and intangible consciousness. The ether gives rise to all known intelligence in the universe and hence this is where the journey of artificial intelligence also begins.
+                The visuals for this space primarily consist of two elements - the first is a fluid simulation which consists of thousands of glowing orb-like particles. This fluid simulation was rendered in real time and is fully interactive. The second element is a mesh-like fabric which surrounds the ephemeral space. This fabric represents force fields which the user's inputs can affect. Both the fluid simulation and the force fields are affected by the crowd's movements in the space. 
+                The tunnel has 48 piezo-electric sensors that are spread along the length of it. These sensors detect vibrations on the floor and when a user steps on one of these sensors, it triggers the visuals on the LED panel. In this way, users can interact with the fluid simulation on the screens by finding and triggering the hidden sensors. In addition to the visuals, the sound within this space is also affected by the sensors. Each of the 48 sensors triggers a different musical note - it works similar to a foot piano which can be triggered by footsteps. This way, the entire tunnel also acts like a generative musical instrument.
+                <br>
+                <br>
+                The tunnel leads to the sanctum, which is located at the end of the space. At the heart of the sanctum, visitors will discover a podium that houses a leap motion sensor. This sensor tracks a user's hand movements and gestures, allowing them to control the visuals displayed on the surrounding screens. Visitors can use hand gestures, like open palms or clenched fists, to interact with floating elements on the screens, turning the experience into an engaging game.
+                The visuals on the screens are primarily composed of particles that move in response to the user's hand gestures, creating an immersive environment. The particles move orthogonally to a fixed grid, providing a mesmerizing display. This fixed grid system allowed us to create a visual language which was at the same time both organic and fluid, yet, blocky and digital. The visuals are primarily dark, reminiscent of the sanctums found in most temples. This darkness is symbolic of a sacred space where human inputs are passed through a manmade algorithm to create its own output. The soundscape of the sanctum includes dialogues about the future of the web and blockchain technology, complementing the installation's theme.
+                <br>
+                <br>
+            </span>
+            <div class="credit-text">
+            <span class="tm-text-gray credit-text">
+                Additional Credits:
+            </span>
+            <br>
+            <span class="tm-text-gray credit-text" style="font-style: italic;">
+                Illangovan (Production), Aswathy 
+            </span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+        
+ <!-- container-fluid, tm-container-content -->
+
+    
+    <script src="js/plugins.js"></script>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
+
+<script>
+    let slideIndex2 = 1;
+    showSlides2(slideIndex2);
+
+    // Next/previous controls
+    function plusSlides2(n) {
+    showSlides2(slideIndex2 += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide2(n) {
+    showSlides2(slideIndex2 = n);
+    }
+
+    function showSlides2(n) {
+    let i;
+    let slides2 = document.getElementsByClassName("mySlides2");
+    let dots2 = document.getElementsByClassName("demo2");
+    let captionText2 = document.getElementById("caption2");
+    if (n > slides2.length) {slideIndex2 = 1}
+    if (n < 1) {slideIndex2 = slides2.length}
+    for (i = 0; i < slides2.length; i++) {
+        slides2[i].style.display = "none";
+    }
+    for (i = 0; i < dots2.length; i++) {
+        dots2[i].className = dots2[i].className.replace(" active", "");
+    }
+    slides2[slideIndex2-1].style.display = "block";
+    dots2[slideIndex2-1].className += " active";
+    captionText2.innerHTML = dots2[slideIndex2-1].alt;
+    }
+</script>
+
+<script>
+    /* Open the sidenav */
+    function openNav() {
+    document.getElementById("mySidenav").style.left = "0vw";
+    }
+
+    /* Close/hide the sidenav */
+    function closeNav() {
+    document.getElementById("mySidenav").style.left = "100vw";
+    }
+</script>
+
+<script>
+    /* Open the sidenav */
+    function openNav() {
+    document.getElementById("mySidenav").style.left = "0vw";
+    }
+
+    /* Close/hide the sidenav */
+    function closeNav() {
+    document.getElementById("mySidenav").style.left = "100vw";
+    }
+</script>
+
+
+<script>
+    function toggleNav() {
+    var x = document.getElementById("navToggle");
+    if (x.style.left == "100vw") {
+        x.style.left = "0";
+    } else {
+        x.style.left = "100vw";
+    }
+    }
+</script>
+
+</body>
+</html>
+
