@@ -382,7 +382,7 @@ function checkRatio() {
   
   if(width/height >1){  
     mostDim = width;
-    bezierThic = width/50;
+    bezierThic = width/100;
     arrowLineThic = width/200;
     arrowThic = width/30;
     dashSpacing = width/100;
@@ -425,7 +425,7 @@ function checkRatio() {
   
   if(width/height <=1){ 
     mostDim = height;
-    bezierThic = width/80;
+    bezierThic = width/50;
     arrowLineThic = width/100;
     arrowThic = width/17;
     dashSpacing = width/50;
