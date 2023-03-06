@@ -82,6 +82,7 @@ h1{
     border-bottom: #000000 solid 4px;
 }
 
+
 .desktop-hero-container{
     position: relative;
     width: 100%;
@@ -234,11 +235,16 @@ hr.dotted {
 }
 
 
-.video-container {
+#youtube {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.20%; /* 16:9 */
     height: 0;
-    margin-bottom: 20px;
+ }
+
+ #interactive {
+    position: relative;
+    padding-bottom: 85.0%; /* 16:9 */
+    height: 0;
  }
 
 .youtubeVideo {
@@ -834,7 +840,7 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
 
     .title{
         font-size: 23px;
-        border-left: #FF6629 solid 10px;
+        border-left: #000000 solid 10px;
         padding-bottom: 4px;
         padding-top: 0px;
         padding-left: 4px;
@@ -842,8 +848,8 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
 
     .content-container{
         margin-bottom: 10px;
-        border-top: #FF6629 solid 3px;
-        border-bottom: #FF6629 solid 3px;
+        border-top: #000000 solid 3px;
+        border-bottom: #000000 solid 3px;
     }
 
     .gallery {
@@ -903,10 +909,6 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
     .tm-container-content2 { max-width: 90vw; }
     
     .nav-item { width: 100%; }
-
-    .video-container {
-        height: 475px;
-     }
 
      .desc-text{
         padding-bottom: 20px;
@@ -1174,10 +1176,6 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
     .tm-paging-col { flex-direction: column; }
     .tm-paging { flex-wrap: wrap; }
 
-    .video-container {
-        height: 375px;
-     }
-
      .numbertext, .numbertext2 {
         color: #FF6629;
         font-size: 18px;
@@ -1203,7 +1201,6 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
 }
 
 @media (max-width: 575px) {
-
 
     .tm-container-content { max-width: 420px; }
     .tm-container-content2 { max-width: 420px; }
@@ -1242,9 +1239,6 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
         font-size: 13px;
     }
 
-    .video-container {
-        height: 275px;
-     }
 
     .secondary-main-heading{
         color: #fff; text-align: left; padding-right: 120px; font-size: 22px;}

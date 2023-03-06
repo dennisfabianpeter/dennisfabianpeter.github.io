@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elleys Pavillion</title>
+    <script src="p5.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/project_template-style.css">
+    <!-- <script src="sketch_project.js"></script> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+    </style>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@500&display=swap');
+    </style>
+
+
+</head>
+<body>
+    <div id="sketch-holder"></div>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://non-linear.in">
+                <img src="img/NL_Logo.png"  height="55" alt="Logo">
+                non linear
+            </a>
+            <button class="navbar-toggler" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">work</a>
+                    </li>
+                </ul>
+                </div>
+        </div>
+    </nav>
+
+    <div id="navToggle" class="fullscreenToggle" style="left: 100vw;">
+        <div class="toggle-list-container">
+            <li class="nav-item-toggler">
+                <a class="nav-link" href="index.html" style="padding-left: 5px;">home</a>
+            </li>
+            <li class="nav-item-toggler">
+                <a class="nav-link" href="index.html" style="padding-left: 5px;">contact</a>
+            </li>
+            <li class="nav-item-toggler">
+                <a class="nav-link active" aria-current="page" href="index.html" style="padding-left: 5px;">work</a>
+            </li>
+        </div>
+    </div>
+
+
+
+
+<div class="center">
+    <div class="container">
+        <div class="left">
+            <div class="gallery">
+                <div class="desktop-hero-container">
+                    <img src="img/EP_HERO.jpg" alt="Image" class="photograph">
+                </div>
+                
+                <div id="mySidenav" class="sidenav">
+
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                    <div class="splash">
+                        <h1 class="main-heading" style="color: #FF6629; text-align: left; margin-right: 60px;">Elleys Pavillion</h1>
+                        <div class="mb-3">
+                            <span class="tag-text">Visual / Interactive</span>
+                        </div>
+            
+                        <div class="mr-4 mb-0">
+                            <span class="tm-text-gray-dark-collab">Collaborators</span>
+                        </div>
+                        <div class="mr-4 mb-0">
+                            <a class="hyperlink-green" href="https://ocupus.in/" target=”_blank”>Ocupus Studio</a>
+                        </div>
+                        <div class="mr-4 mb-0">
+                            <a class="hyperlink-green" href="https://www.instagram.com/choprasdesigns/?hl=en" target=”_blank”>Chopra Designs</a>
+                        </div>
+            
+                        <div class="mr-4 mb-0 mt-3">
+                            <span class="tm-text-gray-dark-collab">Photographs / Video</span>
+                        </div>
+                        <div class="mr-4 mb-0">
+                            <a class="hyperlink-green" href="https://www.instagram.com/eyeamsid/" target=”_blank”>Siddhesh Dave</a>
+                        </div>
+            
+                        <div class="text-container" id="mobile-secondary-text">
+                        <span class="secondary-text">
+                            This dynamic installation made its debut at the "Delhi Contemporary Art Week 2023" in collaboration with Aditi Anuj, who is an origami artist based in Jaipur. Aditi's exhibition centered around the theme of water, where she envisioned a creation that would capture the essence of the ocean's fluctuating motions. 27 individual modules made of pleated origami folds take on the metaphor for a drop of water. These drops combine to form an oceanic landscape that sways in harmony with the motion of waves. Quoting Aditi - "The fleeting nature of the wave represents the unfolding of life and everything else it brings along."
+                            <br>
+                        </span>
+                            
+                        <span class="secondary-text">    
+                            <br>
+                            Aditi's work is a testament to her skillful manipulation of form and geometry. Her artistic vision manifests in the form of intricate designs, which she brings to life through her exploration of pleated folds and the use of modular elements. The design process began with an extensive examination of her previous works, as we sought ways to add fluidity and motion to her pieces. Ultimately, we landed on the V-pleated fold, which proved to be mechanically compliant and aesthetically pleasing. With its myriad facets and varying angles, this fold structure bears a striking resemblance to the folds of an accordion. From the outset, it was evident that multiple motors would be necessary to control similar modules made up of Aditi's intricate pleated folds. Thus, the mechanical design process began from scratch, aiming to animate these pleats in the most straightforward manner. Initially, we explored linear actuator mechanisms to animate the pleats linearly. However, we eventually decided to fold the pleats around a semi-circular path, which was not only simpler to implement mechanically but also visually more captivating. The resulting curved profile imbued the installation with greater depth, while the movement conveyed a heightened sense of dynamism.
+                            <br>
+                            <br>
+                            Aditi collaborated with Sapna Khatri, a watercolour artist, to create the intricate patterns on the origami. With the V-shaped pleats offering various facets and interesting opportunities, Aditi aimed to capture the complex textures of the ocean, from its turbulent white foam to its calm yet deep blue depths. Sapna's work resulted in a mesmerizing, detailed pattern that features two distinct shades of blue, with the left and right facets painted in light and dark blues respectively. The visual effect of the installation is further enhanced when the pleats are set in motion. When the two opposing facets of the pleats are compressed and come together, they form an ever-changing gradient of blues that is truly captivating to watch.
+                            <br>
+                            <br>
+                        </span>
+            
+                    </div>
+                </div>
+                    
+                </div>
+
+
+
+                <div class="fixed-mobile-container">
+                    <div class="mobile-only-hero">
+                        <div class="mobile-hero-container" style="border:none; margin-bottom: 0px;">
+                            <img src="img/EP_HERO.jpg" alt="Image" class="photograph">
+                        </div>
+                        <div class="gradient-container"></div>
+                    </div>
+                </div>
+
+                <div class="heading-container">
+                    <div class="info-button">
+                        <button class="tm-gallery-link" onclick="openNav()">&#10094; info</button>
+                    </div>
+                    <h1 class="secondary-main-heading" >Elleys Pavillion</h1>
+                    <div>
+                        <span class="secondary-tag-text">Visual / Interactive</span>
+                    </div>
+                    <div class="gradient-container-bottom"></div>
+                </div>
+
+                <div class="mobile-only-text">
+                    <span class="main-text" id="primText">
+                        This dynamic installation made its debut at the "Delhi Contemporary Art Week 2023" in collaboration with Aditi Anuj, who is an origami artist based in Jaipur. Aditi's exhibition centered around the theme of water, where she envisioned a creation that would capture the essence of the ocean's fluctuating motions. 27 individual modules made of pleated origami folds take on the metaphor for a drop of water. These drops combine to form an oceanic landscape that sways in harmony with the motion of waves. Quoting Aditi - "The fleeting nature of the wave represents the unfolding of life and everything else it brings along."
+                        <br>
+                    </span>
+                </div>
+
+                <span class="title">Video</span>
+                <div class="content-container" style="display: none;">
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/803035069?h=f37b1d207f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Bionic Bloom - An Interactive Installation"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+
+                <div class="content-container" id="youtube">
+                    <iframe class="youtubeVideo" width="560" height="315" src="https://www.youtube-nocookie.com/embed/NI_HGTeI2ks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>                        
+                    </iframe>
+                </div>
+                
+                <span class="title">Gallery</span>
+
+                <div class="content-container">
+
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 6</div>
+                            <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                                <source src="video/EP_V-02.mp4" style="width:100%">
+                                </video>
+                          </div>
+                      
+                        <div class="mySlides">
+                          <div class="numbertext">2 / 6</div>
+                            <img src="img/EP_01.jpg" style="width:100%">
+                        </div>
+                      
+                        <div class="mySlides">
+                          <div class="numbertext">3 / 6</div>
+                            <img src="img/EP_03.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 6</div>
+                            <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                                <source src="video/EP_V-01.mp4" style="width:100%">
+                                </video>
+                          </div>
+                      
+                        <div class="mySlides">
+                            <div class="numbertext">5 / 6</div>
+                              <img src="img/EP_04.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">6 / 6</div>
+                            <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                                <source src="video/EP_V-04.mp4" style="width:100%">
+                                </video>
+                          </div>
+
+
+                    
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                      
+                    
+                        <div class="caption-container">
+                          <p class="caption" id="caption"></p> 
+                        </div>
+                    
+                        <div class="gallery_row" style="display: none;">
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="The instalation in motion">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="The installation was on exhibtion at the Bikaner House, Delhi">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="Head on view of the artwork">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="Looped animation sequence">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="27 modules/drops make up the installation">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="Sapna Khatri's intricate watercolor details">
+                          </div>
+                        </div>
+                </div>
+
+            <div class="end_spacer"></div>
+
+            </div>         
+        </div>
+
+        
+        <div class="right">
+            <h1 class="main-heading" style="color: #FF6629; text-align: left;">Elleys Interactive</h1>
+            <div class="mb-3">
+                <span class="tag-text">Visual / Interactive</span>
+            </div>
+
+            <div class="mr-4 mb-0">
+                <span class="tm-text-gray-dark-collab">Collaborators</span>
+            </div>
+            <div class="mr-4 mb-0">
+                <a class="hyperlink-green" href="https://ocupus.in/" target=”_blank”>Ocupus Studio</a>
+            </div>
+            <div class="mr-4 mb-0">
+                <a class="hyperlink-green" href="https://www.instagram.com/choprasdesigns/?hl=en" target=”_blank”>Chopra Designs</a>
+            </div>
+
+            <div class="mr-4 mb-0 mt-3">
+                <span class="tm-text-gray-dark-collab">Photographs / Video</span>
+            </div>
+            <div class="mr-4 mb-0">
+                <a class="hyperlink-green" href="https://www.instagram.com/eyeamsid/" target=”_blank”>Siddhesh Dave</a>
+            </div>
+
+            <div class="text-container">
+            <span class="main-text">
+                This dynamic installation made its debut at the "Delhi Contemporary Art Week 2023" in collaboration with Aditi Anuj, who is an origami artist based in Jaipur. Aditi's exhibition centered around the theme of water, where she envisioned a creation that would capture the essence of the ocean's fluctuating motions. 27 individual modules made of pleated origami folds take on the metaphor for a drop of water. These drops combine to form an oceanic landscape that sways in harmony with the motion of waves. Quoting Aditi - "The fleeting nature of the wave represents the unfolding of life and everything else it brings along."
+                <br>
+            </span>
+                
+            <span class="secondary-text">    
+                <br>
+                Aditi's work is a testament to her skillful manipulation of form and geometry. Her artistic vision manifests in the form of intricate designs, which she brings to life through her exploration of pleated folds and the use of modular elements. The design process began with an extensive examination of her previous works, as we sought ways to add fluidity and motion to her pieces. Ultimately, we landed on the V-pleated fold, which proved to be mechanically compliant and aesthetically pleasing. With its myriad facets and varying angles, this fold structure bears a striking resemblance to the folds of an accordion. From the outset, it was evident that multiple motors would be necessary to control similar modules made up of Aditi's intricate pleated folds. Thus, the mechanical design process began from scratch, aiming to animate these pleats in the most straightforward manner. Initially, we explored linear actuator mechanisms to animate the pleats linearly. However, we eventually decided to fold the pleats around a semi-circular path, which was not only simpler to implement mechanically but also visually more captivating. The resulting curved profile imbued the installation with greater depth, while the movement conveyed a heightened sense of dynamism.
+                <br>
+                <br>
+                Aditi collaborated with Sapna Khatri, a watercolour artist, to create the intricate patterns on the origami. With the V-shaped pleats offering various facets and interesting opportunities, Aditi aimed to capture the complex textures of the ocean, from its turbulent white foam to its calm yet deep blue depths. Sapna's work resulted in a mesmerizing, detailed pattern that features two distinct shades of blue, with the left and right facets painted in light and dark blues respectively. The visual effect of the installation is further enhanced when the pleats are set in motion. When the two opposing facets of the pleats are compressed and come together, they form an ever-changing gradient of blues that is truly captivating to watch.
+                <br>
+                <br>
+            </span>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+        
+ <!-- container-fluid, tm-container-content -->
+
+    
+    <script src="js/plugins.js"></script>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
+
+<script>
+    let slideIndex2 = 1;
+    showSlides2(slideIndex2);
+
+    // Next/previous controls
+    function plusSlides2(n) {
+    showSlides2(slideIndex2 += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide2(n) {
+    showSlides2(slideIndex2 = n);
+    }
+
+    function showSlides2(n) {
+    let i;
+    let slides2 = document.getElementsByClassName("mySlides2");
+    let dots2 = document.getElementsByClassName("demo2");
+    let captionText2 = document.getElementById("caption2");
+    if (n > slides2.length) {slideIndex2 = 1}
+    if (n < 1) {slideIndex2 = slides2.length}
+    for (i = 0; i < slides2.length; i++) {
+        slides2[i].style.display = "none";
+    }
+    for (i = 0; i < dots2.length; i++) {
+        dots2[i].className = dots2[i].className.replace(" active", "");
+    }
+    slides2[slideIndex2-1].style.display = "block";
+    dots2[slideIndex2-1].className += " active";
+    captionText2.innerHTML = dots2[slideIndex2-1].alt;
+    }
+</script>
+
+<script>
+    /* Open the sidenav */
+    function openNav() {
+    document.getElementById("mySidenav").style.left = "0vw";
+    }
+
+    /* Close/hide the sidenav */
+    function closeNav() {
+    document.getElementById("mySidenav").style.left = "100vw";
+    }
+</script>
+
+<script>
+    /* Open the sidenav */
+    function openNav() {
+    document.getElementById("mySidenav").style.left = "0vw";
+    }
+
+    /* Close/hide the sidenav */
+    function closeNav() {
+    document.getElementById("mySidenav").style.left = "100vw";
+    }
+</script>
+
+
+<script>
+    function toggleNav() {
+    var x = document.getElementById("navToggle");
+    if (x.style.left == "100vw") {
+        x.style.left = "0";
+    } else {
+        x.style.left = "100vw";
+    }
+    }
+</script>
+
+</body>
+</html>
+

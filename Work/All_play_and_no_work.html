@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Play and no Work</title>
+    <script src="p5.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/project_template-style.css">
+    <!-- <script src="sketch_project.js"></script> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+    </style>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@500&display=swap');
+    </style>
+
+
+</head>
+<body>
+    <div id="sketch-holder"></div>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://non-linear.in">
+                <img src="img/NL_Logo.png"  height="55" alt="Logo">
+                non linear
+            </a>
+            <button class="navbar-toggler" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">work</a>
+                    </li>
+                </ul>
+                </div>
+        </div>
+    </nav>
+
+    <div id="navToggle" class="fullscreenToggle" style="left: 100vw;">
+        <div class="toggle-list-container">
+            <li class="nav-item-toggler">
+                <a class="nav-link" href="index.html" style="padding-left: 5px;">home</a>
+            </li>
+            <li class="nav-item-toggler">
+                <a class="nav-link" href="index.html" style="padding-left: 5px;">contact</a>
+            </li>
+            <li class="nav-item-toggler">
+                <a class="nav-link active" aria-current="page" href="index.html" style="padding-left: 5px;">work</a>
+            </li>
+        </div>
+    </div>
+
+
+
+
+<div class="center">
+    <div class="container">
+        <div class="left">
+            <div class="gallery">
+                <div class="desktop-hero-container">
+                    <img src="img/AP_HERO.jpg" alt="Image" class="photograph">
+                </div>
+                
+                <div id="mySidenav" class="sidenav">
+
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                    <div class="splash">
+                        <h1 class="main-heading" style="color: #FF6629; text-align: left; margin-right: 60px;">All Play and no Work</h1>
+                        <div class="mb-3">
+                            <span class="tag-text">Mixed Media</span>
+                        </div>
+
+            
+                        <div class="mr-4 mb-0 mt-3">
+                            <span class="tm-text-gray-dark-collab">Photographs / Video</span>
+                        </div>
+                        <div class="mr-4 mb-0">
+                            <span class="tm-text-gray" target=”_blank”>Dennis Peter</span>
+                        </div>
+            
+                        <div class="text-container" id="mobile-secondary-text">
+                        <span class="secondary-text">
+                            Bionic Bloom is an interactive art installation that imitates the shape and movement of a floral bloom. It is the result of a collaborative effort with "Digital Intuition" as part of an academic exercise at the Crescent School of Architecture. The project brief was to create an interactive installation that would involve and engage the students of the university, and introduce them to advanced technologies and fabrication processes that are outside the traditional domain of architecture, yet closely linked to design and architecture.
+                            The development of the mechanism for the blooms involved an iterative process that aimed to achieve optimal dynamics while considering the constraints of the available motors in the market. Over the course of four weeks, we explored a range of design and fabrication technologies, along with the students, including 3D printing, computer vision, computational design, and programming and interfacing with microcontrollers.
+                            <br>
+                        </span>
+                            
+                        <span class="secondary-text">    
+                            <br>
+                            The design process for the mechanism involved a series of iterations, in which we experimented with different mechanisms, materials, motors, and sizes.  The mechanical framework was designed to be optimized for 3D printing in parts.  The mechanics were developed based on the chosen motor, servo motors, which allow for about 180 degrees of rotational motion. Through experimentation with various gear mechanisms, the current design was created using a combination of radial and linear gear systems to rotate four prongs simultaneously. The initial prototype of the mechanism consisted of 11 individual printed parts that were manually assembled with fasteners. The design of this mechanism is continuously being developed to reduce assembly times and increase the durability of the parts by identifying potential points of wear and tear. 
+                            <br>
+                            <br>
+                            The user controls the blooms through hand movements which are tracked with a Kinect camera. The petal colour scheme was generated computationally, and fabrication was optimized using computational algorithms in Grasshopper. To minimize material waste and time during laser cutting, packing algorithms were employed for maximum efficiency.
+                            <br>
+                            <br>
+                            We're always looking for ways to improve our prototype build, both in terms of mechanics and electronics. In fact, we plan on creating a production-ready version of the installation in the near future. We're also working on making the system modular so that more modules can be added to expand the artwork. Currently, the installation is powered by a laptop or mini PC, but we're exploring the possibility of running it on a Raspberry Pi to make it more portable. We see a lot of potential in Bionic Blooms, and we're open to collaboration and partnerships to bring it to production. If you have any ideas or suggestions, we'd love to hear from you.
+                            <br>
+                            <br>
+                        </span>
+            
+                    </div>
+                </div>
+                    
+                </div>
+
+
+
+                <div class="fixed-mobile-container">
+                    <div class="mobile-only-hero">
+                        <div class="mobile-hero-container" style="border:none; margin-bottom: 0px;">
+                            <img src="img/AP_HERO.jpg" alt="Image" class="photograph">
+                        </div>
+                        <div class="gradient-container"></div>
+                    </div>
+                </div>
+
+                <div class="heading-container">
+                    <div class="info-button">
+                        <button class="tm-gallery-link" onclick="openNav()">&#10094; info</button>
+                    </div>
+                    <h1 class="secondary-main-heading" >All Play and no Work</h1>
+                    <div>
+                        <span class="secondary-tag-text">Mixed Media</span>
+                    </div>
+                    <div class="gradient-container-bottom"></div>
+                </div>
+
+                <div class="mobile-only-text">
+                    <span class="main-text" id="primText">
+                        Bionic Bloom is an interactive art installation that imitates the shape and movement of a floral bloom. It is the result of a collaborative effort with "Digital Intuition" as part of an academic exercise at the Crescent School of Architecture. The project brief was to create an interactive installation that would involve and engage the students of the university, and introduce them to advanced technologies and fabrication processes that are outside the traditional domain of architecture, yet closely linked to design and architecture.
+                            The development of the mechanism for the blooms involved an iterative process that aimed to achieve optimal dynamics while considering the constraints of the available motors in the market. Over the course of four weeks, we explored a range of design and fabrication technologies, along with the students, including 3D printing, computer vision, computational design, and programming and interfacing with microcontrollers.
+                        <br>
+                    </span>
+                </div>
+
+                <hr class="dotted">
+
+                <span class="title">Audio Visual Jams</span>
+                <br>
+                <br>
+                <div>
+                    <span class="main-text" id="primText" style="text-align: justify;">
+                        Bionic Bloom is an interactive art installation that imitates the shape and movement of a floral bloom. It is the result of a collaborative effort with "Digital Intuition" as part of an academic exercise at the Crescent School of Architecture. The project brief was to create an interactive installation that would involve and engage the students of the university, and introduce them to advanced technologies and fabrication processes that are outside the traditional domain of architecture, yet closely linked to design and architecture.
+                            The development of the mechanism for the blooms involved an iterative process that aimed to achieve optimal dynamics while considering the constraints of the available motors in the market. Over the course of four weeks, we explored a range of design and fabrication technologies, along with the students, including 3D printing, computer vision, computational design, and programming and interfacing with microcontrollers.
+                        <br>
+                    </span>
+                </div>
+                <br>
+
+                
+            <span class="title">AV 1</span>
+            <div class="content-container" id="youtube">
+                <iframe class="youtubeVideo" width="560" height="315" src="https://www.youtube-nocookie.com/embed/8YZxLjDC-5g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>                        
+                </iframe>
+            </div>
+
+            <span class="title">AV 2</span>
+            <div class="content-container" id="youtube">
+                <iframe class="youtubeVideo" width="560" height="315" src="https://www.youtube-nocookie.com/embed/YqeSjQjH7Ak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>                        
+                </iframe>
+            </div>
+
+            <span class="title">AV 3</span>
+            <div class="content-container" id="youtube">
+                <iframe class="youtubeVideo" width="560" height="315" src="https://www.youtube-nocookie.com/embed/veR9sZDOUO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>                        
+                </iframe>
+            </div>
+
+            <div class="spacer">
+            </div>
+
+            <hr class="dotted">
+
+            <span class="title">GLSL Experiments</span>
+            <br>
+            <br>
+            <div>
+                <span class="main-text" id="primText" style="text-align: justify;">
+                    Bionic Bloom is an interactive art installation that imitates the shape and movement of a floral bloom. It is the result of a collaborative effort with "Digital Intuition" as part of an academic exercise at the Crescent School of Architecture. The project brief was to create an interactive installation that would involve and engage the students of the university, and introduce them to advanced technologies and fabrication processes that are outside the traditional domain of architecture, yet closely linked to design and architecture.
+                        The development of the mechanism for the blooms involved an iterative process that aimed to achieve optimal dynamics while considering the constraints of the available motors in the market. Over the course of four weeks, we explored a range of design and fabrication technologies, along with the students, including 3D printing, computer vision, computational design, and programming and interfacing with microcontrollers.
+                    <br>
+                </span>
+            </div>
+            <br>
+
+            
+            <span class="title">GLSL 1</span>
+            <div class="content-container">
+            <div>
+                <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                    <source src="video/GLSL-A_01.mp4" style="width:100%">
+                    </video>
+            </div>
+            <!-- <div class="caption-container2">
+                <p class="caption2" id="caption2">Radial Moire</p>
+              </div> -->
+            </div>
+
+                
+                <span class="title">GLSL 2</span>
+
+                <div class="content-container">
+
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 3</div>
+                            <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                                <source src="video/GLSL-B_01.mp4" style="width:100%">
+                                </video>
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 3</div>
+                            <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                                <source src="video/GLSL-B_02.mp4" style="width:100%">
+                                </video>
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 3</div>
+                            <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                                <source src="video/GLSL-B_03.mp4" style="width:100%">
+                                </video>
+                        </div>
+
+                          
+                    
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                      
+                    
+                        <div class="caption-container">
+                          <p class="caption" id="caption"></p> 
+                        </div>
+                    
+                        <div class="gallery_row" style="display: none;">
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="The lights flow around the columns of the building">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="A Photograph of the installation">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="A Photograph of the installation">
+                          </div>
+                        </div>
+                </div>
+
+                <div class="spacer">
+                </div>
+    
+                <hr class="dotted">
+    
+                <span class="title">Light Paintings</span>
+                <br>
+                <br>
+                <div>
+                    <span class="main-text" id="primText" style="text-align: justify;">
+                        Bionic Bloom is an interactive art installation that imitates the shape and movement of a floral bloom. It is the result of a collaborative effort with "Digital Intuition" as part of an academic exercise at the Crescent School of Architecture. The project brief was to create an interactive installation that would involve and engage the students of the university, and introduce them to advanced technologies and fabrication processes that are outside the traditional domain of architecture, yet closely linked to design and architecture.
+                            The development of the mechanism for the blooms involved an iterative process that aimed to achieve optimal dynamics while considering the constraints of the available motors in the market. Over the course of four weeks, we explored a range of design and fabrication technologies, along with the students, including 3D printing, computer vision, computational design, and programming and interfacing with microcontrollers.
+                        <br>
+                    </span>
+                </div>
+                <br>
+
+                <div class="content-container">
+                  
+                    <div class="mySlides2">
+                        <div class="numbertext2">1 / 4</div>
+                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                            <source src="video/LIGHT-PAINTING_02.mp4" style="width:100%">
+                            </video>
+                      </div>
+
+                      <div class="mySlides2">
+                        <div class="numbertext2">2 / 4</div>
+                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                            <source src="video/LIGHT-PAINTING_01.mp4" style="width:100%">
+                            </video>
+                      </div>
+
+                      <div class="mySlides2">
+                        <div class="numbertext2">3 / 4</div>
+                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                            <source src="video/LIGHT-PAINTING_03.mp4" style="width:100%">
+                            </video>
+                      </div>
+
+                      <div class="mySlides2">
+                        <div class="numbertext2">4 / 4</div>
+                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                            <source src="video/LIGHT-PAINTING_04.mp4" style="width:100%">
+                            </video>
+                      </div>
+                
+                
+                    <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+                    <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+                  
+                
+                    <div class="caption-container2">
+                      <p class="caption2" id="caption2"></p>
+                    </div>
+                
+                    <div class="gallery_row2" style="display: none;">
+                      <div class="gallery_column2">
+                        <img class="demo2 cursor2" alt="An animation illustrating the lines of flow around the space">
+                      </div>
+                      <div class="gallery_column2">
+                        <img class="demo2 cursor2" alt="A plan showing the layout of the light fixtures">
+                      </div>
+                      <div class="gallery_column2">
+                        <img class="demo2 cursor2" alt="This section shows how the lights dip and vary in height">
+                      </div>
+                      <div class="gallery_column2">
+                        <img class="demo2 cursor2" alt="Laying the wires for power and data signals">
+                      </div>
+                    </div>
+            </div>
+
+            <div class="spacer">
+            </div>
+
+            <hr class="dotted">
+
+            <span class="title">Caustics Experiments</span>
+            <br>
+            <br>
+            <div>
+                <span class="main-text" id="primText" style="text-align: justify;">
+                    Bionic Bloom is an interactive art installation that imitates the shape and movement of a floral bloom. It is the result of a collaborative effort with "Digital Intuition" as part of an academic exercise at the Crescent School of Architecture. The project brief was to create an interactive installation that would involve and engage the students of the university, and introduce them to advanced technologies and fabrication processes that are outside the traditional domain of architecture, yet closely linked to design and architecture.
+                        The development of the mechanism for the blooms involved an iterative process that aimed to achieve optimal dynamics while considering the constraints of the available motors in the market. Over the course of four weeks, we explored a range of design and fabrication technologies, along with the students, including 3D printing, computer vision, computational design, and programming and interfacing with microcontrollers.
+                    <br>
+                </span>
+            </div>
+            <br>
+
+            <div class="content-container" id="youtube">
+                <iframe class="youtubeVideo" width="560" height="315" src="https://www.youtube-nocookie.com/embed/MaJbd9UI_og" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>                        
+                </iframe>
+            </div>
+
+            <div class="spacer">
+            </div>
+
+            <hr class="dotted">
+
+            <span class="title">Plucked Resistors</span>
+            <br>
+            <br>
+            <div>
+                <span class="main-text" id="primText" style="text-align: justify;">
+                    Bionic Bloom is an interactive art installation that imitates the shape and movement of a floral bloom. It is the result of a collaborative effort with "Digital Intuition" as part of an academic exercise at the Crescent School of Architecture. The project brief was to create an interactive installation that would involve and engage the students of the university, and introduce them to advanced technologies and fabrication processes that are outside the traditional domain of architecture, yet closely linked to design and architecture.
+                        The development of the mechanism for the blooms involved an iterative process that aimed to achieve optimal dynamics while considering the constraints of the available motors in the market. Over the course of four weeks, we explored a range of design and fabrication technologies, along with the students, including 3D printing, computer vision, computational design, and programming and interfacing with microcontrollers.
+                    <br>
+                </span>
+            </div>
+            <br>
+
+            <div class="content-container" id="youtube">
+                <iframe class="youtubeVideo" width="560" height="315" src="https://www.youtube-nocookie.com/embed/1pNCfjQx55Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>                        
+                </iframe>
+            </div>
+
+            <div class="spacer">
+            </div>
+
+            <hr class="dotted">
+
+            <span class="title">Projection Mapping Tests</span>
+            <br>
+            <br>
+            <div>
+                <span class="main-text" id="primText" style="text-align: justify;">
+                    Bionic Bloom is an interactive art installation that imitates the shape and movement of a floral bloom. It is the result of a collaborative effort with "Digital Intuition" as part of an academic exercise at the Crescent School of Architecture. The project brief was to create an interactive installation that would involve and engage the students of the university, and introduce them to advanced technologies and fabrication processes that are outside the traditional domain of architecture, yet closely linked to design and architecture.
+                        The development of the mechanism for the blooms involved an iterative process that aimed to achieve optimal dynamics while considering the constraints of the available motors in the market. Over the course of four weeks, we explored a range of design and fabrication technologies, along with the students, including 3D printing, computer vision, computational design, and programming and interfacing with microcontrollers.
+                    <br>
+                </span>
+            </div>
+            <br>
+
+            <div class="content-container" id="youtube">
+                <iframe class="youtubeVideo" width="560" height="315" src="https://www.youtube-nocookie.com/embed/A1DQ-6V1wQo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>                        
+                </iframe>
+            </div>
+
+            <div class="end_spacer"></div>
+
+
+            </div>         
+        </div>
+
+        
+        <div class="right">
+            <h1 class="main-heading" style="color: #FF6629; text-align: left;">All Play and no Work</h1>
+            <div class="mb-3">
+                <span class="tag-text">Mixed Media</span>
+            </div>
+
+            <div class="mr-4 mb-0 mt-3">
+                <span class="tm-text-gray-dark-collab">Photographs / Video</span>
+            </div>
+            <div class="mr-4 mb-0">
+                <span class="tm-text-gray" target=”_blank”>Dennis Peter</span>
+
+            </div>
+
+            <div class="text-container">
+            <span class="main-text">
+                Bionic Bloom is an interactive art installation that imitates the shape and movement of a floral bloom. It is the result of a collaborative effort with "Digital Intuition" as part of an academic exercise at the Crescent School of Architecture. The project brief was to create an interactive installation that would involve and engage the students of the university, and introduce them to advanced technologies and fabrication processes that are outside the traditional domain of architecture, yet closely linked to design and architecture.
+                            The development of the mechanism for the blooms involved an iterative process that aimed to achieve optimal dynamics while considering the constraints of the available motors in the market. Over the course of four weeks, we explored a range of design and fabrication technologies, along with the students, including 3D printing, computer vision, computational design, and programming and interfacing with microcontrollers.
+                <br>
+            </span>
+                
+            <span class="secondary-text">    
+                <br>
+                The design process for the mechanism involved a series of iterations, in which we experimented with different mechanisms, materials, motors, and sizes.  The mechanical framework was designed to be optimized for 3D printing in parts.  The mechanics were developed based on the chosen motor, servo motors, which allow for about 180 degrees of rotational motion. Through experimentation with various gear mechanisms, the current design was created using a combination of radial and linear gear systems to rotate four prongs simultaneously. The initial prototype of the mechanism consisted of 11 individual printed parts that were manually assembled with fasteners. The design of this mechanism is continuously being developed to reduce assembly times and increase the durability of the parts by identifying potential points of wear and tear. 
+                <br>
+                <br>
+                The user controls the blooms through hand movements which are tracked with a Kinect camera. The petal colour scheme was generated computationally, and fabrication was optimized using computational algorithms in Grasshopper. To minimize material waste and time during laser cutting, packing algorithms were employed for maximum efficiency.
+                <br>
+                <br>
+                We're always looking for ways to improve our prototype build, both in terms of mechanics and electronics. In fact, we plan on creating a production-ready version of the installation in the near future. We're also working on making the system modular so that more modules can be added to expand the artwork. Currently, the installation is powered by a laptop or mini PC, but we're exploring the possibility of running it on a Raspberry Pi to make it more portable. We see a lot of potential in Bionic Blooms, and we're open to collaboration and partnerships to bring it to production. If you have any ideas or suggestions, we'd love to hear from you.
+                <br>
+                <br>
+            </span>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+        
+ <!-- container-fluid, tm-container-content -->
+
+    
+    <script src="js/plugins.js"></script>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
+
+<script>
+    let slideIndex2 = 1;
+    showSlides2(slideIndex2);
+
+    // Next/previous controls
+    function plusSlides2(n) {
+    showSlides2(slideIndex2 += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide2(n) {
+    showSlides2(slideIndex2 = n);
+    }
+
+    function showSlides2(n) {
+    let i;
+    let slides2 = document.getElementsByClassName("mySlides2");
+    let dots2 = document.getElementsByClassName("demo2");
+    let captionText2 = document.getElementById("caption2");
+    if (n > slides2.length) {slideIndex2 = 1}
+    if (n < 1) {slideIndex2 = slides2.length}
+    for (i = 0; i < slides2.length; i++) {
+        slides2[i].style.display = "none";
+    }
+    for (i = 0; i < dots2.length; i++) {
+        dots2[i].className = dots2[i].className.replace(" active", "");
+    }
+    slides2[slideIndex2-1].style.display = "block";
+    dots2[slideIndex2-1].className += " active";
+    captionText2.innerHTML = dots2[slideIndex2-1].alt;
+    }
+</script>
+
+<script>
+    /* Open the sidenav */
+    function openNav() {
+    document.getElementById("mySidenav").style.left = "0vw";
+    }
+
+    /* Close/hide the sidenav */
+    function closeNav() {
+    document.getElementById("mySidenav").style.left = "100vw";
+    }
+</script>
+
+<script>
+    /* Open the sidenav */
+    function openNav() {
+    document.getElementById("mySidenav").style.left = "0vw";
+    }
+
+    /* Close/hide the sidenav */
+    function closeNav() {
+    document.getElementById("mySidenav").style.left = "100vw";
+    }
+</script>
+
+
+<script>
+    function toggleNav() {
+    var x = document.getElementById("navToggle");
+    if (x.style.left == "100vw") {
+        x.style.left = "0";
+    } else {
+        x.style.left = "100vw";
+    }
+    }
+</script>
+
+</body>
+</html>
+

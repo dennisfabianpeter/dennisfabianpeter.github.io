@@ -7,8 +7,8 @@
     <script src="p5.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="css/templatemo-style.css">
-    <script src="sketch.js"></script>
+    <link rel="stylesheet" href="css/project_template-style.css">
+    <!-- <script src="sketch_project.js"></script> -->
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
@@ -21,8 +21,6 @@
 
 </head>
 <body>
-    <!-- Page Loader -->
-
     <div id="sketch-holder"></div>
 
     <nav class="navbar navbar-expand-lg">
@@ -31,7 +29,7 @@
                 <img src="img/NL_Logo.png"  height="55" alt="Logo">
                 non linear
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" onclick="toggleNav()">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -50,171 +48,314 @@
         </div>
     </nav>
 
-    <div class="container-fluid tm-container-content tm-mt-30" style="margin-bottom: 60px;">     
-        <div class="row tm-mb-60 " >            
-            <div class="col-xl-7 col-lg-6 col-md-6 col-sm-12">
-                <img src="img/OS_SQ_LARGE.jpg" alt="Image" class="img-fluid">
-            </div>
-
-            
-            <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12">
-                <div class="tm-bg-gray tm-video-details" style="background-color: #cfcfcf8f ;">    
-                    <div class="mb-0">
-                        <h1 class="tm-text-gray-dark mb-0" style="color: #FF6629;">Organic Rhythm Sequencer</h1>
-                        <div class="d-flex flex-wrap">
-                            <div class="mr-4 mb-3">
-                                <span class="tm-text-primary">Sound</span>
-                                <span class="tm-text-primary">/</span>
-                                <span class="tm-text-primary">Interactive</span>
-                            </div>
-                        </div>
-
-                        <span class="tm-text-gray-dark ">
-                            This is a unique MIDI sequencer that was developed to explore organic, non-quantized rhythms. The sequencer is designed to have a visually engaging interface that makes it easy for any user to dive in and start creating fun sequences. Currently, it is built as a Touchdesigner script and can seamlessly send MIDI data to any digital audio workstation or external synthesizer through OSC or MIDI loopback.
-                        </span>
-                    </div>
-                </div>
-            </div>
+    <div id="navToggle" class="fullscreenToggle" style="left: 100vw;">
+        <div class="toggle-list-container">
+            <li class="nav-item-toggler">
+                <a class="nav-link" href="index.html" style="padding-left: 5px;">home</a>
+            </li>
+            <li class="nav-item-toggler">
+                <a class="nav-link" href="index.html" style="padding-left: 5px;">contact</a>
+            </li>
+            <li class="nav-item-toggler">
+                <a class="nav-link active" aria-current="page" href="index.html" style="padding-left: 5px;">work</a>
+            </li>
         </div>
     </div>
 
-    <div class="container-fluid tm-container-content2"> 
-
-        <div class="row tm-mb-60" >   
-            <div class="video-container">
-                <iframe class="youtubeVideo" src="https://www.youtube.com/embed/cCh82oCxIvw" allowfullscreen>
-                </iframe>
-            </div>
-                    <div class="desc-text">
-                        <span class="tm-text-gray-dark">
-                            The goal of this MIDI sequencer is to break free from the constraints of regular time intervals that dominate most Western music. Drawing inspiration from Afro-influenced styles like Gnawa and Samba(where the instrumentalists have the flexibility to add their own personal flair and swing to their rhythms), this sequencer creates intricate micro-rhythms that are not bound by quantization.  Although most electronic rhythm generators rely on fixed timers, the challenge of recreating these unique micro-rhythms using digital tools and scripts required some out of the box thinking and experimentation. The visual interface was developed to be intuitive and to provide clear feedback, making it easy for the user to understand and play with.  
-                        
-                        </span>
-                    </div>
-
-                    <div class="spacer">
-                    </div>
-
-                    <div class="spacer">
-                    </div>
-
-                    <div>
-                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
-                            <source src="video/OS_V-01.mp4" type="video/mp4">
-                        </video>  
-                        <div class="caption">
-                            <span>
-                                A script checks if the circles are intersecting (here it is simplified to 4 large circles)
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <div class="desc-text">
-                        <span class="tm-text-gray-dark mb-4">
-                            
-                            The sequencer's functioning is based on a very simple concept, it relies on the convergence of two shapes. A small circle(play head) moves around in space, while larger circles are positioned around the same space. 
-                            The program continuously checks for the small circle's intersections with the larger circles. When it identifies an intersection, the program transmits a "MIDI Note ON" message to the associated DAW. 
-                            Similarly, when the play head leaves the boundaries of a larger circle, the program dispatches a "MIDI Note OFF" message for the same note. All eight large circles can be configured to trigger any note in the sequencer's interface.  
-                            <br>
-                            <br>
-
-                            Using sine wave functions on both the X and Y axis, the play head movement is easily
-                            controlled. The amplitude, frequency, and phase of these functions allow for animation of
-                            the play head along more intricate curved paths. While a circular path creates a
-                            consistent, quantized rhythm with a fixed time interval between circle intersections, the
-                            play head's motion along more complex paths creates slight variations in these intervals.
-                            These subtle shifts between intersections result in the creation of captivating microrhythms.
-                        </span>
-                    </div>
-
-                    <div class="spacer">
-                    </div>
-
-                    <div>
-                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
-                            <source src="video/OS_V-02.mp4" type="video/mp4">
-                        </video>  
-                        <div class="caption">
-                            <span>
-                                The movement of the playhead is controlled by altering the amplitude and frequency of a sine wave
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="desc-text">
-                        <span class="tm-text-gray-dark">
-                            The sequencer sends out MIDI data and does not produce any sound itself. This MIDI data can be routed to any DAW/plugin/external synth in order to produce the sound. The interface for this sequencer allows for two parallel rhythms to be played at the same time - and both of these parallel rhythms can have their own timings and swing.  This means you can add up to 16 individual notes to your sequence while also adjusting the position and radius of larger circles to create overlaps and empty spaces.    The sequencer can send MIDI notes polyphonically - with the ability to have more than one note play at the same instant.
-                        </span>
-                    </div>
-
-                    <div class="spacer">
-                    </div>
 
 
-                    <div>
-                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
-                            <source src="video/OS_V-03.mp4" type="video/mp4">
-                        </video>  
-                        <div class="caption">
-                            <span>
-                                Each of the 8 circles can be programmed to trigger a different MIDI note
-                            </span>
-                        </div>
-                    </div>
+
+<div class="center">
+    <div class="container">
+        <div class="left">
+            <div class="gallery">
+                <div class="desktop-hero-container">
+                    <img src="img/OS_HERO.jpg" alt="Image" class="photograph">
+                </div>
                 
+                <div id="mySidenav" class="sidenav">
 
-                    <div class="spacer">
-                    </div>
-                    <div class="spacer">
-                    </div>
-                    <div class="spacer">
-                    </div>
-                    <div class="spacer">
-                    </div>
-                    <div class="spacer">
-                    </div>
-                    <div class="spacer">
-                    </div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-                    <hr class="dotted">
-
-                    <div class="header2">
-                        <span>Future Development</span>
-                    </div>
-
-                    <div class="desc-text">
-                        <span class="tm-text-gray-dark">
+                    <div class="splash">
+                        <h1 class="main-heading" style="color: #FF6629; text-align: left; margin-right: 60px;">Organic Rhythm Sequencer</h1>
+                        <div class="mb-3">
+                            <span class="tag-text">Sound / Interactive</span>
+                        </div>            
+            
+                        <div class="text-container" id="mobile-secondary-text" style="height: 85%;">
+                        <span class="secondary-text">
+                            This is a unique MIDI sequencer that was developed to explore organic, non-quantized rhythms. The sequencer is designed to have a visually engaging interface that makes it easy for any user to dive in and start creating fun sequences. The goal of this MIDI sequencer is to break free from the constraints of regular time intervals that dominate most Western music. Drawing inspiration from Afro-influenced styles like Gnawa and Samba(where the instrumentalists have the flexibility to add their own personal flair and swing to their rhythms), this sequencer creates intricate micro-rhythms that are not bound by quantization. Although most electronic rhythm generators rely on fixed timers, the challenge of recreating these unique micro-rhythms using digital tools and scripts required some out of the box thinking and experimentation. The visual interface was developed to be intuitive and to provide clear feedback, making it easy for the user to understand and play with.
+                            <br>
+                        </span>
+                            
+                        <span class="secondary-text">    
+                            <br>
+                            The sequencer's functioning is based on a very simple concept, it relies on the convergence of two shapes. A small circle(play head) moves around in space, while larger circles are positioned around the same space. The program continuously checks for the small circle's intersections with the larger circles. When it identifies an intersection, the program transmits a "MIDI Note ON" message to the associated DAW. Similarly, when the play head leaves the boundaries of a larger circle, the program dispatches a "MIDI Note OFF" message for the same note. All eight large circles can be configured to trigger any note in the sequencer's interface. Using sine wave functions on both the X and Y axis, the play head movement is easily controlled. The amplitude, frequency, and phase of these functions allow for animation of the play head along more intricate curved paths. While a circular path creates a consistent, quantized rhythm with a fixed time interval between circle intersections, the play head's motion along more complex paths creates slight variations in these intervals. These subtle shifts between intersections result in the creation of captivating microrhythms.
+                            <br>
+                            <br>
+                            MIDI data can be routed to any DAW/plugin/external synth in order to produce the sound. The interface for this sequencer allows for two parallel rhythms to be played at the same time - and both of these parallel rhythms can have their own timings and swing. This means you can add up to 16 individual notes to your sequence while also adjusting the position and radius of larger circles to create overlaps and empty spaces. The sequencer can send MIDI notes polyphonically - with the ability to have more than one note play at the same instant.
+                            <br>
+                            <br>
                             Currently, this sequencer is available as a touchdesigner script, making it difficult to share among users. It was developed as a proof-of-concept, and touchdesigner's fast prototyping environment allowed to create a powerful tool for creating and sending MIDI data without putting in as much of the resources required for software development. To make the sequencer more accessible, I plan to port the same idea into a p5.js script, making it available as a web app. With this new platform, users will be able to play with the sequencer and have MIDI signals sent to their DAW of choice. In addition, I would also consider creating a M4L device for use with Ableton if there is enough interest.
                             <br>
                             <br>
-                            Future developments could include adding more parameters to provide greater variations in note structure, such as having the array of circles rotate around its radius, which would maintain the same rhythm but change the note sequence/order over time. If you are interested in developing musical plugins and would like to contribute to this project, please don't hesitate to reach out to us. We would love to hear from you!
-                        </span>
+                        </span>            
                     </div>
-
-                    <div>
-                        <div class="video-container">
-                            <iframe class="youtubeVideo" src="https://www.youtube.com/embed/8fU4rp6rgdQ" allowfullscreen>
-                            </iframe>
-                        </div>
-                        
-                        <div class="caption">
-                            <span>
-                               A detialed preview of how to control parameters in the touchdesigner script
-                           </span>
-                       </div>
-                       </div>
-
-                    <div class="end_spacer">
-                    </div>
+                </div>
                     
+                </div>
+
+
+
+                <div class="fixed-mobile-container">
+                    <div class="mobile-only-hero">
+                        <div class="mobile-hero-container" style="border:none; margin-bottom: 0px;">
+                            <img src="img/OS_HERO.jpg" alt="Image" class="photograph">
+                        </div>
+                        <div class="gradient-container"></div>
+                    </div>
+                </div>
+
+                <div class="heading-container">
+                    <div class="info-button">
+                        <button class="tm-gallery-link" onclick="openNav()">&#10094; info</button>
+                    </div>
+                    <h1 class="secondary-main-heading" >Organic Rhythm Sequencer</h1>
+                    <div>
+                        <span class="secondary-tag-text">Sound / Interactive</span>
+                    </div>
+                    <div class="gradient-container-bottom"></div>
+                </div>
+
+                <div class="mobile-only-text">
+                    <span class="main-text" id="primText">
+                        This is a unique MIDI sequencer that was developed to explore organic, non-quantized rhythms. The sequencer is designed to have a visually engaging interface that makes it easy for any user to dive in and start creating fun sequences. The goal of this MIDI sequencer is to break free from the constraints of regular time intervals that dominate most Western music. Drawing inspiration from Afro-influenced styles like Gnawa and Samba(where the instrumentalists have the flexibility to add their own personal flair and swing to their rhythms), this sequencer creates intricate micro-rhythms that are not bound by quantization. Although most electronic rhythm generators rely on fixed timers, the challenge of recreating these unique micro-rhythms using digital tools and scripts required some out of the box thinking and experimentation. The visual interface was developed to be intuitive and to provide clear feedback, making it easy for the user to understand and play with.
+                        <br>
+                    </span>
+                </div>
+
+                <span class="title">Video</span>
+                <div class="content-container" style="display: none;">
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/803035069?h=f37b1d207f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Bionic Bloom - An Interactive Installation"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+
+                <div class="content-container" id="youtube">
+                    <iframe class="youtubeVideo" width="560" height="315" src="https://www.youtube-nocookie.com/embed/cCh82oCxIvw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>                        
+                    </iframe>
+                </div>
+                
+                <span class="title">Working</span>
+
+                <div class="content-container">
+
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 3</div>
+                            <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                                <source src="video/OS_V-01.mp4" style="width:100%">
+                                </video>
+                          </div>
+                      
+
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 3</div>
+                            <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                                <source src="video/OS_V-02.mp4" style="width:100%">
+                                </video>
+                          </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">3 / 3</div>
+                            <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                                <source src="video/OS_V-03.mp4" style="width:100%">
+                                </video>
+                          </div>
+                      
+
+                    
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                      
+                    
+                        <div class="caption-container">
+                          <p class="caption" id="caption"></p> 
+                        </div>
+                    
+                        <div class="gallery_row" style="display: none;">
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="A script checks if the circles are intersecting">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="Movement of the playhead is controlled by altering the amplitude and frequency of a sine wave">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="Each of the 8 circles can be programmed to trigger a different MIDI note ">
+                          </div>
+                        </div>
+                </div>
+
+                
+            <span class="title">Video</span>
+            <div class="content-container" style="display: none;">
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/803035069?h=f37b1d207f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Bionic Bloom - An Interactive Installation"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+
+            <div class="content-container">
+            <div class="content-container" id="youtube" style="margin-bottom: 0px; border-bottom: none;">
+                <iframe class="youtubeVideo" width="560" height="315" src="https://www.youtube-nocookie.com/embed/8fU4rp6rgdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>                        
+                </iframe>
+            </div>
+            <div class="caption-container2">
+                <p class="caption2" id="caption2">A detialed preview of controlling parameters in the touchdesigner script</p>
+              </div>
+           </div>
+
+
+            <div class="end_spacer"></div>
+
+
+            </div>         
+        </div>
+
+        
+        <div class="right">
+            <h1 class="main-heading" style="color: #FF6629; text-align: left;">Organic Rhythm Sequencer</h1>
+            <div class="mb-3">
+                <span class="tag-text">Sound / Interactive</span>
+            </div>
+
+            <div class="text-container">
+            <span class="main-text">
+                This is a unique MIDI sequencer that was developed to explore organic, non-quantized rhythms. The sequencer is designed to have a visually engaging interface that makes it easy for any user to dive in and start creating fun sequences. The goal of this MIDI sequencer is to break free from the constraints of regular time intervals that dominate most Western music. Drawing inspiration from Afro-influenced styles like Gnawa and Samba(where the instrumentalists have the flexibility to add their own personal flair and swing to their rhythms), this sequencer creates intricate micro-rhythms that are not bound by quantization. Although most electronic rhythm generators rely on fixed timers, the challenge of recreating these unique micro-rhythms using digital tools and scripts required some out of the box thinking and experimentation. The visual interface was developed to be intuitive and to provide clear feedback, making it easy for the user to understand and play with.
+                <br>
+            </span>
+                
+            <span class="secondary-text">    
+                <br>
+                The sequencer's functioning is based on a very simple concept, it relies on the convergence of two shapes. A small circle(play head) moves around in space, while larger circles are positioned around the same space. The program continuously checks for the small circle's intersections with the larger circles. When it identifies an intersection, the program transmits a "MIDI Note ON" message to the associated DAW. Similarly, when the play head leaves the boundaries of a larger circle, the program dispatches a "MIDI Note OFF" message for the same note. All eight large circles can be configured to trigger any note in the sequencer's interface. Using sine wave functions on both the X and Y axis, the play head movement is easily controlled. The amplitude, frequency, and phase of these functions allow for animation of the play head along more intricate curved paths. While a circular path creates a consistent, quantized rhythm with a fixed time interval between circle intersections, the play head's motion along more complex paths creates slight variations in these intervals. These subtle shifts between intersections result in the creation of captivating microrhythms.
+                <br>
+                <br>
+                MIDI data can be routed to any DAW/plugin/external synth in order to produce the sound. The interface for this sequencer allows for two parallel rhythms to be played at the same time - and both of these parallel rhythms can have their own timings and swing. This means you can add up to 16 individual notes to your sequence while also adjusting the position and radius of larger circles to create overlaps and empty spaces. The sequencer can send MIDI notes polyphonically - with the ability to have more than one note play at the same instant.
+                <br>
+                <br>
+                Currently, this sequencer is available as a touchdesigner script, making it difficult to share among users. It was developed as a proof-of-concept, and touchdesigner's fast prototyping environment allowed to create a powerful tool for creating and sending MIDI data without putting in as much of the resources required for software development. To make the sequencer more accessible, I plan to port the same idea into a p5.js script, making it available as a web app. With this new platform, users will be able to play with the sequencer and have MIDI signals sent to their DAW of choice. In addition, I would also consider creating a M4L device for use with Ableton if there is enough interest.
+                <br>
+                <br>
+            </span>
         </div>
     </div>
-        
-
 </div>
 
-       <script src="js/plugins.js"></script>
 
+
+
+
+        
+ <!-- container-fluid, tm-container-content -->
+
+    
+    <script src="js/plugins.js"></script>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
+
+<script>
+    let slideIndex2 = 1;
+    showSlides2(slideIndex2);
+
+    // Next/previous controls
+    function plusSlides2(n) {
+    showSlides2(slideIndex2 += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide2(n) {
+    showSlides2(slideIndex2 = n);
+    }
+
+    function showSlides2(n) {
+    let i;
+    let slides2 = document.getElementsByClassName("mySlides2");
+    let dots2 = document.getElementsByClassName("demo2");
+    let captionText2 = document.getElementById("caption2");
+    if (n > slides2.length) {slideIndex2 = 1}
+    if (n < 1) {slideIndex2 = slides2.length}
+    for (i = 0; i < slides2.length; i++) {
+        slides2[i].style.display = "none";
+    }
+    for (i = 0; i < dots2.length; i++) {
+        dots2[i].className = dots2[i].className.replace(" active", "");
+    }
+    slides2[slideIndex2-1].style.display = "block";
+    dots2[slideIndex2-1].className += " active";
+    captionText2.innerHTML = dots2[slideIndex2-1].alt;
+    }
+</script>
+
+<script>
+    /* Open the sidenav */
+    function openNav() {
+    document.getElementById("mySidenav").style.left = "0vw";
+    }
+
+    /* Close/hide the sidenav */
+    function closeNav() {
+    document.getElementById("mySidenav").style.left = "100vw";
+    }
+</script>
+
+<script>
+    /* Open the sidenav */
+    function openNav() {
+    document.getElementById("mySidenav").style.left = "0vw";
+    }
+
+    /* Close/hide the sidenav */
+    function closeNav() {
+    document.getElementById("mySidenav").style.left = "100vw";
+    }
+</script>
+
+
+<script>
+    function toggleNav() {
+    var x = document.getElementById("navToggle");
+    if (x.style.left == "100vw") {
+        x.style.left = "0";
+    } else {
+        x.style.left = "100vw";
+    }
+    }
+</script>
 
 </body>
 </html>

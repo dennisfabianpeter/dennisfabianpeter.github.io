@@ -7,8 +7,8 @@
     <script src="p5.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="css/templatemo-style.css">
-    <script src="sketch.js"></script>
+    <link rel="stylesheet" href="css/project_template-style.css">
+    <!-- <script src="sketch_project.js"></script> -->
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
@@ -21,8 +21,6 @@
 
 </head>
 <body>
-    <!-- Page Loader -->
-
     <div id="sketch-holder"></div>
 
     <nav class="navbar navbar-expand-lg">
@@ -31,7 +29,7 @@
                 <img src="img/NL_Logo.png"  height="55" alt="Logo">
                 non linear
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" onclick="toggleNav()">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -50,273 +48,442 @@
         </div>
     </nav>
 
-    <div class="container-fluid tm-container-content tm-mt-30" style="margin-bottom: 60px;">     
-        <div class="row tm-mb-60 " >            
-            <div class="col-xl-7 col-lg-6 col-md-6 col-sm-12">
-                <img src="img/CS_SQ_LARGE.jpg" alt="Image" class="img-fluid">
-            </div>
-
-            
-            <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12">
-                <div class="tm-bg-gray tm-video-details" style="background-color: #cfcfcf8f ;">    
-                    <div class="mb-0">
-                        <h1 class="tm-text-gray-dark mb-0" style="color: #FF6629;">This City Swells</h1>
-                        <div class="d-flex flex-wrap">
-                            <div class="mr-4 mb-3">
-                                <span class="tm-text-primary">Sound</span>
-                                <span class="tm-text-primary">/</span>
-                                <span class="tm-text-primary">Visual</span>
-                            </div>
-                        </div>
-
-                        <span class="tm-text-gray-dark ">
-                            "This City Swells" is a music video that features visuals made entirely from maps and GIS data of Mumbai City. The music reflects the fast pace of the city and syncs perfectly with the visuals. The project was made possible through a residency program by the British Council for audio-visual artists, providing a platform to explore and experiment with sound and visuals/technology.
-                            The music-video was promoted and released by skip-a-beat.
-                        </span>
-                    </div>
-                </div>
-            </div>
+    <div id="navToggle" class="fullscreenToggle" style="left: 100vw;">
+        <div class="toggle-list-container">
+            <li class="nav-item-toggler">
+                <a class="nav-link" href="index.html" style="padding-left: 5px;">home</a>
+            </li>
+            <li class="nav-item-toggler">
+                <a class="nav-link" href="index.html" style="padding-left: 5px;">contact</a>
+            </li>
+            <li class="nav-item-toggler">
+                <a class="nav-link active" aria-current="page" href="index.html" style="padding-left: 5px;">work</a>
+            </li>
         </div>
     </div>
 
-    <div class="container-fluid tm-container-content2"> 
 
-        <div class="row tm-mb-60" >   
-            <div class="video-container">
-                <iframe class="youtubeVideo" src="https://www.youtube.com/embed/K9IjDCSqyaw" allowfullscreen>
-                </iframe>
-            </div>
-                    <div class="desc-text">
-                        <span class="tm-text-gray-dark">
-                            "This City Swells" is a music video that provides a unique vantage point of Mumbai City through the use of maps and land use diagrams. By integrating sound and visuals, the video uncovers the texture and vibrancy of the city.
 
-                            The auditory and visual components of the video are a reflection of my personal experiences and emotions while navigating through the city. The video was created by utilizing audio-reactive algorithms that activate different elements of the visuals, resulting in a symbiotic relationship between sound and visuals.
+
+<div class="center">
+    <div class="container">
+        <div class="left">
+            <div class="gallery">
+                <div class="desktop-hero-container">
+                    <img src="img/CS_HERO.jpg" alt="Image" class="photograph">
+                </div>
+                
+                <div id="mySidenav" class="sidenav">
+
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                    <div class="splash">
+                        <h1 class="main-heading" style="color: #FF6629; text-align: left; margin-right: 60px;">This City Swells</h1>
+                        <div class="mb-3">
+                            <span class="tag-text">Sound / Visual</span>
+                        </div>
+
+                        <div class="mr-4 mb-0 mt-3">
+                            <span class="tm-text-gray-dark-collab">Photographs</span>
+                        </div>
+                        <div class="mr-4 mb-0">
+                            <a class="hyperlink-green" href="https://www.instagram.com/eyeamsid/" target=”_blank”>Siddhesh Dave</a>
+                        </div>
+            
+            
+                        <div class="text-container" id="mobile-secondary-text">
+                        <span class="secondary-text">
+                            "This City Swells" is a music video that provides a unique vantage point of Mumbai City through the use of maps and land use diagrams. By integrating sound and visuals, the video uncovers the texture and vibrancy of the city. The auditory and visual components of the video are a reflection of my personal experiences and emotions while navigating through the city. The video was created by utilizing audio-reactive algorithms that activate different elements of the visuals, resulting in a symbiotic relationship between sound and visuals. Notably, this project marks my maiden endeavor in utilizing algorithms, code, and data to inform my creative outputs.
+                            <br>
+                        </span>
                             
-                            Notably, this project marks my maiden endeavor in utilizing algorithms, code, and data to inform my creative outputs.
-                        </span>
-                    </div>
-
-                    <div class="spacer">
-                    </div>
-
-                    <hr class="dotted">
-
-                    <div class="spacer">
-                    </div>
-
-                    <div class="header2">
-                        <span>Process</span>
-                    </div>
-
-
-                    <div>
-                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
-                            <source src="video/CS_V-01.mp4" type="video/mp4">
-                        </video>  
-                        <div class="caption">
-                            <span>
-                                The various maps and topographic data used for the video
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <div class="desc-text">
-                        <span class="tm-text-gray-dark mb-4">
-                            The project originated from an arts residency held in Mumbai in February 2020, just before the outbreak of the pandemic. As sound-based artists and musicians with an interest in visual fields, we were tasked with developing an audio-visual piece on a theme of our choice. I chose to explore the theme of "Urbanism of Mumbai", drawing on my background in architecture and prior experience with urban research-based projects. 
+                        <span class="secondary-text">    
+                            <br>
+                            The project originated from an arts residency held in Mumbai in February 2020, just before the outbreak of the pandemic. As sound-based artists and musicians with an interest in visual fields, we were tasked with developing an audio-visual piece on a theme of our choice. I chose to explore the theme of "Urbanism of Mumbai".
+                            Despite preferring the calm of the countryside and not being a resident of a metropolis, every time I visit Mumbai, I'm immediately hit by the shift of pace and the frenzied nature of city life. Often, this shift almost felt like a high. As a result, this project aimed to capture the vibrancy and energy of the city through the medium of sound and music. 
                             <br>
                             <br>
-                            Despite preferring the calm of the countryside and not being a resident of a metropolis, every time I visit Mumbai, I'm immediately hit by the shift of pace and the frenzied nature of city life. Often, this shift almost felt like a high.  As a result, this project aimed to capture the vibrancy and energy of the city through the medium of sound and music.
-                        </span>
-                    </div>
-
-                    <div class="spacer">
-                    </div>
-
-                    <div>
-                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
-                            <source src="video/CS_V-02.mp4" type="video/mp4">
-                        </video>  
-                        <div class="caption">
-                            <span>
-                                Land use maps of various locations around mumbai
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="desc-text">
-                        <span class="tm-text-gray-dark">
-                            This project was an opportunity for me to challenge myself both creatively and technically. Although I did not have prior experience in animation, I was determined to establish a comfortable process. As an architecture graduate, I have always had a fascination with maps and their ability to communicate the history and aspirations of cities. Land-use maps, in particular, offered a wealth of information on the patterns of settlement and demographic structure of the city. What also intrigued me about maps was their visual appeal, which I aimed to integrate into the animations. To achieve this, I utilized open-source maps and CAD plans of the city to create animations in software that I was familiar with.
-                        </span>
-                    </div>
-
-                    <div class="spacer">
-                    </div>
-
-
-                    <div>
-                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
-                            <source src="video/CS_V-06.mp4" type="video/mp4">
-                        </video>  
-                        <div class="caption">
-                            <span>
-                                Colors from the land-use maps are seperated by hue to reveal different layers of the city
-                            </span>
-                        </div>
-                    </div>
-
-
-                    <div class="spacer">
-                    </div>
-                    <div class="spacer">
-                    </div>
-                    <div class="spacer">
-                    </div>
-                    
-                    <div>
-                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
-                            <source src="video/CS_V-03.mp4" type="video/mp4">
-                        </video>  
-
-                        <div class="caption">
-                             <span>
-                                Various layers of the city reveal themselves
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="desc-text">
-                        <span class="tm-text-gray-dark">
+                            This was an opportunity for me to challenge myself both creatively and technically. Although I did not have prior experience in animation, I was determined to establish a comfortable process. As an architecture graduate, I have always had a fascination with maps and their ability to communicate the history and aspirations of cities. Land-use maps, in particular, offered a wealth of information on the patterns of settlement and demographic structure of the city. What also intrigued me about maps was their visual appeal, which I aimed to integrate into the animations. To achieve this, I utilized open-source maps and CAD plans of the city to create animations in software that I was familiar with.
                             A crucial aspect of the music video was the use of land-use maps of Mumbai that had various zones of colour which represented the different land-use types of the city. I utilized a technique that separated these zones using their respective colours and triggered each colour using audio triggers. For instance, the yellow zone was revealed with a kick drum, and the purple zone was triggered using hi-hats.
                             <br>
                             <br>
-                            To generate these audio-visual triggers, I learned creative coding, which I had been eager to explore. This project provided me with the perfect opportunity to develop my skills and bring my vision to life. During the COVID lockdown, I spent time learning these techniques and animating the video, one scene at a time.
-                        </span>
-                    </div>
-
-                    
-                    <div class="spacer">
-                    </div>
-
-                    <div>
-                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
-                            <source src="video/CS_V-04.mp4" type="video/mp4">
-                        </video>  
-
-                        <div class="caption">
-                             <span>
-                                Seqeunce from the video with various circles found around the city
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="spacer">
-                    </div>
-                    <div class="spacer">
-                    </div>
-                    <div class="spacer">
-                    </div>
-
-                    <div>
-                        <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
-                            <source src="video/CS_V-05.mp4" type="video/mp4">
-                        </video>  
-
-                        <div class="caption">
-                             <span>
-                                In this sequence various layers from the maps are stacked, forming an isometric view
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="spacer">
-                    </div>
-                    <div class="spacer">
-                    </div>
-                    <div class="spacer">
-                    </div>
-                    <div class="spacer">
-                    </div>
-                    <div class="spacer">
-                    </div>
-
-                    <hr class="dotted">
-
-                    <div class="spacer">
-                    </div>
-
-                    <div class="header2">
-                        <span>Selector Pro - Artists Residency</span>
-                    </div>
-
-
-                    <div>
-                        <div>
-                            <img src="img/CS_01.jpg" alt="Image" class="img-fluid">
-                        </div>
-                        <div class="caption">
-                            <span>
-                                The project was initiated at the Selector-Pro Residency by 'British Council' and 'Unbox Cultural Futures'
-                            </span>
-                        </div>
-                    </div>
-
-
-                    <div class="desc-text">
-                        <span class="tm-text-gray-dark">
-                            The Selector-Pro residency invited music producers, musicians, and multidisciplinary artists from India who want to expand their skills around producing music, broaden their artistic boundaries and better understand the international future ecosystem around music. It was held in Mumbai from the 13th to 16th of February 2020. It included seminars and one on one time with professionals from various fields of sound and mixed-media. Some of the notable mentors at the residency included Nainita Desai(BAFTA winning music composer), Avinash Kumar(Co-founder, Quicksand), Tejas Nair(Founder of Skip-a-beat and music producer), and Aditya Balani(Music producer and educator). 
-                        </span>
-                    </div>
-
-
-                    <div>
-                        <div>
-                            <img src="img/CS_02.jpg" alt="Image" class="img-fluid">
-                        </div>
-                        <div class="caption">
-                            <span>
-                                Participants of the Residency at Island City Studios
-                            </span>
-                        </div>
-                    </div>
-
-
-                    <div class="desc-text">
-                        <span class="tm-text-gray-dark">
-                            The objective of the residency was to collaborate with filmmakers and visual artists in order to create interactive works in tandem with game designers and new media artists, as well as to produce new screen-based art for exhibitions in India and beyond. Additionally, we were granted access to "Island City Studios" throughout the duration of the residency, which is regarded as one of the most highly-equipped professional recording studios in Mumbai. The residency also included talks given by mentors who detailed their approaches to the production of audio-visual content. The participants of the residency were drawn from a diverse range of backgrounds, including established choir conductors, rappers, indie musicians, and radio presenters.
+                            The Selector-Pro residency was aimed at musicians who work with filmmakers, visual artists and game designers. It explored the creation of interactive works in tandem with new media artists, as well as to produce new screen-based art for exhibitions in India and beyond. The participants were granted access to "Island City Studios" throughout the duration of the residency, which is regarded as one of the most highly-equipped professional recording studios in Mumbai. The residency also included talks given by mentors who detailed their approaches to the production of audio-visual content. The participants of the residency were drawn from a diverse range of backgrounds, including established choir conductors, rappers, indie musicians, and radio presenters.
                             <br>
                             <br>
                             While the idea for this project was conceived during the 4-day residency, the bulk of this video took over 3 months to flesh out and develop. Upon completion of the music video, I partnered with "Skip-a-Beat" - which is an electronic music label from Mumbai headed by Tejas Nair(Spryk) for the release of the song and video. The video was released on 4th September 2020.
+                            <br>
+                            <br>
                         </span>
+                        <div class="credit-text" id="mobile-secondary-text">
+                        <span class="tm-text-gray credit-text">
+                            Additional Credits:
+                        </span>
+                        <br>
+                        <span class="tm-text-gray credit-text" style="font-style: italic;" id="mobile-secondary-text">
+                            Skip-a-beat, Tejas Nair, Vir RC, Yash Chandak, British Council
+                        </span>
+                        </div>
+            
                     </div>
+                </div>
+                    
+                </div>
 
+
+
+                <div class="fixed-mobile-container">
+                    <div class="mobile-only-hero">
+                        <div class="mobile-hero-container" style="border:none; margin-bottom: 0px;">
+                            <img src="img/CS_HERO.jpg" alt="Image" class="photograph">
+                        </div>
+                        <div class="gradient-container"></div>
+                    </div>
+                </div>
+
+                <div class="heading-container">
+                    <div class="info-button">
+                        <button class="tm-gallery-link" onclick="openNav()">&#10094; info</button>
+                    </div>
+                    <h1 class="secondary-main-heading">This City Swells</h1>
                     <div>
-                    <div class="video-container">
-                        <iframe class="youtubeVideo" src="https://www.youtube.com/embed/hHlevoSGBxc" allowfullscreen>
-                        </iframe>
+                        <span class="secondary-tag-text">Sound / Visual</span>
                     </div>
+                    <div class="gradient-container-bottom"></div>
+                </div>
+
+                <div class="mobile-only-text">
+                    <span class="main-text" id="primText">
+                        "This City Swells" is a music video that provides a unique vantage point of Mumbai City through the use of maps and land use diagrams. By integrating sound and visuals, the video uncovers the texture and vibrancy of the city. The auditory and visual components of the video are a reflection of my personal experiences and emotions while navigating through the city. The video was created by utilizing audio-reactive algorithms that activate different elements of the visuals, resulting in a symbiotic relationship between sound and visuals. Notably, this project marks my maiden endeavor in utilizing algorithms, code, and data to inform my creative outputs.
+                        <br>
+                    </span>
+                </div>
+
+                <span class="title">Video</span>
+                <div class="content-container" style="display: none;">
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/803035069?h=f37b1d207f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Bionic Bloom - An Interactive Installation"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+
+                <div class="content-container" id="youtube">
+                    <iframe class="youtubeVideo" width="560" height="315" src="https://www.youtube-nocookie.com/embed/K9IjDCSqyaw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>                        
+                    </iframe>
+                </div>
+                
+                <span class="title">Process</span>
+
+                <div class="content-container">
+
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 6</div>
+                            <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                                <source src="video/CS_V-01.mp4" style="width:100%">
+                                </video>
+                          </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">2 / 6</div>
+                            <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                                <source src="video/CS_V-02.mp4" style="width:100%">
+                                </video>
+                          </div>
+                      
+
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 6</div>
+                            <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                                <source src="video/CS_V-06.mp4" style="width:100%">
+                                </video>
+                          </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">4 / 6</div>
+                            <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                                <source src="video/CS_V-03.mp4" style="width:100%">
+                                </video>
+                          </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">5 / 6</div>
+                            <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                                <source src="video/CS_V-04.mp4" style="width:100%">
+                                </video>
+                          </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">6 / 6</div>
+                            <video autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop id="tm-video">
+                                <source src="video/CS_V-05.mp4" style="width:100%">
+                                </video>
+                          </div>
+                      
+
+                      
                     
-                    <div class="caption">
-                        <span>
-                           An initial draft of the video made during the residency
-                       </span>
-                   </div>
-                   </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                      
+                    
+                        <div class="caption-container">
+                          <p class="caption" id="caption"></p> 
+                        </div>
+                    
+                        <div class="gallery_row" style="display: none;">
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="The various maps and topographic data used for the video">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="Land use maps of various locations around mumbai">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="Colors are seperated by hue to reveal different layers of the city">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="Various layers of the city reveal themselves">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="Video sequence with various circles found around the city">
+                          </div>
+                          <div class="gallery_column">
+                            <img class="demo cursor" alt="Various layers from the maps are stacked, forming an isometric view">
+                          </div>
+                        </div>
+                </div>
 
+                <span class="title">Selector Pro Residency</span>
 
-
-
-
-                    <div class="end_spacer">
+                <div class="content-container">
+                  
+                    <div class="mySlides2">
+                        <div class="numbertext2">1 / 4</div>
+                        <img src="img/CS_02.jpg" style="width:100%">
+                          </video>
                     </div>
-                    
+
+                    <div class="mySlides2">
+                        <div class="numbertext2">2 / 4</div>
+                        <img src="img/CS_03.jpg" style="width:100%">
+                          </video>
+                    </div>
+
+                    <div class="mySlides2">
+                        <div class="numbertext2">3 / 4</div>
+                        <img src="img/CS_04.jpg" style="width:100%">
+                          </video>
+                    </div>
+                    <div class="mySlides2">
+                        <div class="numbertext2">4 / 4</div>
+                        <img src="img/CS_01.jpg" style="width:100%">
+                          </video>
+                    </div>
+
+                  
+                
+                    <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+                    <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+                  
+                
+                    <div class="caption-container2">
+                      <p class="caption2" id="caption2"></p>
+                    </div>
+                
+                    <div class="gallery_row2" style="display: none;">
+                      <div class="gallery_column2">
+                        <img class="demo2 cursor2" alt="Participants of the Residency at Island City Studios">
+                      </div>
+                      <div class="gallery_column2">
+                        <img class="demo2 cursor2" alt="Participants during the Residency">
+                      </div>
+                      <div class="gallery_column2">
+                        <img class="demo2 cursor2" alt="Participants during the Residency">
+                      </div>
+                      <div class="gallery_column2">
+                        <img class="demo2 cursor2" alt="This project was initiated at the Selector-Pro Residency">
+                      </div>
+     
+                    </div>
+            </div>
+
+            <span class="title">Video</span>
+            <div class="content-container" style="display: none;">
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/803035069?h=f37b1d207f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Bionic Bloom - An Interactive Installation"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+
+            <div class="content-container">
+            <div class="content-container" id="youtube" style="margin-bottom: 0px; border-bottom: none;">
+                <iframe class="youtubeVideo" width="560" height="315" src="https://www.youtube-nocookie.com/embed/hHlevoSGBxc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>                        
+                </iframe>
+            </div>
+            <div class="caption-container2">
+                <p class="caption2" id="caption2">An initial draft of the video made during the residency</p>
+              </div>
+           </div>
+
+            <div class="end_spacer"></div>
+
+
+            </div>         
+        </div>
+
+        
+        <div class="right">
+            <h1 class="main-heading" style="color: #FF6629; text-align: left;">This City Swells</h1>
+            <div class="mb-3">
+                <span class="tag-text">Sound / Visual</span>
+            </div>
+
+            <div class="mr-4 mb-0 mt-3">
+                <span class="tm-text-gray-dark-collab">Photographs</span>
+            </div>
+            <div class="mr-4 mb-0">
+                <a class="hyperlink-green" href="https://www.instagram.com/eyeamsid/" target=”_blank”>Siddhesh Dave</a>
+            </div>
+
+            <div class="text-container">
+            <span class="main-text">
+                "This City Swells" is a music video that provides a unique vantage point of Mumbai City through the use of maps and land use diagrams. By integrating sound and visuals, the video uncovers the texture and vibrancy of the city. The auditory and visual components of the video are a reflection of my personal experiences and emotions while navigating through the city. The video was created by utilizing audio-reactive algorithms that activate different elements of the visuals, resulting in a symbiotic relationship between sound and visuals. Notably, this project marks my maiden endeavor in utilizing algorithms, code, and data to inform my creative outputs.
+                <br>
+            </span>
+                
+            <span class="secondary-text">    
+                <br>
+                The project originated from an arts residency held in Mumbai in February 2020, just before the outbreak of the pandemic. As sound-based artists and musicians with an interest in visual fields, we were tasked with developing an audio-visual piece on a theme of our choice. I chose to explore the theme of "Urbanism of Mumbai".
+                Despite preferring the calm of the countryside and not being a resident of a metropolis, every time I visit Mumbai, I'm immediately hit by the shift of pace and the frenzied nature of city life. Often, this shift almost felt like a high. As a result, this project aimed to capture the vibrancy and energy of the city through the medium of sound and music. 
+                <br>
+                <br>
+                This was an opportunity for me to challenge myself both creatively and technically. Although I did not have prior experience in animation, I was determined to establish a comfortable process. As an architecture graduate, I have always had a fascination with maps and their ability to communicate the history and aspirations of cities. Land-use maps, in particular, offered a wealth of information on the patterns of settlement and demographic structure of the city. What also intrigued me about maps was their visual appeal, which I aimed to integrate into the animations. To achieve this, I utilized open-source maps and CAD plans of the city to create animations in software that I was familiar with.
+                A crucial aspect of the music video was the use of land-use maps of Mumbai that had various zones of colour which represented the different land-use types of the city. I utilized a technique that separated these zones using their respective colours and triggered each colour using audio triggers. For instance, the yellow zone was revealed with a kick drum, and the purple zone was triggered using hi-hats.
+                <br>
+                <br>
+                The Selector-Pro residency was aimed at musicians who work with filmmakers, visual artists and game designers. It explored the creation of interactive works in tandem with new media artists, as well as to produce new screen-based art for exhibitions in India and beyond. The participants were granted access to "Island City Studios" throughout the duration of the residency, which is regarded as one of the most highly-equipped professional recording studios in Mumbai. The residency also included talks given by mentors who detailed their approaches to the production of audio-visual content. The participants of the residency were drawn from a diverse range of backgrounds, including established choir conductors, rappers, indie musicians, and radio presenters.
+                <br>
+                <br>
+                While the idea for this project was conceived during the 4-day residency, the bulk of this video took over 3 months to flesh out and develop. Upon completion of the music video, I partnered with "Skip-a-Beat" - which is an electronic music label from Mumbai headed by Tejas Nair(Spryk) for the release of the song and video. The video was released on 4th September 2020.
+                <br>
+                <br>
+            </span>
+            <div class="credit-text">
+            <span class="tm-text-gray credit-text">
+                Additional Credits:
+            </span>
+            <br>
+            <span class="tm-text-gray credit-text" style="font-style: italic;">
+                Skip-a-beat, Tejas Nair, Vir RC, Yash Chandak, British Council
+            </span>
+            </div>
+
         </div>
     </div>
-        
-
 </div>
+
+
+
+
+
+        
+ <!-- container-fluid, tm-container-content -->
 
     
     <script src="js/plugins.js"></script>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
+
+<script>
+    let slideIndex2 = 1;
+    showSlides2(slideIndex2);
+
+    // Next/previous controls
+    function plusSlides2(n) {
+    showSlides2(slideIndex2 += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide2(n) {
+    showSlides2(slideIndex2 = n);
+    }
+
+    function showSlides2(n) {
+    let i;
+    let slides2 = document.getElementsByClassName("mySlides2");
+    let dots2 = document.getElementsByClassName("demo2");
+    let captionText2 = document.getElementById("caption2");
+    if (n > slides2.length) {slideIndex2 = 1}
+    if (n < 1) {slideIndex2 = slides2.length}
+    for (i = 0; i < slides2.length; i++) {
+        slides2[i].style.display = "none";
+    }
+    for (i = 0; i < dots2.length; i++) {
+        dots2[i].className = dots2[i].className.replace(" active", "");
+    }
+    slides2[slideIndex2-1].style.display = "block";
+    dots2[slideIndex2-1].className += " active";
+    captionText2.innerHTML = dots2[slideIndex2-1].alt;
+    }
+</script>
+
+<script>
+    /* Open the sidenav */
+    function openNav() {
+    document.getElementById("mySidenav").style.left = "0vw";
+    }
+
+    /* Close/hide the sidenav */
+    function closeNav() {
+    document.getElementById("mySidenav").style.left = "100vw";
+    }
+</script>
+
+<script>
+    /* Open the sidenav */
+    function openNav() {
+    document.getElementById("mySidenav").style.left = "0vw";
+    }
+
+    /* Close/hide the sidenav */
+    function closeNav() {
+    document.getElementById("mySidenav").style.left = "100vw";
+    }
+</script>
+
+
+<script>
+    function toggleNav() {
+    var x = document.getElementById("navToggle");
+    if (x.style.left == "100vw") {
+        x.style.left = "0";
+    } else {
+        x.style.left = "100vw";
+    }
+    }
+</script>
 
 </body>
 </html>
