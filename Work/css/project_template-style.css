@@ -1091,6 +1091,8 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
         margin-top: 20px;
     }
 
+    .hyperlink-green { font-size: 16px; color: #fff;}
+
     .main-text{color: #b6b6b6;}
 
     .gradient-container{
@@ -1252,6 +1254,8 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
         font-size: 14px;
  
     }
+
+    .hyperlink-green { font-size: 14px;}
 
     #primText{
         font-size: 13px;
