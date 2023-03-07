@@ -98,6 +98,7 @@ function setup() {
   abtText = createP("Non-Linear is a creative practice led by Dennis Fabain Peter. The practice operates within the overlapping fields of art, design and technology. Trained as an architect, and with his keen interests in computational design and generative art, Peter's work often focuses on creating immersive and interactive spatial experiences that aim to engage and stimulate the viewer. <br> <br> The desire for constant experimentation is essential for the practice. The beauty of experimenting with technology/code & art is that the process takes you on a journey of multiple divergencies.  The unmatched joy in following these divergencies from one happy accident to another is what fundamentally drives Non-Linear. ");
   abtText.style('font-family', 'Montserrat');
   abtText.style('display', 'none');
+  abtText.style('text-align', 'justify');
 
   
   whiteC = color(255,255,255);
