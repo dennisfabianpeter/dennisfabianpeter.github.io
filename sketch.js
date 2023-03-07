@@ -462,7 +462,7 @@ function checkRatio() {
     workButtonHeight = height - (workButtonSize * 2.7);
     
     aboutTextSize = 16;
-    abtTextHeight = height/2 - (aboutTextSize*6) ;
+    abtTextHeight = height/2 - (aboutTextSize*12) ;
   }
   
     if(width/height >1.8){ 
