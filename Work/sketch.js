@@ -30,7 +30,7 @@ function setup() {
   
   canvas.parent('sketch-holder');
   
-  noCursor();
+  //noCursor();
 
   targetX = 0;
   targetY = 0;

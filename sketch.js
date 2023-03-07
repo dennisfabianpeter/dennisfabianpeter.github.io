@@ -92,12 +92,12 @@ function setup() {
   canvas = createCanvas(window.innerWidth, window.innerHeight);
   mouseColor = color(255,255,255,0);
   
-  noCursor();
+  //noCursor();
   
   abtText = createP("Non-Linear is a process-driven design practice led by Dennis Fabain Peter. The practice operates within the overlapping fields of art, design, sound and technology. Trained as an architect, and along with his keen intersts in computational design and generative art, Peter's work often focusses on creating immersive and interactive spatial experiences that aim to stimulate the viewer. ");
   abtText.style('font-family', 'Montserrat');
   abtText.style('display', 'none');
-  abtText.style('cursor', 'none');
+  abtText.style('cursor', 'pointer');
 
   
   whiteC = color(255,255,255);
@@ -127,19 +127,19 @@ y = height/2 ;
   abtButton.style('font-family', 'Montserrat Alternates');
   abtButton.style('border', '3px solid black');  
   abtButton.style('background-color', 'transparent'); 
-  abtButton.style('cursor', 'none');
+  abtButton.style('cursor', 'pointer');
   
   workButton = createButton('work');
   workButton.style('font-family', 'Montserrat Alternates');
   workButton.style('border', '3px solid black');  
   workButton.style('background-color', 'transparent'); 
-  workButton.style('cursor', 'none');
+  workButton.style('cursor', 'pointer');
   
   spotButton = createButton('    ');
   spotButton.style('font-family', 'Montserrat Alternates');
   spotButton.style('border', 'none');  
   spotButton.style('background-color', 'transparent'); 
-  spotButton.style('cursor', 'none');
+  spotButton.style('cursor', 'pointer');
   
   canvas.touchStarted(cursorOff);
       

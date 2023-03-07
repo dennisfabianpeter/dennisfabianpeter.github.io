@@ -1,5 +1,8 @@
 *{
   overscroll-behavior: none;
+  
+  cursor: url('../cursors/circle-1.svg'), auto;
+
 }
 
 html, body {

@@ -6,9 +6,26 @@ https://templatemo.com/tm-556-catalog-z
 
 */
 
+body{
+    cursor: url('../cursors/circle-2.svg') 12 12, auto;
+}
+
+button:hover{
+    cursor: url('../cursors/circle-1.svg') 12 12, auto;
+}
+
+a:hover{
+    cursor: url('../cursors/circle-1.svg') 12 12, auto;
+}
+
 body::-webkit-scrollbar{
     background: #ffffff00;
     width: 12px;
+    
+  }
+
+  ::-webkit-scrollbar{
+    cursor: url('../cursors/circle-1.svg') 12 12, auto;
   }
 
 body::-webkit-scrollbar-thumb{
@@ -18,9 +35,6 @@ body::-webkit-scrollbar-track {
     background: #03a5a5a8;
   }
 
-* { 
-    font-family: 'Montserrat';
-    }
     
 #sketch-holder{
     position: fixed;
@@ -39,7 +53,7 @@ a {
 }
 
 .hover_box{
-    cursor: pointer;
+    cursor: url('../cursors/circle-1.svg') 12 12, auto;
 }
 
 hr.dotted {
@@ -188,7 +202,7 @@ hr.dotted {
 
 .hover_box:hover .d-flex{
     animation: fadeInText 0.3s; 
-    color: #FF6629
+    color: #FF6629;
 }
 
 @keyframes fadeInText{
@@ -368,7 +382,7 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
     position: relative;
     overflow: hidden;
     text-align: center;
-    cursor: pointer;
+    cursor: url('../cursors/circle-1.svg') 12 12, auto;
 }
 
 .tm-video-item img {
@@ -627,6 +641,8 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
 
     .nav-link:hover {
         color: #FF6629;
+        cursor: url('../cursors/circle-1.svg') 12 12, auto;
+        
         
     }
 
@@ -1029,12 +1045,12 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
   
   /* Add a pointer when hovering over the thumbnail images */
   .cursor {
-    cursor: pointer;
+    cursor: url('../cursors/circle-1.svg') 12 12, auto;
   }
   
   /* Next & previous buttons */
   .prev{
-    cursor: pointer;
+    cursor: url('../cursors/circle-1.svg') 12 12, auto;
     position: absolute;
     top: 40%;
     width: auto;
@@ -1049,7 +1065,7 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
   }
 
   .next {
-    cursor: pointer;
+    cursor: url('../cursors/circle-1.svg') 12 12, auto;
     position: absolute;
     top: 40%;
     width: auto;
