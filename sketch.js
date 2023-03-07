@@ -128,19 +128,19 @@ y = height/2 ;
   abtButton.style('font-family', 'Montserrat Alternates');
   abtButton.style('border', '3px solid black');  
   abtButton.style('background-color', 'transparent'); 
-  abtButton.style('cursor', "url('/work/cursors/circle-1.svg'),crosshair");
+  abtButton.style('cursor', "url('/Work/cursors/circle-1.svg'),crosshair");
   
   workButton = createButton('work');
   workButton.style('font-family', 'Montserrat Alternates');
   workButton.style('border', '3px solid black');  
   workButton.style('background-color', 'transparent'); 
-  workButton.style('cursor', "url('/work/cursors/circle-1.svg'),crosshair");
+  workButton.style('cursor', "url('/Work/cursors/circle-1.svg'),crosshair");
   
   spotButton = createButton('    ');
   spotButton.style('font-family', 'Montserrat Alternates');
   spotButton.style('border', 'none');  
   spotButton.style('background-color', 'transparent'); 
-  spotButton.style('cursor', "url('/work/cursors/circle-1.svg'),crosshair");
+  spotButton.style('cursor', "url('/Work/cursors/circle-1.svg'),crosshair");
   
   canvas.touchStarted(cursorOff);
       
