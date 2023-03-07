@@ -79,6 +79,8 @@ function setup() {
 canvas = createCanvas(windowWidth, windowHeight, WEBGL);
 ortho(-width / (windowWidth/600), width /(windowWidth/600), height / (windowWidth/600), -height / (windowWidth/600), 0, 1000);
 
+cursor('https://non-linear.in/Work/cursors/circle-2.svg');
+
 button =createButton('Change Permutation');
 button.position(10,10);
 button.style('background-color', '#000');
@@ -86,6 +88,7 @@ button.style('color', '#fff');
 button.style('border', 'solid');
 button.style('border-color', '#fff');
 button.style('border-radius', '3px');
+button.style('cursor', "url('https://non-linear.in/Work/cursors/circle-1.svg'),auto");
 
 button.mouseClicked(ChangeOrder);
 button.mousePressed(ChangeButtonColor);
