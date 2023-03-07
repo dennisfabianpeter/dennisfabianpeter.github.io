@@ -93,7 +93,7 @@ function setup() {
   mouseColor = color(255,255,255,0);
   
   //noCursor();
-  cursor('/work/cursors/circle-2.svg');
+  cursor('/Work/cursors/circle-2.svg');
   
   abtText = createP("Non-Linear is a process-driven design practice led by Dennis Fabain Peter. The practice operates within the overlapping fields of art, design, sound and technology. Trained as an architect, and along with his keen intersts in computational design and generative art, Peter's work often focusses on creating immersive and interactive spatial experiences that aim to stimulate the viewer. ");
   abtText.style('font-family', 'Montserrat');
@@ -323,7 +323,7 @@ if(displayCursor == true ){
   stroke(mouseColor);
   mouseColor.setAlpha(mouseFill)
   fill(mouseColor)
-  circle(mouseX, mouseY, mouseRadius);
+  //circle(mouseX, mouseY, mouseRadius);
   pop();
 }
   
