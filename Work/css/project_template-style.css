@@ -530,6 +530,7 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
     border-radius: 0 10px 10px 0;
     user-select: none;
     -webkit-user-select: none;
+    background-color: #0000003d;
   }
 
   .next {
@@ -548,6 +549,7 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
     border-radius: 10px 0 0 10px;
     user-select: none;
     -webkit-user-select: none;
+    background-color: #0000003d;
   }
 
   
@@ -647,6 +649,7 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
     border-radius: 0 10px 10px 0;
     user-select: none;
     -webkit-user-select: none;
+    background-color: #0000003d;
   }
 
   .next2 {
@@ -665,6 +668,7 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
     border-radius: 10px 0 0 10px;
     user-select: none;
     -webkit-user-select: none;
+    background-color: #0000003d;
   }
   
 
