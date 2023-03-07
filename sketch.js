@@ -93,12 +93,11 @@ function setup() {
   mouseColor = color(255,255,255,0);
   
   //noCursor();
-  cursor('https://non-linear.in/Work/cursors/circle-2.svg');
+  cursor('https://non-linear.in/Work/cursors/circle-2.svg', 12, 12);
   
-  abtText = createP("Non-Linear is a process-driven design practice led by Dennis Fabain Peter. The practice operates within the overlapping fields of art, design, sound and technology. Trained as an architect, and along with his keen intersts in computational design and generative art, Peter's work often focusses on creating immersive and interactive spatial experiences that aim to stimulate the viewer. ");
+  abtText = createP("Non-Linear is a creative practice led by Dennis Fabain Peter. The practice operates within the overlapping fields of art, design and technology. Trained as an architect, and with his keen interests in computational design and generative art, Peter's work often focuses on creating immersive and interactive spatial experiences that aim to engage and stimulate the viewer. <br> <br> The desire for constant experimentation is essential for the practice. The beauty of experimenting with technology/code & art is that the process takes you on a journey of multiple divergencies.  The unmatched joy in following these divergencies from one happy accident to another is what fundamentally drives Non-Linear. ");
   abtText.style('font-family', 'Montserrat');
   abtText.style('display', 'none');
-  abtText.style('cursor', 'pointer');
 
   
   whiteC = color(255,255,255);
@@ -128,19 +127,19 @@ y = height/2 ;
   abtButton.style('font-family', 'Montserrat Alternates');
   abtButton.style('border', '3px solid black');  
   abtButton.style('background-color', 'transparent'); 
-  abtButton.style('cursor', "url('/Work/cursors/circle-1.svg'),auto");
+  abtButton.style('cursor', "url('/Work/cursors/circle-1.svg') 12 12,auto");
   
   workButton = createButton('work');
   workButton.style('font-family', 'Montserrat Alternates');
   workButton.style('border', '3px solid black');  
   workButton.style('background-color', 'transparent'); 
-  workButton.style('cursor', "url('/Work/cursors/circle-1.svg'),auto");
+  workButton.style('cursor', "url('/Work/cursors/circle-1.svg') 12 12,auto");
   
   spotButton = createButton('    ');
   spotButton.style('font-family', 'Montserrat Alternates');
   spotButton.style('border', 'none');  
   spotButton.style('background-color', 'transparent'); 
-  spotButton.style('cursor', "url('/Work/cursors/circle-1.svg'),auto");
+  spotButton.style('cursor', "url('/Work/cursors/circle-1.svg') 12 12,auto");
   
   canvas.touchStarted(cursorOff);
       

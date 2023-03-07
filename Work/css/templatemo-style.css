@@ -6,6 +6,10 @@ https://templatemo.com/tm-556-catalog-z
 
 */
 
+html {
+    overflow-y:scroll;
+}
+
 body{
     cursor: url('../cursors/circle-2.svg') 12 12, auto;
 }
@@ -21,8 +25,9 @@ a:hover{
 body::-webkit-scrollbar{
     background: #ffffff00;
     width: 12px;
-    
   }
+
+  .hyperlink-green { color: #009999; font-family: 'Montserrat'; font-size: 16px; }
 
   ::-webkit-scrollbar{
     cursor: url('../cursors/circle-1.svg') 12 12, auto;
@@ -33,6 +38,47 @@ body::-webkit-scrollbar-thumb{
   }
 body::-webkit-scrollbar-track {
     background: #03a5a5a8;
+  }
+
+  .wrapper-container{
+    max-width: 1300px;
+    margin: auto;
+    margin-top: 27vh;
+    font-family: 'Montserrat';
+  }
+
+  .contact-container{
+    margin: auto;
+    padding-left: 100px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: #8f8f8f3d;
+    margin-bottom: 30px;
+    border-left: #000000 solid 15px;
+  }
+
+  .social-container{
+    margin: auto;
+    padding-left: 100px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: #8f8f8f3d;
+    border-left: #000000 solid 15px;
+  }
+
+  svg {
+    width: 35px;
+    fill: rgb(116, 116, 116);
+  }
+
+  svg:hover {
+    fill: rgb(0, 0, 0);
   }
 
     
@@ -601,6 +647,38 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
 
 @media (max-width: 991px) {
 
+
+    .wrapper-container{
+        margin: auto;
+        margin-top: 35vh;
+        font-family: 'Montserrat';
+      }
+
+    .contact-container{
+        margin: auto;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 100px;
+        margin-right: 100px;
+        background-color: #8f8f8f3d;
+        margin-bottom: 30px;
+        border-left: #000000 solid 15px;
+      }
+    
+      .social-container{
+        margin: auto;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 100px;
+        margin-right: 100px;
+        background-color: #8f8f8f3d;
+        border-left: #000000 solid 15px;
+      }
+
     .navbar-collapse {
         margin-right: 0px;
         position: fixed;
@@ -739,6 +817,37 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
 
 @media (max-width: 767px) {
 
+    .wrapper-container{
+        margin: auto;
+        margin-top: 32vh;
+        font-family: 'Montserrat';
+      }
+
+    .contact-container{
+        margin: auto;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color: #8f8f8f3d;
+        margin-bottom: 30px;
+        border-left: #000000 solid 15px;
+      }
+    
+      .social-container{
+        margin: auto;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color: #8f8f8f3d;
+        border-left: #000000 solid 15px;
+      }
+
     .tm-paging-col { flex-direction: column; }
     .tm-paging { flex-wrap: wrap; }
 
@@ -818,13 +927,47 @@ p, .tm-text-gray { color: #999; font-family: 'Montserrat'; font-size: 16px; }
 
 @media (max-width: 575px) {
 
+    .wrapper-container{
+        margin: auto;
+        margin-top: 25vh;
+        font-family: 'Montserrat';
+      }
+
+    .contact-container{
+        margin: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+        background-color: #8f8f8f3d;
+        margin-bottom: 30px;
+        border-left: #000000 solid 15px;
+      }
+    
+      .social-container{
+        margin: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+        background-color: #8f8f8f3d;
+        border-left: #000000 solid 15px;
+      }
+
     .tm-section{
         margin-top: 68px;
-        margin-left: 30px;
-        margin-right: 30px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
-    .tm-container-content { max-width: 420px; }
+    .tm-container-content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
     .tm-container-content2 { max-width: 420px; }
     .desc-text{
         padding-left: 14px;

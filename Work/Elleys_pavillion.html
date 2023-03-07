@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elleys Pavillion</title>
+    <link rel="icon" type="image/x-icon" href="../favicon_var.ico">
     <script src="p5.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
@@ -26,7 +27,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="https://non-linear.in">
-                <img src="img/NL_Logo.png"  height="55" alt="Logo">
+                <img src="img/NL_LOGO.svg"  height="55" alt="Logo">
                 non linear
             </a>
             <button class="navbar-toggler" onclick="toggleNav()">
@@ -35,10 +36,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">home</a>
+                        <a class="nav-link" href="../index.html">home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">contact</a>
+                        <a class="nav-link" href="Contact.html">contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html">work</a>
@@ -51,10 +52,10 @@
     <div id="navToggle" class="fullscreenToggle" style="left: 100vw;">
         <div class="toggle-list-container">
             <li class="nav-item-toggler">
-                <a class="nav-link" href="index.html" style="padding-left: 5px;">home</a>
+                <a class="nav-link" href="../index.html" style="padding-left: 5px;">home</a>
             </li>
             <li class="nav-item-toggler">
-                <a class="nav-link" href="index.html" style="padding-left: 5px;">contact</a>
+                <a class="nav-link" href="Contact.html" style="padding-left: 5px;">contact</a>
             </li>
             <li class="nav-item-toggler">
                 <a class="nav-link active" aria-current="page" href="index.html" style="padding-left: 5px;">work</a>
@@ -149,12 +150,12 @@
                     </span>
                 </div>
 
-                <span class="title">Video</span>
+                <span class="title" style="display: none;">Video</span>
                 <div class="content-container" style="display: none;">
                     <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/803035069?h=f37b1d207f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Bionic Bloom - An Interactive Installation"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
 
-                <div class="content-container" id="youtube">
+                <div class="content-container" id="youtube" style="display: none;">
                     <iframe class="youtubeVideo" width="560" height="315" src="https://www.youtube-nocookie.com/embed/NI_HGTeI2ks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>                        
                     </iframe>
                 </div>

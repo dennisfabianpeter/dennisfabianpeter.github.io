@@ -6,6 +6,10 @@ https://templatemo.com/tm-556-catalog-z
 
 */
 
+html {
+    overflow-y:scroll;
+}
+
 body{
     cursor: url('../cursors/circle-2.svg') 12 12, auto;
 }
